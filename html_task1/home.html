@@ -10,26 +10,94 @@
 </head>
 
 <body>
-    <header>
-        <h1>Guide to the City</h1>
-    </header>
+    <table border="5" cellpadding="10">
+        <tr>
+            <td colspan="3" height="100">
+                <center>
+                    <header>
+                        <h1>Guide to the City</h1>
+                    </header>
+                </center>
+            </td>
 
-    <main>
-        <aside>
-            <h2>navigation</h2>
-        </aside>
-        <h2>Kraków</h2>
-        <aside>
-            <label>Username:</label>
-            <label>Password:</label>
-        </aside>
-    </main>
+        </tr>
+        <main>
+            <td width="150" valign="top">
+                <aside>
+                    <h2>Navigation</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Hotels</a>
+                        </li>
+                        <li>
+                            <a href="#">Restaurants</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </aside>
+            </td>
+            <td>
+                <center>
+                    <h2>Kraków</h2>
+                </center>
+                <article>
+                    <p align="justify">
+                        Kraków is the second largest and one of the oldest cities in Poland. Situated on the Vistula River (Polish: Wisła) in the Lesser Poland (Polish: Małopolska) region, the city dates back to the 7th century.[4] Kraków has traditionally been one of the leading centres of Polish academic, cultural and artistic life and is one of Poland's most important economic hubs. It was the capital of the Crown of the Kingdom of Poland from 1038 to 1569; the Polish–Lithuanian Commonwealth from 1569 to 1596[5], the Free City of Kraków from 1815 to 1846; the Grand Duchy of Cracow from 1846 to 1918; and Kraków Voivodeship from the 14th century to 1998. It has been the capital of Lesser Poland Voivodeship since 1999.
+                    </p>
+                </article>
+                <ol>
+                    <li>Polish pronunciation: <i>[ˈkrakuf]</i>, also Cracow or Krakow</li>
+                    <li>Information source: Wikipedia</li>
+                </ol>
+                <footer>
+                    <h2>Tonight in Kraków:</h2>
+                    <table width="100%">
+                        <tr align="left">
+                            <th>Event</th>
+                            <th>Location</th>
+                            <th>Time</th>
+                        </tr>
+                        <tr>
+                            <td>Archivve on Tour</td>
+                            <td>Forty Kleparz</td>
+                            <td>20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Traditional Songs</td>
+                            <td>Main Square</td>
+                            <td>18:00</td>
+                        </tr>
+                    </table>
+                </footer>
+            </td>
 
+            <td width="150" valign="top">
+                <aside>
+                    <form>
+                        <label for="username">Username:</label>
+                        <input id="username" type="text">
+                        <label for="password">Password:</label>
+                        <input id="password" type="text">
+                        <select>
+                                <option>Admin</option>
+                                <option>Tester</option>
+                                <option>User</option>
+                            </select>
+                        <br>
+                        <label><input type="checkbox">Keep signed in</label>
+                        <input type="submit" value="Sign-in">
+                    </form>
+                </aside>
+            </td>
 
+        </main>
 
-
-
-
+    </table>
 </body>
 
 </html>
