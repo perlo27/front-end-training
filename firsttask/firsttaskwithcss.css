@@ -1,0 +1,36 @@
+body {
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+}
+nav{
+    flex: 1;
+}
+
+aside{
+    flex: 1;
+}
+
+article{
+    flex: 8;
+
+}
+
+footer{
+}
+
+header,nav,aside,article,footer{
+    padding: 10px;
+}
+
+
+.border {
+    border: double;
+}
