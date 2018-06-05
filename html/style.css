@@ -1,0 +1,68 @@
+.main_content {
+    display: flex;
+    height: 100%;
+}
+
+.head_class {
+    border-style: double;
+    padding: 10px;
+    height: 100px;
+}
+
+.navigation {
+    border-style: double;
+    padding: 10px;
+    width: 150px;
+    height: auto;
+}
+
+.login {
+    border-style: double;
+    padding: 10px;
+    width: 150px;
+}
+
+.main {
+    border-style: double;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.image {
+    padding: 5px;
+    width: 30%;
+    float: right;
+}
+
+.event {
+    width: 50%
+}
+
+.location {
+    width: 42%
+}
+
+.time {
+    width: 8%
+}
+
+.input {
+    width: 130px;
+}
+
+.foot_class {
+    text-align: center;
+    padding: 10px;
+}
+
+h2, h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+}
