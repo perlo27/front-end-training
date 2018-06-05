@@ -1,0 +1,19 @@
+@media (max-width: 764px) {
+    figcaption {
+        color: grey;
+    }
+    
+}
+
+@media (min-width: 1020px) {
+    figcaption {
+        color: green;
+    }
+}
+
+@media (min-width: 765 px) and (max-width: 1019px){
+    
+}
+
+
+
