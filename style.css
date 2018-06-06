@@ -1,0 +1,16 @@
+.horizontal li{
+    display: inline;
+}
+
+.img-wrap{
+    flex: 1 0 0;
+    min-height: 0;
+    display: flex;
+}
+
+.img-wrap img {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
