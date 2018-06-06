@@ -1,64 +1,10 @@
-body {
+body{
     margin-left: 50px;
+    margin-right: 50px;
     border-style: solid;
-    border-width: 0 0 0 1px;
+    border-width: 0 1px 0 1px;
     border-color: #e2e2e2
-}
-.main-navbar{
-    display: flex;
-    justify-content: space-between;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: #e2e2e2;
-}
-.quick-navigation{
-    margin-left: -30px;
-}
-#sections-button{
-    border-style: solid;
-    border-width: 1px;
-    border-color: #e2e2e2;
-    padding: 5px;
-    background: white;
-}
 
-#gear-button{
-    background: transparent;
-    color: black;
-}
-
-.quick-navigation Button {
-    background-color: transparent;
-    border: none;
-    padding: 5px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.user-tools {
-    margin-right: 45px;
-}
-
-.user-tools Button {
-    background-color: #6288A5;
-    border: none;
-    color: white;
-    padding: 5px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.articles-regions {
-    border-style: solid;
-    border-width: 1px 0 2px 0;
-    border-top-color: #e2e2e2;
-    border-bottom-color: #000000
 }
 
 
