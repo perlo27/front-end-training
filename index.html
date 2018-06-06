@@ -2,8 +2,64 @@
 <head>
     <title>World - The New York Times</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+<h1>Simple Pure CSS Drop Down Menu</h1>
+<nav id="primary_nav_wrap">
+    <ul>
+        <li class="show-menu"><i class="glyphicon glyphicon-menu-hamburger"></i></li>
+        <li class="on-hover-menu"><a href="#">Menu 1</a>
+            <ul>
+                <li><a href="#">Sub Menu 1</a></li>
+                <li><a href="#">Sub Menu 2</a></li>
+                <li><a href="#">Sub Menu 3</a></li>
+                <li><a href="#">Sub Menu 4</a>
+                    <ul>
+                        <li><a href="#">Deep Menu 1</a>
+                            <ul>
+                                <li><a href="#">Sub Deep 1</a></li>
+                                <li><a href="#">Sub Deep 2</a></li>
+                                <li><a href="#">Sub Deep 3</a></li>
+                                <li><a href="#">Sub Deep 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Deep Menu 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sub Menu 5</a></li>
+            </ul>
+        </li>
+        <li class="on-hover-menu"><a href="#">Menu 2</a>
+            <ul>
+                <li><a href="#">Sub Menu 1</a></li>
+                <li><a href="#">Sub Menu 2</a></li>
+                <li><a href="#">Sub Menu 3</a></li>
+            </ul>
+        </li>
+        <li class="on-hover-menu"><a href="#">Menu 3</a>
+            <ul>
+                <li class="dir"><a href="#">Sub Menu 1</a></li>
+                <li class="dir"><a href="#">Sub Menu 2 THIS IS SO LONG IT MIGHT CAUSE AN ISSEUE BUT MAYBE NOT?</a>
+                    <ul>
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 2</a></li>
+                        <li><a href="#">Category 3</a></li>
+                        <li><a href="#">Category 4</a></li>
+                        <li><a href="#">Category 5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sub Menu 3</a></li>
+                <li><a href="#">Sub Menu 4</a></li>
+                <li><a href="#">Sub Menu 5</a></li>
+            </ul>
+        </li>
+        <li class="on-hover-menu"><a href="#">Menu 4</a></li>
+        <li class="on-hover-menu"><a href="#">Menu 5</a></li>
+        <li class="on-hover-menu"><a href="#">Menu 6</a></li>
+        <li class="on-hover-menu"><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
 <div style="display: flex;flex-direction: column">
     <div style="display: flex;flex-direction: row; width: 100%;justify-content: space-around">
         <label>Sections</label>
@@ -42,8 +98,10 @@
             <div style="display: flex;flex-direction: row ; width: 60%">
                 <div style="display: flex;flex-direction: column; width: 50%">
                     <!--<figure>-->
-                        <div class="img-wrap"><img src="https://static01.nyt.com/images/2018/06/02/world/02Greece-Macedonia1/merlin_138927423_b5795654-46e0-4254-9190-af4992184a55-videoLarge.jpg"></div>
-                        <!--<figcaption>NICOLAS ECONOMOU/NURPHOTO, VIA GETTY IMAGES</figcaption>-->
+                    <div class="img-wrap"><img
+                            src="https://static01.nyt.com/images/2018/06/02/world/02Greece-Macedonia1/merlin_138927423_b5795654-46e0-4254-9190-af4992184a55-videoLarge.jpg">
+                    </div>
+                    <!--<figcaption>NICOLAS ECONOMOU/NURPHOTO, VIA GETTY IMAGES</figcaption>-->
                     <!--</figure>-->
                     Deal for Macedonia Name? High Treason, Some Greeks Say
                     Greece’s long feud with the Balkan neighbor that claims the same ancient name as its northern region
@@ -55,8 +113,9 @@
                 <div style="display: flex;flex-direction: column; width: 50%">
                     <div style="display: flex;flex-direction: column">
                         <p>Guatemala Volcano Stirs Anew, and Survivors Wait for News</p>
-                        <div class="img-wrap"><img style="float: right"
-                                                   src="https://static01.nyt.com/images/2018/06/06/world/06guatemala2/06guatemala2-thumbStandard.jpg"></div>
+                        <div class="img-wrap" style="float: right">
+                            <img src="https://static01.nyt.com/images/2018/06/06/world/06guatemala2/06guatemala2-thumbStandard.jpg">
+                        </div>
                         A new flow of volcanic material was making its way down the mountain slopes, and the authorities
                         ordered more evacuations.
 
@@ -66,8 +125,11 @@
                     <div style="display: flex;flex-direction: column">
                         <p>Ethiopia to ‘Fully Accept’ Eritrea Peace Deal From 2000</p>
 
-                        <div class="img-wrap"><img style="float: right" src="https://static01.nyt.com/images/2018/06/06/world/06ethiopia1/06ethiopia1-thumbStandard.jpg"></div>
-                        The announcement appeared to be a major step toward ending a protracted border dispute that led to one of Africa’s deadliest wars.
+                        <div class="img-wrap" style="float: right">
+                            <img src="https://static01.nyt.com/images/2018/06/06/world/06ethiopia1/06ethiopia1-thumbStandard.jpg">
+                        </div>
+                        The announcement appeared to be a major step toward ending a protracted border dispute that led
+                        to one of Africa’s deadliest wars.
 
                         14h ago
                         By RICK GLADSTONE
