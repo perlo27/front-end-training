@@ -1,0 +1,61 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-top: 3px;
+}
+
+.logo {
+    width: 300px;
+    height: 40px;
+}
+
+.social-section > button {
+    background-color: #6288a5;
+    border: 1px solid #e2e2e2;
+    color: #fff;
+    height: 30px;
+}
+
+.top-nav-button {
+    color: #333;
+    background-color: transparent;
+    border: none;
+}
+
+.menu-button{
+    margin-left: -15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px lightgray;
+    font-weight: 700;
+    margin-right: 6px;
+    height: 30px;
+}
+
+.sprite-icon{
+    background: url("images/sprite.svg") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px;
+    width: 16px;
+    height: 16px;
+}
+
+.menu-button .sprite-icon{
+    background-position: -35px -243px;
+}
+
+.home-button .sprite-icon{
+    background-position: -136px -276px;
+}
+
+.search-button .sprite-icon{
+    background-position: -456px -210px;
+}
+
+.social-section .sprite-icon{
+    background-position: -86px -243px;
+}
