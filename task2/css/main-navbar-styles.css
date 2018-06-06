@@ -1,0 +1,48 @@
+.main-navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding: 14px 12px;
+    border-bottom: solid 1px;
+}
+
+.btn{
+    margin-right: 10px;
+    border: none;
+    background: white;;
+    text-transform: uppercase;
+    padding: 7px 10px 6px;
+    font-size: 1em;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    font-style: normal;
+    height:30px;
+}
+
+.btn:hover{
+    background-color: #e2e2e2;
+    transition: background-color 0.3s;
+}
+
+.sections-button{
+    border: 1px solid #e2e2e2;
+}
+
+.user-tools .btn {
+    background: #6288A5;
+    border: 1px solid #4D7B9F;
+    border-radius: 3px;
+    color: #ffffff;
+}
+.user-tools .btn:hover{
+    background: #326891;
+    transition: background-color 0.3s;
+}
+.user-tools .configuration-button {
+    background: transparent;
+    color: black;
+    border: none;
+}
+.user-tools .configuration-button:hover{
+    background-color: #e2e2e2;
+    transition: background-color 0.3s;
+}

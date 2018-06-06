@@ -1,0 +1,58 @@
+.commercial{
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.commercial img{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+.articles h1{
+    display: block;
+    font-family: "nyt-franklin,arial,helvetica,sans-serif";
+    color: #333;
+    font-size: 100%;
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 16px;
+}
+h1{
+    visibility: hidden;
+}
+
+h1:hover{
+    visibility: visible;
+}
+
+.articles-regions{
+    margin-top:10px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 2px solid #000000;
+}
+
+
+.articles-regions li{
+    list-style-type: none;
+    display: inline;
+    color: #333;
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif";
+    
+}
+.articles-regions li + li:before {
+    content: " | ";
+}
+
+.articles-regions ul{
+    padding: 0px;
+}
+
+.articles-regions li:hover{
+    text-decoration: underline;
+}
