@@ -29,6 +29,14 @@ button {
     text-transform: uppercase;
     font-style: normal;
     font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    outline: none;
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .btn {
@@ -67,24 +75,6 @@ button {
     border-bottom-color: #cecece;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-}
-
-.small-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: #e2e2e2;
-}
-
 .menu {
     display: flex;
     margin-top: 20px;
@@ -115,7 +105,94 @@ li:after {
     vertical-align: -2px;
 }
 
+.header-img {
+    z-index: 1;
+    margin-top: 12px;
+    margin-left: -14px;
+}
 
+.masthead .container  {
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #ccc;
+    min-height: 47px;
+    position: relative;
+}
 
+.main {
+    min-width: 300px;
+    width: 960px;
+    width: auto;
+    margin: 0 10 px;
+    border-top: 1px solid #e2e2e2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.masthead .quick-nav {
+    position: relative;
+    padding-top: 8px;
+    float: left;
+    z-index: 2;
+}
 
+.user-tools {
+    position: relative;
+    padding-top: 8px;
+    padding-right: 15px;
+    float: right;
+    z-index: 2;
+}
+
+.user-tools .settings-btn {
+    width: 30px;
+    height: 30px;
+    
+}
+
+.branding {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    display: block;
+    margin-left: -14px;
+}
+
+.branding .branding-heading {
+    text-align: center;
+    margin-top: 0;
+}
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.shell {
+    position: relative;
+    width: 100%;
+    padding-top: 47px;
+}
+
+.masthead {
+    min-width: 315px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000000090;
+    position: fixed;
+    backface-visibility: hidden;
+    background-color: #ffffff;
+    border-color: #e2e2e2;
+    margin-left: 15px;
+    display: block;
+}
