@@ -1,9 +1,21 @@
-@media (max-width: 764px) {
 
+@media (max-width: 764px) {
+    .btn-text {
+        display: none;
+    }
+}
+
+@media (max-width: 1020px) {
+    .subscribe-btn {
+        display: none;
+    
+    }
 }
 
 @media (min-width: 1020px) {
-
+    .subscribe-href {
+        display: none;
+    }
 }
 
 @media (min-width: 765 px) and (max-width: 1019px){
@@ -37,6 +49,20 @@ h2 {
     line-height: 1.375rem;
     font-weight: 700;
     font-style: normal;
+}
+
+.subscribe-href {
+    font-weight: 700;    
+    font-size: 0.6875rem;
+    line-height: 0.8125rem;
+    text-transform: uppercase;
+    color: #666666;
+    text-decoration: none;
+    text-align: center;
+}
+
+.subscribe-href:hover {
+    text-decoration: underline;
 }
 
 .btn {
