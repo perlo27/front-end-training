@@ -62,6 +62,22 @@
     padding: 0;
 }
 
+.main_section .main_content .third_article > ol {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main_section .main_content .third_article > ol > li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
 .main_section .main_content > ol > li {
     padding: 0 15px 15px;
     border-right: 1px solid #e2e2e2;
@@ -81,9 +97,6 @@
     flex-grow: 1;
 }
 
-.main_content {
-}
-
 .minor_content {
     border-top: solid 1px lightgrey;
     margin-top: 30px;
@@ -92,7 +105,7 @@
 
 .main_section .minor_content > ol {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -100,7 +113,7 @@
 
 .main_section .minor_content > ol > li {
     box-sizing: content-box;
-    padding: 0 20px;
+    padding: 0 20px 0px;
     border-right: 1px solid #e2e2e2;
     flex-grow: 1;
     line-height: 1.4375rem;
@@ -112,6 +125,7 @@
 .main_section .minor_content > ol > li:last-child {
     border-style: none;
 }
+
 .main_section .minor_content > ol > li:first-child {
     padding-left: 0px;
 }
@@ -123,12 +137,30 @@
 
 .main_content h2 a {
     margin-bottom: 7px;
+    margin-top: 0px;
     font-size: 1.4375rem;
     line-height: 1.6875rem;
     font-weight: 700;
     font-style: normal;
     text-decoration: none;
     color: #333333;
+}
+
+.main_content .third_article h3 {
+    font-size: 0.6875rem;
+    line-height: 0.75rem;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Libre Franklin', arial, helvetica, sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main_content h2 a:hover {
+    text-decoration: underline;
 }
 
 .second_article img {
@@ -138,6 +170,16 @@
 
 .third_article li:last-child {
     border-top: 1px solid #e2e2e2;
+}
+
+.summary img {
+    display: block;
+    float: right;
+    clear: right;
+    margin-right: 0;
+    padding: 0 0 5px 5px;
+    height: 75px;
+    width: 75px;
 }
 
 figcaption {
@@ -156,8 +198,8 @@ figcaption {
     line-height: 1.375rem;
     font-weight: 500;
     font-style: normal;
-    font-family: georgia,"times new roman",times,serif;
-    margin-bottom: 0;
+    font-family: georgia, "times new roman", times, serif;
+    margin: 0;
 }
 
 .main_content .author {
@@ -168,4 +210,23 @@ figcaption {
     font-style: normal;
     font-family: 'Libre Franklin', arial, helvetica, sans-serif;
     color: #999;
+}
+
+.small_article a img {
+    height: 126px;
+}
+
+.minor_content h2 a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+    font-style: normal;
+    font-family: "cheltenham-normal-500", georgia, "times new roman", times, serif;
+    margin-bottom: 7px;
+}
+
+.minor_content h2 a:hover {
+    text-decoration: underline;
 }
