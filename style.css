@@ -1,32 +1,100 @@
-.horizontal li{
+ .horizontal li{
     display: inline;
 }
 
-.img-wrap{
-    flex: 1 0 0;
-    min-height: 0;
-    display: flex;
-}
 
 .img-wrap img {
     max-width: 100%;
     width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-#btn:not(:active) {
-    /* now keep red background for 1s */
-    transition: background-color 1000ms step-end;
+.img-wrap figure{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#btn:active {
-    background: red;
+.container{
+  display: grid;
+  min-width: 940px;
+  max-width: 940px;
+  width: 940px;
+    /*  Define the size and number of columns in our grid.
+    The fr unit works similar to flex:
+    fr columns will share the free space in the row in proportion to their value.
+    We will have 2 columns - the first will be 3x the size of the second.  */
+    grid-template-columns: 5fr 2fr 2fr;
+
+    /*  Assign the grid areas we did earlier to specific places on the grid.
+        First row is all header.
+        Second row is shared between main and sidebar.
+        Last row is all footer.  */
+    grid-template-areas:
+        "first-col second-col third-col";
+
+    /*  The gutters between each grid cell will be 60 pixels. */
+    grid-gap: 15px;
+}
+
+@media (min-width: 750px){
+  .first-col{
+    width: 500px
+  }
+  .second-col,.third-col{
+    width: 200px
+  }
+}
+
+@media (max-width: 960px) and (min-width: 750px){
+    .container {
+    min-width: 720px;
+    max-width: 720px;
+    /*  Realign the grid areas for a mobile layout. */
+    grid-template-columns: 5fr 2fr;
+    grid-template-areas:
+        "first-col second-col"
+        "third-col third-col"
+    }
+}
+
+@media (max-width: 750px){
+    .container {
+    min-width: initial;
+    max-width: initial;
+    width: 100%;
+    /*  Realign the grid areas for a mobile layout. */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "first-col"
+        "second-col"
+        "third-col"
+    }
+}
+
+.first-col{
+    grid-area: first-col;
+}
+.second-col{
+    grid-area: second-col;
+}
+.third-col{
+    grid-area: third-col;
 }
 
 #primary_nav_wrap
 {
-    margin-top:15px
+    position: absolute;
+    margin-top: 5px: 
+}
+
+#primary_nav_wrap a
+{
+  width: 10em
 }
 
 #primary_nav_wrap:hover .show-menu
@@ -71,7 +139,8 @@
     float:left;
     clear: left;
     margin:0;
-    padding:0
+    padding:0;
+    background:#ffffff
 }
 
 #primary_nav_wrap ul li:hover
