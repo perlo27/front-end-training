@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    padding: 0px
+}
+
+.main-container {
+    min-height: 47px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-left: solid 1px lightgrey;
+    border-right: solid 1px lightgrey;
+}
