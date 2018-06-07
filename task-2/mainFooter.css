@@ -27,7 +27,7 @@
 }
 
 .footer-main li {
-    padding: 4px;
+    padding: 2px 4px;
 }
 
 .first-element-bold li:first-child {
@@ -78,4 +78,34 @@
 
 .small-ul-1 {
     border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.footer-of-footer {
+    margin: 10px auto;
+    padding-top: 10px;
+    width: 90%;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-of-footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-of-footer li {
+    display: inline;
+    border-left: 1px solid beige;
+}
+
+.footer-of-footer ul li:first-child {
+    display: inline;
+    border: none;
+}
+
+.footer-of-footer a {
+    color: lightgray;
+    font-size: 0.5rem;
 }

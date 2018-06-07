@@ -13,10 +13,18 @@
     height: 30px;
 }
 
+.social-section > button:hover {
+    background-color: #4170a5;
+}
+
 .top-nav-button {
     color: #333;
     background-color: transparent;
     border: none;
+}
+
+.top-nav-button:hover{
+    box-shadow: 1px 1px 5px lightgray;
 }
 
 .menu-button{
@@ -28,6 +36,10 @@
     font-weight: 700;
     margin-right: 6px;
     height: 30px;
+}
+
+.menu-button:hover {
+    box-shadow: 1px 1px 5px gray;
 }
 
 .menu-button .sprite-icon{
