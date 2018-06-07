@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="subnavbar.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="articles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
 </head>
@@ -29,7 +30,6 @@
         </div>
         <header>
             <img src="../ny-logo.jpg">
-
         </header>
         <div>
             <button class="button user-tools">
@@ -44,7 +44,7 @@
         </div>
     </nav>
     <main>
-        <section>
+        <section class="articles">
             <h1>World</h1>
             <nav class="articles-regions">
                 <ul>
@@ -56,78 +56,84 @@
                     <li><a href="#">MIDDLE EAST</a></li>
                 </ul>
             </nav>
-            <article>
-                <figure>
-                    <img src="">
-                    <figcaption>SZILARD KOSZTICSAK/EPA, VIA SHUTTERSTOCK</figcaption>
-                </figure>
-                <h2>Safe in Hungary, Viktor Orban Pushes His Message Across Europe</h2>
-                <p>Allies of Mr. Orban, Hungary’s far-right leader, are buying media outlets across Central and Eastern Europe, extending his influence.</p>
-                <p>
-                    <time>19h ago</time> By
-                    <span>PATRICK KINGSLEY</span>
-                </p>
-            </article>
-            <article>
-                <figure>
-                    <img src="">
-                    <figcaption>CREDITYAN CONG FOR THE NEW YORK TIMES</figcaption>
-                </figure>
-                <h2>China’s Trade With North Korea Is Set to Soar With a Trump-Kim Deal</h2>
-                <p>A shadowy gray market of “shuttle traders” and money couriers already exists, and economic ties could quickly take off if sanctions are lifted.</p>
-                <p>
-                    <time>1h ago</time> By
-                    <span>JANE PERLEZ</span>
-                </p>
-            </article>
-            <article>
-                <figure>
-                    <img src="">
-                </figure>
-                <h2>Guatemala Volcano’s Death Toll, Now at 65, Is Likely to Rise</h2>
-                <p>Emergency workers were searching through layers of ash for survivors after the eruption of the volcano less than 30 miles from the capital.</p>
-                <p>
-                    <time>1d ago</time> By
-                    <span>NIC WIRTZ and ELISABETH MALKIN</span>
-                </p>
-            </article>
-            <article>
-                <figure>
-                    <img src="">
-                </figure>
-                <h2>U.S. and Turkey Agree on Kurds’ Withdrawal From Syrian Town</h2>
-                <p>Turkey objected to the presence of U.S.-backed Kurdish fighters in the city of Manbij. Turkey threatened to invade the city in January.</p>
-                <p>
-                    <time>11h ago</time> By
-                    <span>CARLOTTA GALL</span>
-                </p>
-            </article>
-            <section>
-                <ul>
-                    <li>
-                        <img src="">
-                        <h3>U.S. Army Veteran Tried to Spy for China, Officials Say</h3>
-                    </li>
-                    <li>
-                        <img src="">
-                        <h3>Mexican Court Orders New Inquiry Into Disappearance of 43 Students</h3>
-                    </li>
-                    <li>
-                        <img src="">
-                        <h3>Mexican Court Orders New Inquiry Into Disappearance of 43 Students</h3>
-                    </li>
-                    <li>
-                        <img src="">
-                        <h3>Jordan’s Prime Minister Quits as Protesters Demand an End to Austerity</h3>
-                    </li>
-                    <li>
-                        <img src="">
-                        <h3>Alexis Kohler, Aide to Emmanuel Macron, Is Accused of Corruption</h3>
-                    </li>
-                </ul>
+            <section class="articles">
+                <div class="articles-main-section">
+                    <div class="articles-menu">
+                        <article class="first-story">
+                            <figure>
+                                <img src="https://static01.nyt.com/images/2018/06/08/world/08Chna-Sonic/merlin_139126446_64417bb2-3e28-4fb7-ae2a-cdb62c9f8b96-videoLarge.jpg">
+                                <figcaption class="article-footer">LAM YIK FEI FOR THE NEW YORK TIMES</figcaption>
+                            </figure>
+                            <h2>China Pledges to Investigate Fears of Sonic Attacks on U.S. Diplomats
+                            </h2>
+                            <p>China’s Foreign Ministry said it was prepared to investigate what was causing symptoms similar to brain injury among U.S. diplomats in the city of Guangzhou.</p>
+                            <p class="article-footer">
+                                <time>4h ago</time> By
+                                <span class="author">JANE PERLEZ and STEVEN LEE MYERS</span>
+                            </p>
+                        </article>
+                        <article class="second-story">
+                            <figure>
+                                <img src="https://static01.nyt.com/images/2018/06/08/world/08nkorea-1/08nkorea-1-videoLarge.jpg">
+                                <figcaption class="article-footer">KOREAN CENTRAL NEWS AGENCY, VIA AGENCE FRANCE-PRESSE — GETTY IMAGES</figcaption>
+                            </figure>
+                            <h2>North Korea Razes Missile Test Facility Ahead of Meeting With Trump</h2>
+                            <p>North Korea has used the facility to test a type of missile technology that is considered a particularly worrisome addition to the country’s arsenal.</p>
+                            <p class="article-footer">
+                                <time>1h ago</time> By
+                                <span class="author">CHOE SANG-HUN</span>
+                            </p>
+                        </article>
+                        <article class="third-story-top">
+                            <h2>U.K. Court Dismisses Challenge to Northern Ireland Abortion Law</h2>
+                            <figure>
+                                <img src="https://static01.nyt.com/images/2018/06/08/world/08Northern-Ireland/08Northern-Ireland-thumbStandard.jpg">
+                            </figure>
+                            <p>A majority of the judges said they believed that the measure was incompatible with European human rights laws, but the case was rejected on a legal technicality.</p>
+                            <p class="article-footer">
+                                <time>1d ago</time> By
+                                <span class="author">KIMIKO de FREYTAS-TAMURA and RICHARD PÉREZ-PEÑA</span>
+                            </p>
+                        </article>
+                        <article class="fourth-story-bottom">
+                            <h2>Uzbek Asylum Seeker Gets Life in Prison for Deadly Truck Attack in Sweden</h2>
+                            <figure>
+                                <img src="https://static01.nyt.com/images/2018/06/08/world/08sweden/08sweden-thumbStandard.jpg">
+                            </figure>
+                            <p>Rakhmat Akilov, who failed to get asylum and later pledged allegiance to ISIS, was found guilty of terrorism and murder.</p>
+                            <p class="article-footer">
+                                <time>11h ago</time> By
+                                <span class="author">CHRISTINA ANDERSON</span>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+                <section class="news-list">
+                    <ul>
+                        <li class="news-list-item">
+                            <img src="../images/army.jpg">
+                            <h3>U.S. Army Veteran Tried to Spy for China, Officials Say</h2>
+                        </li>
+                        <li class="news-list-item">
+                            <img src="../images/mexican.jpg">
+                            <h3>Mexican Court Orders New Inquiry Into Disappearance of 43 Students</h2>
+                        </li>
+                        <li class="news-list-item">
+                            <img src="../images/pentagon.jpg">
+                            <h3>Mexican Court Orders New Inquiry Into Disappearance of 43 Students</h2>
+                        </li>
+                        <li class="news-list-item">
+                            <img src="../images/jordan.jpg">
+                            <h3>Jordan’s Prime Minister Quits as Protesters Demand an End to Austerity</h2>
+                        </li>
+                        <li class="news-list-item">
+                            <img src="../images/alexis.jpg">
+                            <h3>Alexis Kohler, Aide to Emmanuel Macron, Is Accused of Corruption</h2>
+                        </li>
+                    </ul>
 
+                </section>
             </section>
-        </section>
 
     </main>
 

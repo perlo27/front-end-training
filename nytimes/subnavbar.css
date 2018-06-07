@@ -26,3 +26,12 @@
 .articles-regions li + li:before {
     content: " | ";
 }
+
+.articles-regions a {
+    color: #333;
+    text-decoration: none;
+}
+
+.articles-regions li:hover {
+    text-decoration: underline;
+}
