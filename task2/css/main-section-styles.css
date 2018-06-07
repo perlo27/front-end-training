@@ -56,3 +56,7 @@ h1:hover{
 .articles-regions li:hover{
     text-decoration: underline;
 }
+.articles-menu figure{
+    margin: 0px; 
+    padding-top: 29px;
+}
