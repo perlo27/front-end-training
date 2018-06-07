@@ -12,3 +12,17 @@ body{
 button {
     border-radius: 5px;
 }
+
+.sprite-icon{
+    background: url("images/sprite.svg") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px;
+    width: 16px;
+    height: 16px;
+}
+
+.logo {
+    width: 250px;
+    height: 35px;
+}

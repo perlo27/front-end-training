@@ -59,6 +59,14 @@
     color: #999;
 }
 
+.footer-main{
+    font-size: 0.775rem;
+    line-height: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    font-family: "Libre Franklin",arial,helvetica,sans-serif;
+}
+
 a {
     color: #000;
     text-decoration: none;
