@@ -2,6 +2,10 @@
     display: inline;
 }
 
+.big-title{
+  font-weight: bold;
+  float: left;
+}
 
 .img-wrap img {
     max-width: 100%;
@@ -41,12 +45,38 @@
     grid-gap: 15px;
 }
 
+
+.container3{
+  display: grid;
+  min-width: 940px;
+  max-width: 940px;
+  width: 940px;
+    /*  Define the size and number of columns in our grid.
+    The fr unit works similar to flex:
+    fr columns will share the free space in the row in proportion to their value.
+    We will have 2 columns - the first will be 3x the size of the second.  */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    /*  Assign the grid areas we did earlier to specific places on the grid.
+        First row is all header.
+        Second row is shared between main and sidebar.
+        Last row is all footer.  */
+    grid-template-areas:
+        "first second third fourth fifth";
+
+    /*  The gutters between each grid cell will be 60 pixels. */
+    grid-gap: 15px;
+}
+
 @media (min-width: 750px){
   .first-col{
     width: 500px
   }
   .second-col,.third-col{
     width: 200px
+  }
+  .big-title{
+    font-size: 30px;
   }
 }
 
@@ -60,6 +90,15 @@
         "first-col second-col"
         "third-col third-col"
     }
+    .third-col{
+      width: 100%
+    }
+
+        .container3 {
+        min-width: 720px;
+        max-width: 720px;
+      }
+
 }
 
 @media (max-width: 750px){
@@ -74,6 +113,25 @@
         "second-col"
         "third-col"
     }
+    .big-title{
+      font-size: 20px;
+    }
+    .container3 {
+    min-width: initial;
+    max-width: initial;
+    width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "first"
+            "second"
+            "third"
+            "fourth"
+            "fifth"
+      }
+
+      .container3 ul{
+        display: none;
+      }
 }
 
 .first-col{
@@ -89,7 +147,7 @@
 #primary_nav_wrap
 {
     position: absolute;
-    margin-top: 5px: 
+    margin-top: 5px:
 }
 
 #primary_nav_wrap a
