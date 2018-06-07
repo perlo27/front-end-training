@@ -8,7 +8,10 @@
 @media (max-width: 1020px) {
     .subscribe-btn {
         display: none;
-    
+    }
+
+    .main {
+        width: 705px;
     }
 }
 
@@ -16,10 +19,14 @@
     .subscribe-href {
         display: none;
     }
+
+    .main {
+        width: 960px;        
+    }
 }
 
 @media (min-width: 765 px) and (max-width: 1019px){
-    
+
 }
 
 body {
@@ -27,8 +34,12 @@ body {
     font-family: "cheltenham";
 }
 
+figure {
+    position: relative;
+}
+
 figcaption {
-    color: grey;
+
 }
 
 button {
@@ -41,7 +52,7 @@ button {
     text-transform: uppercase;
     font-style: normal;
     font-family: "nyt-franklin",arial,helvetica,sans-serif;
-    outline: none;
+    /* outline: none; */
 }
 
 h2 {
@@ -101,35 +112,45 @@ h2 {
     border-bottom-color: #cecece;
 }
 
-.menu {
-    display: flex;
+.regions {
+    display: block;
     margin-top: 20px;
     border-top: 1px solid #e2e2e2;
-    list-style: none;
     padding: 9px 0 7px 0;
+    list-style: none;
+    
 }
 
-.menu li {
-    line-height: 0.6875rem;
+.regions ol {
+    display: flex;
+    margin: 0;
+    padding: 9px 0 7px 0;
+    list-style-type: none;
+}
+
+.regions li {
+    padding-left: 0;
     font-size: 0.6875rem;
+    line-height: 0.6875rem;
     font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
     border-right: none;
-    padding-left: 0;
 }
 
-li a {
+.regions li a {
     font-weight: 400;
     text-decoration: none;
     color: #333333;
-    white-space: nowrap;
 }
 
-li:after {
-    height: 16px;
+.regions li + li:before {
+    height: 16px;    
     padding-right: 5px;
-    vertical-align: -2px;
+    padding-left: 5px;
+    content: " | ";
 }
+
 
 .header-img {
     z-index: 1;
@@ -148,13 +169,11 @@ li:after {
 
 .main {
     min-width: 300px;
-    width: 960px;
-    width: auto;
-    margin: 0 10 px;
-    border-top: 1px solid #e2e2e2;
+    margin: 0 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .masthead .quick-nav {
@@ -207,6 +226,8 @@ li:after {
     position: relative;
     width: 100%;
     padding-top: 47px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
 }
 
 .masthead {
@@ -222,3 +243,112 @@ li:after {
     margin-left: 15px;
     display: block;
 }
+
+.main .page-header {
+    margin-top: 32px;
+    display: block;
+    font-size: 2.625rem;
+    line-height: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.rank-template {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50% 25% 25%;
+}
+
+.item1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.item3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+.item4 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.media-photo {
+    margin-left: 0px;
+    float: none;
+    width: 100%;
+}
+
+.rank-template .story-body {
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 0;
+}
+
+.rank-template .headline {
+    margin-bottom: 7px;
+    font-size: 1.4375rem;
+    line-height: 1.6875rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.rank-template .summary {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+.rank-template .caption {
+    color: #999999;
+    margin-top: 3px;
+    display: flex;
+    font-size: 0.6875rem;
+    line-height: 0.75rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.rank-template figcaption {
+    color: #b3b3b3;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-style: normal;
+    line-height: 0.75rem;
+    margin-top: 2px;
+    text-align: right;
+}
+
+.rank-template article {
+    padding: 0 15px 15px;
+}
+
+.story-menu li {
+    width: 420px;
+    padding: 0 29px 29px;
+    margin-top: 0;
+    border-right: 1px solid #e2e2e2;
+}
+
+.story-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rank-template img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
