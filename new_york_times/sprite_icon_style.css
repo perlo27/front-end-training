@@ -1,0 +1,33 @@
+.sprite_icon {
+    background-image: url("sprite-no-repeat.svg");
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px;
+    width: 16px;
+    height: 16px;
+}
+
+.sections_button .sprite_icon {
+    background-position: -35px -243px;
+}
+
+.home_button .sprite_icon {
+    background-position: -136px -276px;
+}
+
+.search_button .sprite_icon {
+    background-position: -456px -210px;
+}
+
+.home_delivery .sprite_icon {
+    background-position: -253px -54px;
+}
+
+.digital_subscriptions .sprite_icon {
+    background-position: -119px -276px;
+}
+
+.crossword .sprite_icon {
+    background-position: -375px 0;
+    width: 14px;
+}

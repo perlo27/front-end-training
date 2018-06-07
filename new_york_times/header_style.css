@@ -1,7 +1,7 @@
 .main_header {
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px lightgrey;
+    border-bottom: solid 1px #e2e2e2;
     padding: 10px;
 }
 
@@ -45,26 +45,7 @@
     padding: 8px;
 }
 
-.sprite_icon {
-    background-image: url("sprite-no-repeat.svg");
-    display: inline-block;
-    vertical-align: middle;
-    padding: 1px;
-    width: 16px;
-    height: 16px;
-}
 
-.sections_button .sprite_icon {
-    background-position: -35px -243px;
-}
-
-.home_button .sprite_icon {
-    background-position: -136px -276px;
-}
-
-.search_button .sprite_icon {
-    background-position: -456px -210px;
-}
 
 .main_navigation_header > button:hover {
     background-color: whitesmoke;
