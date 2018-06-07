@@ -1,3 +1,9 @@
+@media only screen and (max-device-width : 800px) {
+    body {
+        text-decoration: none;
+        background: yellow;
+    }
+}
 .main-navbar{
     display: flex;
     justify-content: space-between;
@@ -25,6 +31,11 @@
 
 .sections-button{
     border: 1px solid #e2e2e2;
+}
+
+.user-tools a{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .user-tools .btn {
