@@ -1,4 +1,5 @@
 .main_header {
+    z-index: -10;
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px #e2e2e2;
@@ -23,6 +24,10 @@
     margin: auto;
 }
 
+.sections_button:hover .left_show_div {
+    display: block;
+}
+
 .home_button {
     background-color: transparent;
     color: black;
@@ -44,8 +49,6 @@
     height: 30px;
     padding: 8px;
 }
-
-
 
 .main_navigation_header > button:hover {
     background-color: whitesmoke;
@@ -69,7 +72,7 @@
     font-family: 'Libre Franklin', arial, helvetica, sans-serif;
 }
 
-.right_buttons_menu > button:hover {
+.right_buttons_menu > button:hover .left_show_div {
     background-color: #5e88af;
 
 }
@@ -87,4 +90,9 @@
 .right_buttons_menu .icon_button .sprite_icon {
     background-position: -85px -243px;
 }
+
+.icon_button:hover .show_div {
+    display: block;
+}
+
 
