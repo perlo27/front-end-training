@@ -1,14 +1,25 @@
-.news-list-item img{
+.news-list-item img {
     width: 150px;
     height: 120px;
 }
 
-.news-list-item {
-    
+.news-list {
+    border-style: solid;
+    border-width: 1px 0 2px 0;
+    border-top-color: #e2e2e2;
+    border-bottom-color: white;
 }
 
 .news-list ul {
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
+}
+
+.news-list li {
+    border-right: 1px solid #e2e2e2;
+}
+
+.news-list li:last-child {
+    border-right: none;
 }
