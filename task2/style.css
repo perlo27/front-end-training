@@ -170,8 +170,7 @@
 }
 
 #nyt-logo {
-  position: absolute;
-  left: 50%;
+  flex: 1;
 }
 
 #subscribe-button, #login-button {
@@ -279,6 +278,14 @@ a {
 
 section img {
   width: 100%;
+}
+
+.left-buttons, .right-buttons {
+  flex-grow: 1;
+}
+.header-main {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 1020px) {
