@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task2 - New York Times</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <div id="sections-container">
+      <ul>
+        <li class="sections-tab">
+          <i class="glyphicon-menu-hamburger"></i>
+          <span class="sections-button-text">Sections</span>
+        </li>
+        <li class="on-hover-menu"><a href="#">Home Page</a>
+          <li class="on-hover-menu"><a href="#">World</a>
+            <ul>
+              <li><a href="#">Africa</a></li>
+              <li><a href="#">Americas</a></li>
+            </ul>
+          </li>
+          <li class="on-hover-menu"><a href="#">U.S.</a>
+            <ul>
+              <li><a href="#">Education</a>
+                <ul>
+                  <li><a href="#">Primay Schools</a></li>
+                  <li><a href="#">Universities</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+
+    <button id="home-button" onclick="location.href='index.html'" title="Go to the home page to see the latest top stories.">
+      <i class="home-icon"></i>
+      <span class="home-button-text">Home</span>
+    </button>
+
+    <button id="search-button">
+      <i class="search-icon"></i>
+      <span class="search-button-text">Search</span>
+    </button>
+
+    <div id="nyt-logo">
+      <a href="index.html">
+        <img src="nyt-logo-185x26.png" alt="The New York Times"></img>
+      </a>
+    </div>
+
+    <button id="user-settings-button">
+      <i class="user-settings-icon"></i>
+    </button>
+
+    <button id="login-button">
+      <span class="login-button-text">Log In
+      </span>
+    </button>
+
+    <button id="subscribe-button" onclick="location.href='index.html'" type="button">
+      <span class="subscribe-button-text">SUBSCRIBE NOW</span>
+    </button>
+
+  </header>
+
+  <iframe class="top-add" src="index-embeded.html" title="External ad" name="ad-from-the-internet" width="100%"></iframe>
+
+  <div>
+    <header>
+      <h1 class="main-heading">World</h1>
+    </header>
+
+    <nav id="subnavigation">
+      <ul>
+        <li>
+          <a href="index.html">Africa</a>
+        </li>
+        <li>
+          <a href="index.html">Americas</a>
+        </li>
+        <li>
+          <a href="index.html">Asia</a>
+        </li>
+        <li>
+          <a href="index.html">Australia</a>
+        </li>
+        <li>
+          <a href="index.html">Europe</a>
+        </li>
+        <li>
+          <a href="index.html">Middle East</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <section class="news-container">
+      <article class="image1">
+        <a href="index.html">
+              <img src="image1.jpg" alt="image1" ></img>
+            </a>
+        <h2>
+              <a href="index.html">A Trump-Kim Deal Could Send China’s Trade With North Korea Soaring</a>
+            </h2>
+        <p>A shadowy gray market of “shuttle traders” and money couriers already exists, and economic ties could quickly take off if sanctions are lifted.</p>
+      </article>
+      <article class="image2">
+        <a href="index.html">
+              <img src="image2.jpg" alt="image2"></img>
+            </a>
+        <h2>
+              <a href="index.html">Iran Moves to Lift Its Nuclear Enrichment Capacity</a>
+            </h2>
+        <p>Tehran pledged to stay within limits set by the 2015 nuclear accord, but the action hinted at a resumption of industrial-scale production if the pact unravels.</p>
+      </article>
+      <article class="image3">
+        <a href="index.html">
+              <img src="image3.jpg" alt="image3"></img>
+            </a>
+        <h2>
+              <a href="index.html">Guatemala Volcano Stirs Anew, and Survivors Wait for News</a>
+            </h2>
+        <p>A new flow of volcanic material was making its way down the mountain slopes, and the authorities ordered more evacuations.</p>
+      </article>
+      <article class="image4">
+        <a href="index.html">
+              <img src="image4.jpg" alt="image4"></img>
+            </a>
+        <h2>
+              <a href="index.html">Same-Sex Marriages Are Backed in E.U. Immigration Ruling</a>
+            </h2>
+        <p>Member states that do not recognize same-sex unions must do so when considering residency rights for couples where one partner is an E.U. citizen, the court ruled.</p>
+      </article>
+
+    </section>
+  </div>
+</body>
+
+</html>

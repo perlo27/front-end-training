@@ -1,0 +1,309 @@
+#sections-container .sections-tab {
+  border-color: rgb(206, 206, 206);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  padding-bottom: 7px;
+  padding-left: 9px;
+  padding-top: 7px;
+}
+
+#sections-container .glyphicon-menu-hamburger {
+  background-image: url(https://g1.nyt.com/assets/collection/20180530-161835/images/sprite/sprite-no-repeat.svg);
+  background-position-x: -35px;
+  background-position-y: -243px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  font-weight: 700;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  text-rendering: auto;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#sections-container .sections-button-text {
+  font-size: 14px;
+  vertical-align: top;
+  padding-right: 10px;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+#sections-container:hover .sections-tab {
+  display: none;
+}
+
+#sections-container .on-hover-menu {
+  display: none;
+}
+
+#sections-container:hover .on-hover-menu {
+  display: block;
+}
+
+#sections-container ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0
+}
+
+#sections-container ul a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 15px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+#sections-container ul li {
+  position: relative;
+  float: left;
+  clear: left;
+  margin: 0;
+  padding: 0;
+  background: #ffffff
+}
+
+#sections-container ul li:hover {
+  background: #f6f6f6
+}
+
+#sections-container ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  padding: 0
+}
+
+#sections-container ul ul li {
+  float: none;
+  width: 200px
+}
+
+#sections-container ul ul a {
+  line-height: 120%;
+  padding: 10px 15px
+}
+
+#sections-container ul ul ul {
+  top: 0;
+  left: 100%
+}
+
+#sections-container ul li:hover>ul {
+  display: block
+}
+
+/*  NAVIGATION BUTTONS */
+
+#home-button, #search-button {
+  border-color: rgb(206, 206, 206);
+  border-style: none;
+  border-width: 1px;
+  border-radius: 1px;
+  padding-bottom: 7px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 7px;
+  background-color: rgb(255, 255, 255);
+  display: list-item;
+  float: left;
+  cursor: pointer;
+}
+
+#home-button .home-icon {
+  background-image: url(https://g1.nyt.com/assets/collection/20180530-161835/images/sprite/sprite-no-repeat.svg);
+  background-position-x: -136px;
+  background-position-y: -276px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  font-weight: 700;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  text-rendering: auto;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#search-button .search-icon {
+  background-image: url(https://g1.nyt.com/assets/collection/20180530-161835/images/sprite/sprite-no-repeat.svg);
+  background-position-x: -456px;
+  background-position-y: -210px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  font-weight: 700;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  text-rendering: auto;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#home-button .home-button-text, #search-button .search-button-text, #subscribe-button .subscribe-button-text {
+  font-size: 14px;
+  vertical-align: top;
+  padding-right: 10px;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#nyt-logo {
+  position: absolute;
+  left: 50%;
+}
+
+#subscribe-button, #login-button {
+  border-color: rgb(206, 206, 206);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  padding-bottom: 7px;
+  padding-left: 9px;
+  padding-top: 7px;
+  background-color: rgb(98, 136, 165);
+  align-items: center;
+  display: inline-block;
+  float: right;
+}
+
+#subscribe-button .subscribe-button-text, #login-button .login-button-text {
+  font-size: 14px;
+  vertical-align: top;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  vertical-align: middle;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+#user-settings-button .user-settings-icon {
+  background-image: url(https://g1.nyt.com/assets/collection/20180607-141442/images/sprite/sprite-no-repeat.svg);
+  background-position-x: -86px;
+  background-position-y: -243px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "nyt-franklin", arial, helvetica, sans-serif;
+  font-weight: 700;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  text-rendering: auto;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#user-settings-button {
+  border-color: rgb(206, 206, 206);
+  border-style: none;
+  border-width: 1px;
+  border-radius: 1px;
+  padding-bottom: 7px;
+  padding-right: 9px;
+  padding-top: 7px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+}
+
+#subnavigation ul {
+  list-style-type: none;
+}
+
+#subnavigation li {
+  float: left;
+}
+
+#subnavigation li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*  GRID */
+
+.news-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "image1 image2 image3" "image1 image2 image4";
+  grid-gap: 60px;
+  float: left;
+}
+
+.image1 {
+  grid-area: image1;
+}
+
+.image2 {
+  grid-area: image2;
+}
+
+.image3 {
+  grid-area: image3;
+}
+
+.image4 {
+  grid-area: image4;
+}
+
+section img {
+  width: 100%;
+}
+
+@media (max-width: 1020px) {
+  .news-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image1 image1 image1 image1 image2 image2" "image1 image1 image1 image1 image2 image2" "image3 image3 image3 image4 image4 image4"
+  }
+}
+
+@media (max-width: 900px) {
+  #home-button .home-button-text,
+  #search-button .search-button-text,
+  #subscribe-button, #login-button {
+    display: none;
+  }
+}
+
+@media (max-width: 764px) {
+  #sections-container .sections-button-text {
+    display: none;
+  }
+  .news-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image1" "image2" "image3" "image4"
+  }
+}
