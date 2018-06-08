@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="minorNews.css">
     <link rel="stylesheet" href="majorNews.css">
     <link rel="stylesheet" href="mainFooter.css">
+    <link rel="stylesheet" href="menuLeft.css">
+    <link rel="stylesheet" href="large.css">
+    <link rel="stylesheet" href="midi.css">
+    <link rel="stylesheet" href="small.css">
+    <link rel="stylesheet" href="mini.css">
+
 
     <link href="https://fonts.googleapis.com/css?family=Domine|Libre+Franklin" rel="stylesheet">
 </head>
@@ -19,6 +25,58 @@
         <button type="button" class="menu-button">
             <i class="sprite-icon"></i>
             <span class="button-text">Sections</span>
+            <section class="menu-left-container">
+                <nav class="menu-left">
+                    <ul>
+                        <li>Home Page</li>
+                        <li>
+                            World
+                            <span>&gt;</span>
+                            <ul>
+                                <li>U.S.</li>
+                                <li>Politics</li>
+                                <li>N.Y.</li>
+                                <li>Business</li>
+                                <li>Opinion</li>
+                                <li>Tech</li>
+                            </ul>
+                        </li>
+                        <li>U.S.</li>
+                        <li>Politics</li>
+                        <li>N.Y.</li>
+                        <li>Business</li>
+                        <li>Opinion</li>
+                        <li>Tech</li>
+                        <li>Science</li>
+                        <li>Health</li>
+                        <li>Sports</li>
+                    </ul>
+                    <ul>
+                        <li>Arts</li>
+                        <li>Books</li>
+                        <li>Fashion & Style</li>
+                        <li>Food</li>
+                        <li>Travel</li>
+                        <li>Magizine</li>
+                        <li>T Magazine</li>
+                        <li>Real Estate</li>
+                        <li>Obituaries</li>
+                        <li>Video</li>
+                        <li>The Upshot</li>
+                        <li>Reader Center</li>
+                        <li>Conferences</li>
+                    </ul>
+                    <ul>
+                        <li>Crossword</li>
+                        <li>Times Insider</li>
+
+                    </ul>
+                    <ul>
+                        <li>More</li>
+
+                    </ul>
+                </nav>
+            </section>
         </button>
         <button type="button" class="top-nav-button home-button"
                 title="Go to the home page to see the latest top stories.">
@@ -40,6 +98,12 @@
         </button>
         <i class="sprite-icon"></i>
     </section>
+    <section class="only-mini">
+        <button type="button" class="top-nav-button search-button ">
+            <i class="sprite-icon"></i>
+            <span class="button-text">Search</span>
+        </button>
+    </section>
 </header>
 
 <section class="main">
@@ -58,28 +122,32 @@
     </nav>
     <main>
         <section class="major-news-section">
-            <article class="top-1-article">
-                <img src="images/news-top-1.jpg">
-                <header class="article-photo-signature">SZILARD KOSZTICSAK/EPA, VIA SHUTTERSTOCK</header>
-                <header class="article-header"><a href="">Safe in Hungary, Viktor Orban Pushes His Message Across
-                    Europe</a></header>
-                <article class="article-text">Allies of Mr. Orban, Hungary’s far-right leader, are buying media outlets
-                    across Central and
-                    Eastern Europe, extending his influence.
+            <section class="top-articles">
+                <article class="top-1-article">
+                    <img src="images/news-top-1.jpg">
+                    <header class="article-photo-signature">SZILARD KOSZTICSAK/EPA, VIA SHUTTERSTOCK</header>
+                    <header class="article-header"><a href="">Safe in Hungary, Viktor Orban Pushes His Message Across
+                        Europe</a></header>
+                    <article class="article-text">Allies of Mr. Orban, Hungary’s far-right leader, are buying media
+                        outlets
+                        across Central and
+                        Eastern Europe, extending his influence.
+                    </article>
+                    <footer class="article-footer">1d ago By PATRICK KINGSLEY</footer>
                 </article>
-                <footer class="article-footer">1d ago By PATRICK KINGSLEY</footer>
-            </article>
-            <article class="top-2-article">
-                <img src="images/news-top-2.jpg">
-                <header class="article-photo-signature">CREDITYAN CONG FOR THE NEW YORK TIMES</header>
-                <header class="article-header"><a href="">China’s Trade With North Korea Is Set to Soar With a Trump-Kim
-                    Deal</a></header>
-                <article class="article-text">A shadowy gray market of “shuttle traders” and money couriers already
-                    exists, and economic ties
-                    could quickly take off if sanctions are lifted.
+                <article class="top-2-article">
+                    <img src="images/news-top-2.jpg">
+                    <header class="article-photo-signature">CREDITYAN CONG FOR THE NEW YORK TIMES</header>
+                    <header class="article-header"><a href="">China’s Trade With North Korea Is Set to Soar With a
+                        Trump-Kim
+                        Deal</a></header>
+                    <article class="article-text">A shadowy gray market of “shuttle traders” and money couriers already
+                        exists, and economic ties
+                        could quickly take off if sanctions are lifted.
+                    </article>
+                    <footer class="article-footer">21h ago By JANE PERLEZ</footer>
                 </article>
-                <footer class="article-footer">21h ago By JANE PERLEZ</footer>
-            </article>
+            </section>
             <section class="major-less-section">
                 <article class="top-3-article">
                     <header class="article-header"><a href="">Guatemala Volcano’s Death Toll, Now at 65, Is Likely to
@@ -120,11 +188,6 @@
             <article class="minor-news">
                 <img src="images/minor-news-2.jpg">
                 <header class="article-photo-signature">MAHMUD HAMS/AGENCE FRANCE-PRESSE — GETTY IMAGES
-                    Israel Says Palestinian Medic’s Death in Gaza Was Unintentional
-                    Commenting on a killing that has created an international outcry, the Israeli military said its
-                    soldiers did not deliberately shoot the young woman.
-
-                    17h ago
                 </header>
                 <header class="article-header"><a href="">Mexican Court Orders New Inquiry Into Disappearance of 43
                     Students</a></header>
@@ -272,22 +335,22 @@
         <footer class="footer-of-footer">
             <aside>
                 <ul>
-                    <li><a href="">© 2018 The New York Times Company</a> </li>
-                    <li><a href="">Contact Us</a> </li>
-                    <li><a href="">Work With Us</a> </li>
-                    <li><a href="">Advertise</a> </li>
-                    <li><a href="">Your Ad Choices</a> </li>
-                    <li><a href="">Privacy</a> </li>
-                    <li><a href=""> Terms of Service</a> </li>
-                    <li><a href="">Terms of Sale</a> </li>
+                    <li><a href="">© 2018 The New York Times Company</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Work With Us</a></li>
+                    <li><a href="">Advertise</a></li>
+                    <li><a href="">Your Ad Choices</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href=""> Terms of Service</a></li>
+                    <li><a href="">Terms of Sale</a></li>
                 </ul>
             </aside>
             <aside>
                 <ul>
-                    <li><a href="">Site Map</a> </li>
-                    <li><a href="">Help</a> </li>
-                    <li><a href="">Feedback</a> </li>
-                    <li><a href="">Subscriptions</a> </li>
+                    <li><a href="">Site Map</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Feedback</a></li>
+                    <li><a href="">Subscriptions</a></li>
                 </ul>
             </aside>
         </footer>

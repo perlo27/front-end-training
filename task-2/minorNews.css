@@ -29,7 +29,9 @@
     padding-bottom: 5px;
 }
 
-.minor-news-section .article-photo-signature {
+.minor-news-section .article-photo-signature,
+.minor-news-section .article-text,
+.minor-news-section .article-footer{
     display: none;
 }
 
@@ -37,12 +39,4 @@
     font-weight: 500;
     font-size: 0.85rem;
     line-height: 1.125rem;
-}
-
-.minor-news-section .article-text {
-    display: none;
-}
-
-.minor-news-section .article-footer {
-    display: none;
 }

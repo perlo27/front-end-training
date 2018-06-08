@@ -8,7 +8,16 @@
     font-weight: 700;
 }
 
-.nav-text {
+.menu-left-container{
+    font-style: normal;
+    font-family: "Libre Franklin", arial, helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 0.6875rem;
+    font-weight: 700;
+}
+
+.nav-text{
     font-size: 0.6875rem;
     line-height: 0.6875rem;
     font-weight: 400;

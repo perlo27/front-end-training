@@ -1,0 +1,7 @@
+@media screen and (max-width: 900px) {
+    .home-button .button-text,
+    .search-button .button-text {
+        display: none;
+    }
+
+}
