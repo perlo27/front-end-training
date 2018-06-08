@@ -6,307 +6,336 @@
 </head>
 <body>
   <nav id="primary_nav_wrap">
-    <ul>
-      <li class="show-menu"><i class="glyphicon glyphicon-menu-hamburger"></i>SECTIONS</li>
-      <li class="on-hover-menu">
-        <a href="#">Home Page</a>
-      </li>
-      <li class="on-hover-menu">
-        <a href="#">World</a>
+    <div class="sections">
+      <div class="section">
         <ul>
-          <li><a href="#">Africa</a></li>
-          <li><a href="#">Americas</a></li>
-          <li><a href="#">US</a>
+          <button class="nav-menu-button show-menu" type="button">
+            <i class="nav-menu-button-icon"></i>
+            <span class="nav-menu-button-span">Sections</span>
+          </button>
+          <!-- <li class="show-menu"><i class="glyphicon glyphicon-menu-hamburger"></i>SECTIONS</li> -->
+          <li class="on-hover-menu">
+            <a href="#">Home Page</a>
+          </li>
+          <li class="on-hover-menu">
+            <a href="#">World</a>
+
+          <div class="arrow-right">
+            <div class="arrow-conceal"></div></div>
             <ul>
-              <li><a href="#">Education</a>
-                <ul>
-                  <li><a href="#">Politics</a></li>
-                  <li><a href="#">NY</a></li>
-                  <li><a href="#">Business</a></li>
+              <li>
+                <a href="#">
+                  Africa
+                </a>
+                </li>
+                  <li><a href="#">Americas</a></li>
+                  <li><a href="#">US</a>
+                    <ul>
+                      <li><a href="#">Education</a>
+                        <ul>
+                          <li><a href="#">Politics</a></li>
+                          <li><a href="#">NY</a></li>
+                          <li><a href="#">Business</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tech</a>
+                        <ul>
+                          <li><a href="#">Science</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
-              <li><a href="#">Tech</a>
+              <li class="on-hover-menu">
+                <a href="#">
+                  Health
+                <div class="arrow-right">
+                  <div class="arrow-conceal"></div></div>
+                </a>
                 <ul>
-                  <li><a href="#">Science</a></li>
+                  <li><a href="#">Sports</a></li>
+                  <li><a href="#">Arts</a></li>
+                  <li><a href="#">Books</a></li>
+                </ul>
+              </li>
+              <li class="on-hover-menu"><a href="#">Fashion</a>
+                <ul>
+                  <li class="dir"><a href="#">Food</a></li>
+                  <li class="dir"><a href="#">Travel</a>
+                    <ul>
+                      <li><a href="#">Magazine</a></li>
+                      <li><a href="#">T Magazine</a></li>
+                      <li><a href="#">Real Estate</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Obituaries</a></li>
+                  <li><a href="#">Video</a></li>
+                  <li><a href="#">The Upshot</a></li>
                 </ul>
               </li>
             </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="on-hover-menu"><a href="#">Health</a>
-        <ul>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Arts</a></li>
-          <li><a href="#">Books</a></li>
-        </ul>
-      </li>
-      <li class="on-hover-menu"><a href="#">Fashion</a>
-        <ul>
-          <li class="dir"><a href="#">Food</a></li>
-          <li class="dir"><a href="#">Travel</a>
-            <ul>
-              <li><a href="#">Magazine</a></li>
-              <li><a href="#">T Magazine</a></li>
-              <li><a href="#">Real Estate</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Obituaries</a></li>
-          <li><a href="#">Video</a></li>
-          <li><a href="#">The Upshot</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <div style="display: flex;flex-direction: column">
-    <div style="display: flex;flex-direction: row; width: auto;justify-content: space-between; margin-left:15em">
-      <div>
-        <button class="home-button" type="button"><i class="home-icon"></i><span>Home</span></button>
-        <button class="search-button" type="button"><i class="search-icon"></i><span>Search</span></button>
-      </div>
-      <h2 class="brand-heading">
-        <a class="branding-heading-link" href="">
-          <span class="brand-heading-span">The New York Times</span>
-          <svg class="brand-heading-logo" width="185" height="26" role="img" aria-label="The New York Times">
-            <image width="185" height="26" src="https://g1.nyt.com/assets/collection/20180530-161835/images/foundation/logos/nyt-logo-185x26.png" alt="The New York Times" border="0">
-            </image>
-          </svg>
-          <img src="https://g1.nyt.com/assets/collection/20180530-161835/images/foundation/logos/nyt-logo-185x26.png" class="brand-heading-logo-print" alt="The New York Times">
-        </a>
-      </h2>
-      <div>
-        <a class="blue-button" href="">Subscribe Now</a>
-        <a class="blue-button" href="">Log In</a>
-        <button class="settings-button" type="button"><i class="gear-icon"></i></button>
-      </div>
-    </div>
-    <div style="display: flex;flex-direction: column">
-      <div class="container4">
-        <span class="first big-title">
-          <p>US</p>
-        </span>
-      </div>
-      <div class="container4">
-        <hr class="first header-line">
-      </div>
-      <div class="container">
-        <div class="first-col">
-          <div class="img-wrap">
-            <img src="https://static01.nyt.com/images/2018/06/06/world/06putin1/06putin1-videoLarge-v4.jpg">
-          </div>
-          <div style="width:100%">
-            <h3>In Fight for California Governor, Candidates Head to Ideological Corners</h3>
-            <p>
-              Gavin Newsom and John Cox appear ready to engage in a stark battle over taxes, health care and President Trump.
-
-              13h ago
-              By ADAM NAGOURNEY and THOMAS FULLER
-            </p>
           </div>
         </div>
-
-        <div class="second-col">
-          <div class="img-wrap"><img
-            src="https://static01.nyt.com/images/2018/06/02/world/02Greece-Macedonia1/merlin_138927423_b5795654-46e0-4254-9190-af4992184a55-videoLarge.jpg">
+      </nav>
+      <div style="display: flex;flex-direction: column">
+        <div style="display: flex;flex-direction: row; width: auto;justify-content: space-between; margin-left:15em">
+          <div>
+            <button class="home-button" type="button"><i class="home-icon"></i><span>Home</span></button>
+            <button class="search-button" type="button"><i class="search-icon"></i><span>Search</span></button>
           </div>
-          <div style="width:100%">
-            <h3>5 Takeaways From California’s Primary, for Californians</h3>
-            <p>
-              Though it had national implications, the California primary also tested state political issues like single-payer health care, Latino turnout and an unpopular gas tax.
-
-              14h ago
-              By TIM ARANGO and JENNIFER MEDINA
-            </p>
+          <h2 class="brand-heading">
+            <a class="branding-heading-link" href="">
+              <span class="brand-heading-span">The New York Times</span>
+              <svg class="brand-heading-logo" width="185" height="26" role="img" aria-label="The New York Times">
+                <image width="185" height="26" src="https://g1.nyt.com/assets/collection/20180530-161835/images/foundation/logos/nyt-logo-185x26.png" alt="The New York Times" border="0">
+                </image>
+              </svg>
+              <img src="https://g1.nyt.com/assets/collection/20180530-161835/images/foundation/logos/nyt-logo-185x26.png" class="brand-heading-logo-print" alt="The New York Times">
+            </a>
+          </h2>
+          <div>
+            <a class="blue-button" href="">Subscribe Now</a>
+            <a class="blue-button" href="">Log In</a>
+            <button class="settings-button" type="button"><i class="gear-icon"></i></button>
           </div>
         </div>
-        <div class="third-col container2">
-          <div class="fourth-col">
-            <div style="width:100%">
-              <h3>Guatemala Volcano Stirs Anew, and Survivors Wait for News</h3>
-            </div>
-            <div style="width:100%">
-              <div class="img-wrap" style="float: right">
-                <img src="https://static01.nyt.com/images/2018/06/06/world/06guatemala2/06guatemala2-thumbStandard.jpg">
+        <div style="display: flex;flex-direction: column">
+          <div class="container4">
+            <span class="first big-title">
+              <p>US</p>
+            </span>
+          </div>
+          <div class="container4">
+            <hr class="first header-line">
+          </div>
+          <div class="container">
+            <div class="first-col">
+              <div class="img-wrap">
+                <img src="https://static01.nyt.com/images/2018/06/06/world/06putin1/06putin1-videoLarge-v4.jpg">
               </div>
               <div style="width:100%">
+                <h3>In Fight for California Governor, Candidates Head to Ideological Corners</h3>
                 <p>
-                  A new flow of volcanic material was making its way down the mountain slopes, and the authorities
-                  ordered more evacuations.
+                  Gavin Newsom and John Cox appear ready to engage in a stark battle over taxes, health care and President Trump.
 
                   13h ago
-                  By NIC WIRTZ and ELISABETH MALKIN
+                  By ADAM NAGOURNEY and THOMAS FULLER
                 </p>
               </div>
             </div>
-          </div>
-          <div class="fifth-col">
-            <div style="width:100%">
-              <h3>Ethiopia to ‘Fully Accept’ Eritrea Peace Deal From 2000</h3>
-            </div>
-            <div style="width:100%">
-              <div class="img-wrap" style="float: right">
-                <img src="https://static01.nyt.com/images/2018/06/06/world/06ethiopia1/06ethiopia1-thumbStandard.jpg">
-              </div>
 
+            <div class="second-col">
+              <div class="img-wrap"><img
+                src="https://static01.nyt.com/images/2018/06/02/world/02Greece-Macedonia1/merlin_138927423_b5795654-46e0-4254-9190-af4992184a55-videoLarge.jpg">
+              </div>
               <div style="width:100%">
+                <h3>5 Takeaways From California’s Primary, for Californians</h3>
                 <p>
-                  The announcement appeared to be a major step toward ending a protracted border dispute that led
-                  to one of Africa’s deadliest wars.
+                  Though it had national implications, the California primary also tested state political issues like single-payer health care, Latino turnout and an unpopular gas tax.
 
                   14h ago
-                  By RICK GLADSTONE
+                  By TIM ARANGO and JENNIFER MEDINA
                 </p>
               </div>
+            </div>
+            <div class="third-col container2">
+              <div class="fourth-col">
+                <div style="width:100%">
+                  <h3>Guatemala Volcano Stirs Anew, and Survivors Wait for News</h3>
+                </div>
+                <div style="width:100%">
+                  <div class="img-wrap" style="float: right">
+                    <img src="https://static01.nyt.com/images/2018/06/06/world/06guatemala2/06guatemala2-thumbStandard.jpg">
+                  </div>
+                  <div style="width:100%">
+                    <p>
+                      A new flow of volcanic material was making its way down the mountain slopes, and the authorities
+                      ordered more evacuations.
+
+                      13h ago
+                      By NIC WIRTZ and ELISABETH MALKIN
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="fifth-col">
+                <div style="width:100%">
+                  <h3>Ethiopia to ‘Fully Accept’ Eritrea Peace Deal From 2000</h3>
+                </div>
+                <div style="width:100%">
+                  <div class="img-wrap" style="float: right">
+                    <img src="https://static01.nyt.com/images/2018/06/06/world/06ethiopia1/06ethiopia1-thumbStandard.jpg">
+                  </div>
+
+                  <div style="width:100%">
+                    <p>
+                      The announcement appeared to be a major step toward ending a protracted border dispute that led
+                      to one of Africa’s deadliest wars.
+
+                      14h ago
+                      By RICK GLADSTONE
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container3">
+            <div class="bottom-header-col">
+              <h2 class="brand-heading heading-left">
+                <a class="branding-heading-link" href="">
+                  <span class="brand-heading-span">The New York Times</span>
+                  <img src="https://g1.nyt.com/assets/collection/20180530-161835/images/foundation/logos/nyt-logo-185x26.png" class="brand-heading-logo-print" alt="The New York Times">
+                </a>
+              </h2>
+            </div>
+
+            <div class="first">
+              NEWS
+              <ul>
+                <li>World
+                </li>
+                <li>U.S.
+                </li>
+                <li>Politics
+                </li>
+                <li>N.Y.
+                </li>
+                <li>Business
+                </li>
+                <li>Tech
+                </li>
+                <li>Science
+                </li>
+                <li>Health
+                </li>
+                <li>Sports
+                </li>
+                <li>Education
+                </li>
+                <li>Obituaries
+                </li>
+                <li>Today's Paper
+                </li>
+                <li>Corrections
+                </li>
+              </ul>
+            </div>
+            <div class="second">
+              OPINION
+              <ul>
+                <li>
+                  Today's Opinion
+                </li>
+                <li>
+                  Op-Ed Columnists
+                </li>
+                <li>
+                  Editorials
+                </li>
+                <li>
+                  Op-Ed Contributors
+                </li>
+                <li>
+                  Letters
+                </li>
+                <li>
+                  Sunday Review
+                </li>
+                <li>
+                  Video: Opinion
+                </li>
+              </ul>
+            </div>
+            <div class="third">
+              ARTS
+              <ul>
+                <li>
+                  Today's Arts
+                </li>
+                <li>
+                  Art & Design
+                </li>
+                <li>
+                  Books
+                </li>
+                <li>
+                  Dance
+                </li>
+                <li>
+                  Movies
+                </li>
+                <li>
+                  Music
+                </li>
+                <li>
+                  N.Y.C. Events Guide
+                </li>
+                <li>
+                  Television
+                </li>
+                <li>
+                  Theater
+                </li>
+                <li>
+                  Video: Arts
+                </li>
+              </ul>
+            </div>
+            <div class="fourth">
+              LIVING
+              <ul>
+                <li>
+                  Today's Opinion
+                </li>
+                <li>
+                  Op-Ed Columnists
+                </li>
+                <li>
+                  Editorials
+                </li>
+                <li>
+                  Op-Ed Contributors
+                </li>
+                <li>
+                  Letters
+                </li>
+                <li>
+                  Sunday Review
+                </li>
+                <li>
+                  Video: Opinion
+                </li>
+              </ul>
+            </div>
+            <div class="fifth">
+              LISTINGS&MORE
+              <ul>
+                <li>
+                  Today's Opinion
+                </li>
+                <li>
+                  Op-Ed Columnists
+                </li>
+                <li>
+                  Editorials
+                </li>
+                <li>
+                  Op-Ed Contributors
+                </li>
+                <li>
+                  Letters
+                </li>
+                <li>
+                  Sunday Review
+                </li>
+                <li>
+                  Video: Opinion
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="container3">
-        <div class="first">
-          NEWS
-          <ul>
-            <li>World
-            </li>
-            <li>U.S.
-            </li>
-            <li>Politics
-            </li>
-            <li>N.Y.
-            </li>
-            <li>Business
-            </li>
-            <li>Tech
-            </li>
-            <li>Science
-            </li>
-            <li>Health
-            </li>
-            <li>Sports
-            </li>
-            <li>Education
-            </li>
-            <li>Obituaries
-            </li>
-            <li>Today's Paper
-            </li>
-            <li>Corrections
-            </li>
-          </ul>
-        </div>
-        <div class="second">
-          OPINION
-          <ul>
-            <li>
-              Today's Opinion
-            </li>
-            <li>
-              Op-Ed Columnists
-            </li>
-            <li>
-              Editorials
-            </li>
-            <li>
-              Op-Ed Contributors
-            </li>
-            <li>
-              Letters
-            </li>
-            <li>
-              Sunday Review
-            </li>
-            <li>
-              Video: Opinion
-            </li>
-          </ul>
-        </div>
-        <div class="third">
-          ARTS
-          <ul>
-            <li>
-              Today's Arts
-            </li>
-            <li>
-              Art & Design
-            </li>
-            <li>
-              Books
-            </li>
-            <li>
-              Dance
-            </li>
-            <li>
-              Movies
-            </li>
-            <li>
-              Music
-            </li>
-            <li>
-              N.Y.C. Events Guide
-            </li>
-            <li>
-              Television
-            </li>
-            <li>
-              Theater
-            </li>
-            <li>
-              Video: Arts
-            </li>
-          </ul>
-        </div>
-        <div class="fourth">
-          LIVING
-          <ul>
-            <li>
-              Today's Opinion
-            </li>
-            <li>
-              Op-Ed Columnists
-            </li>
-            <li>
-              Editorials
-            </li>
-            <li>
-              Op-Ed Contributors
-            </li>
-            <li>
-              Letters
-            </li>
-            <li>
-              Sunday Review
-            </li>
-            <li>
-              Video: Opinion
-            </li>
-          </ul>
-        </div>
-        <div class="fifth">
-          LISTINGS&MORE
-          <ul>
-            <li>
-              Today's Opinion
-            </li>
-            <li>
-              Op-Ed Columnists
-            </li>
-            <li>
-              Editorials
-            </li>
-            <li>
-              Op-Ed Contributors
-            </li>
-            <li>
-              Letters
-            </li>
-            <li>
-              Sunday Review
-            </li>
-            <li>
-              Video: Opinion
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+    </body>
