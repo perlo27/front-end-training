@@ -2,6 +2,7 @@
   display: inline;
 }
 
+
 .big-title{
   font-weight: bold;
   float: left;
@@ -2274,6 +2275,71 @@ auto
 
 .header-line{
   border: 0; clear:both;  display:block;  width: 100%;  background-color:#000000;height: 1px;
+}
+
+.footer-text li{color:
+rgb(153, 153, 153)
+;
+cursor:
+pointer
+;
+display:
+inline
+;
+font-family:
+nyt-franklin, arial, helvetica, sans-serif
+;
+font-size:
+11px
+;
+font-style:
+normal
+;
+font-weight:
+400
+;
+height:
+auto
+;
+line-height:
+10px
+;
+list-style-image:
+none
+;
+list-style-position:
+outside
+;
+list-style-type:
+none
+;
+outline-color:
+rgb(153, 153, 153)
+;
+outline-style:
+none
+;
+outline-width:
+0px
+;
+text-align:
+left
+;
+text-decoration-color:
+rgb(153, 153, 153)
+;
+text-decoration-line:
+underline
+;
+text-decoration-style:
+solid
+;
+text-size-adjust:
+100%
+;
+width:
+auto
+;
 }
 
 @media (min-width: 960px) {
