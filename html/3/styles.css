@@ -1,8 +1,95 @@
+@media screen and (max-width: 620px) {
+    .login-btn {
+        display: none;
+    }
 
-@media (max-width: 764px) {
+    .settings-btn {
+        display: none;
+    }
+
+    .search-btn {
+        display: none;
+    }
+
+    .user-tools .second-search-btn {
+        display: block;
+    }
+
+    .btn-text-sections {
+        display: none;
+    }
+
+    .home-btn {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 764px) {
+    body .shell {
+        border: none;
+    }
+    
     .btn-text {
         display: none;
     }
+
+    .subscribe-href {
+        display: none;
+    }
+
+    .main .rank-template {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main .rank-template .item1 {
+        grid-column: 1;
+        grid-row: 1;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .main .rank-template .item2 {
+        grid-column: 1;
+        grid-row: 2;
+        border-bottom: 1px solid #e2e2e2;
+        border-right: none;
+    }
+
+    .subrank-template {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 10px;    
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .main .subrank-template .item3 {
+        grid-column: 1;
+        grid-row: 1;
+        border-bottom: none;
+        border-bottom: 1px solid #e2e2e2;        
+    }
+    
+    
+    .main .subrank-template .item4 {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 27px;
+    }
+
+    .main .subrank-template .thumb {
+        padding-left: 0;
+    }
+
+    .shell .main {
+        min-width: 300px;
+        width: auto;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
 }
 
 @media (max-width: 1020px) {
@@ -13,6 +100,14 @@
     .main {
         width: 705px;
     }
+
+    body .shell {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1020px) and (min-width: 765px) {
+    
 
     .main .rank-template {
         display: grid;
@@ -54,6 +149,16 @@
         grid-row: 1;
         margin-top: 27px;
     }
+
+    .main .subrank-template .thumb {
+        padding-left: 0;
+        
+    }
+
+    .subrank-template .thumb img {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 @media (min-width: 1020px) {
@@ -64,10 +169,11 @@
     .main {
         width: 960px;        
     }
-}
 
-@media (min-width: 765 px) and (max-width: 1019px){
-
+    .subrank-template .thumb img {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 body {
@@ -468,4 +574,8 @@ h2 {
 .page-section1 {
     padding-top: 29px;
     border-top: 2px solid #000;
+}
+
+.second-search-btn {
+    display: none;
 }
