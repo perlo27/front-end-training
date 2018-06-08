@@ -1,0 +1,13 @@
+.news-list-item img{
+    width: 150px;
+    height: 120px;
+}
+
+.news-list-item {
+    
+}
+
+.news-list ul{
+    display: flex;
+    justify-content: flex-start;
+}
