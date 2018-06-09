@@ -3,6 +3,7 @@
 <head>
     <meta charset='UTF-8'/>
     <title>Some Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='styles/style.css'/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -10,17 +11,76 @@
 <body>
 
 <nav class="top-header sticky">
-    <nav class="navigation">
-        <button class="sections-button"><i class="sprite_icon"></i>Sections</button>
-        <button class="home-button"><i class="sprite_icon"></i>Home</button>
-        <button class="search-button"><i class="sprite_icon"></i>Search</button>
-    </nav>
+    <ul class="navigation">
+        <li class="sections-button">
+            <i class="sprite_icon"></i>Sections
+            <nav class="main-menu-container">
+                <ul>
+                    <li><a href="">Home Page</a></li>
+                    <li><a href="">World</a><i class="arrow_right"></i></li>
+                    <li><a href="">U.S.</a><i class="arrow_right"></i></li>
+                    <li><a href="">Politics</a><i class="arrow_right"></i></li>
+                    <li><a href="">N.Y.</a><i class="arrow_right"></i></li>
+                    <li><a href="">Business</a><i class="arrow_right"></i></li>
+                    <li><a href="">Opinion</a><i class="arrow_right"></i></li>
+                    <li><a href="">Tech</a><i class="arrow_right"></i></li>
+                    <li><a href="">Science</a><i class="arrow_right"></i></li>
+                    <li><a href="">Health</a><i class="arrow_right"></i></li>
+                    <li><a href="">Sports</a><i class="arrow_right"></i></li>
+                </ul>
+                <ul>
+                    <li><a href="">Arts</a><i class="arrow_right"></i></li>
+                    <li><a href="">Books</a><i class="arrow_right"></i></li>
+                    <li><a href="">Fashion & Style</a><i class="arrow_right"></i></li>
+                    <li><a href="">Food</a><i class="arrow_right"></i></li>
+                    <li><a href="">Travel</a></li>
+                    <li><a href="">Magazine</a></li>
+                    <li><a href="">T Magazine</a></li>
+                    <li><a href="">Video</a><i class="arrow_right"></i></li>
+                    <li><a href="">The Upshot</a></li>
+                    <li><a href="">Reader Center</a></li>
+                    <li><a href="">Conferences</a><i class="arrow_right"></i></li>
+                </ul>
+                <ul>
+                    <li><a href="">More</a><i class="arrow_right"></i></li>
+                </ul>
+            </nav>
+        </li>
+        <li class="home-button"><i class="sprite_icon"></i>Home</li>
+        <li class="search-button"><i class="sprite_icon"></i>Search</li>
+    </ul>
     <section class="top-logo"><img class="logo-image" src="images/main_logo.png"></section>
     <section class="account-links">
         <button class="subscribe-button">SUBSCRIBE NOW</button>
         <button>LOG IN</button>
         <button class="icon_button">
             <i class="sprite_icon"></i>
+            <nav class="account-settings-container">
+                <div class="square"></div>
+                <section class="edition-settings">
+                    <p>EDITION</p>
+                    <ul>
+                        <li><a href="">English</a></li>
+                        <li><a href="">Chinese</a></li>
+                        <li><a href="">Espanol</a></li>
+                    </ul>
+                </section>
+                <section class="help-menu">
+                    <p>HELP</p>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </section>
+                <section class="font-size-setting">
+                    <p>TYPE SIZE</p>
+                    <ul>
+                        <li><a href="">
+                            <div class="small_a">A</div>
+                        </a></li>
+                    </ul>
+                </section>
+            </nav>
         </button>
     </section>
 </nav>
