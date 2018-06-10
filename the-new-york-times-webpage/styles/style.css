@@ -39,8 +39,6 @@ ol {
 .navigation,
 .account-links {
     /*border: 1px solid #000000;  !* For debugging *!*/
-    flex: initial;
-    width: 300px;
 }
 
 .navigation {
@@ -63,6 +61,10 @@ ol {
     box-shadow: 0 2px 8px lightgray;
     font-weight: 700;
     font-size: 0.6875rem;
+}
+
+.sections-button > p {
+    display: inline;
 }
 
 .sections-button:hover .main-menu-container {
@@ -111,7 +113,7 @@ ol {
     line-height: 1.0625rem;
     font-weight: 700;
     font-style: normal;
-    font-family: 'Libre Franklin',arial,helvetica,sans-serif;
+    font-family: 'Libre Franklin', arial, helvetica, sans-serif;
     white-space: nowrap;
     font-size: 0.875rem;
     color: black;
@@ -156,6 +158,10 @@ ol {
     /*height: 30px;*/
 }
 
+.home-button > p {
+    display: inline;
+}
+
 .search-button {
     align-self: baseline;
     cursor: pointer;
@@ -167,6 +173,10 @@ ol {
     font-size: 0.6875rem;
     /*height: 30px;*/
     padding: 8px;
+}
+
+.search-button > p {
+    display: inline;
 }
 
 .sprite_icon {
@@ -268,8 +278,8 @@ ol {
     right: 30px;
     width: 11px;
     height: 11px;
-    border-top: 1px solid rgba(0,0,0,.15);
-    border-left: 1px solid rgba(0,0,0,.15);
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    border-left: 1px solid rgba(0, 0, 0, .15);
     background-color: #fff;
     transform: rotate(45deg);
 }
@@ -286,7 +296,7 @@ ol {
     border-bottom: none;
 }
 
-.account-settings-container  p {
+.account-settings-container p {
     text-align: left;
     line-height: 0.9375rem;
     font-weight: 700;
@@ -300,7 +310,7 @@ ol {
     text-indent: 5px;
 }
 
-.account-settings-container  ul {
+.account-settings-container ul {
     margin-left: 0;
     padding-left: 0;
     text-align: left;
@@ -357,7 +367,7 @@ ol {
     border: 1px solid #bab8b3;
     background-color: #e9ebe4;
     border-radius: 3px;
-    transition: background-color 0.2s linear,border-color 0.2s linear;
+    transition: background-color 0.2s linear, border-color 0.2s linear;
     width: 45px;
     height: 45px;
     margin-left: 10px;
@@ -371,19 +381,16 @@ ol {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 1125px;
-    margin: 0 auto;
+    /*width: 1125px;*/
+    margin-left: 7em;
+    margin-right: 7em;
+    /*margin: 0 auto;*/
 }
 
 /*world banner*/
 .banner {
     display: flex;
     justify-content: flex-start;
-}
-
-.banner > p {
-    font-size: xx-large;
-    font-weight: bold;
 }
 
 /*regions navigation*/
@@ -441,28 +448,28 @@ ol {
     /*border: 1px dotted #000000;  !* For debugging *!*/
 }
 
-.left-article {
+.first-article {
     flex-basis: 50%;
     padding-right: 15px;
     border-right: 1px solid #e2e2e2;
 }
 
-.left-article > img {
+.first-article > img {
     max-width: 100%;
 }
 
-.center-article {
+.second-article {
     flex-basis: 25%;
     padding-right: 15px;
     padding-left: 15px;
     border-right: 1px solid #e2e2e2;
 }
 
-.center-article > img {
+.second-article > img {
     max-width: 100%;
 }
 
-.right-article {
+.third-article {
     flex-basis: 25%;
     padding-right: 15px;
     padding-left: 15px;
@@ -478,10 +485,11 @@ ol {
 }
 
 .article-image {
-    align-self: center
+    align-self: center;
+    width: 100%;
 }
 
-.summary > img {
+.small-article-image {
     display: block;
     float: right;
     clear: right;
@@ -537,7 +545,6 @@ figcaption {
 }
 
 /*minor articles*/
-
 .articles-carousel {
     display: flex;
     justify-content: flex-start;
@@ -550,7 +557,6 @@ figcaption {
 .articles-carousel > * {
     /*border: 1px dotted #000000;  !* For debugging *!*/
     flex-grow: 1;
-    flex-basis: 0;
     border-right: 1px solid #e2e2e2;
     padding: 0 20px 0;
 }
@@ -570,9 +576,20 @@ figcaption {
 .article-thumbnail > img {
     width: 192px;
     height: 126px;
+    order: 1;
 }
 
-.minor-headlight {
+.article-image-container > figcaption {
+    display: none;
+}
+
+.article-text-container > .summary,
+.article-text-container > .author{
+    display: none;
+}
+
+
+.minor-headlight a{
     color: #000;
     text-decoration: none;
     font-size: 1rem;
@@ -585,4 +602,115 @@ figcaption {
 
 .minor-headlight a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 764px) {
+    .sections-button > p,
+    .home-button > p,
+    .search-button > p {
+        display: none;
+    }
+
+    .banner > h1 {
+        font-size: x-large;
+    }
+
+    .main-container {
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+
+    .articles-block {
+        flex-direction: column;
+    }
+
+    .small-article-image {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    .first-article {
+        border: none;
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 25px;
+    }
+
+    .second-article {
+        border: none;
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+    .third-article {
+        padding-top: 25px;
+    }
+
+    .articles-carousel {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        /*border-top: 1px solid #e2e2e2;*/
+    }
+
+    .article-thumbnail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border: none;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+
+
+    .article-thumbnail > .article-image-container {
+        height: 100%;
+        order: 2;
+        flex-basis: 40%;
+        display: flex;
+        align-content: right;
+        flex-direction: column;
+        justify-content: right;
+    }
+
+    .article-image {
+        align-self: flex-end;
+    }
+
+    .article-thumbnail > .article-text-container{
+        display: flex;
+        order: 1;
+        flex-basis: 60%;
+        justify-content: space-around;
+        align-content: right;
+        flex-direction: column;
+    }
+
+    .article-image-container > figcaption {
+        display: inline-block;
+    }
+
+    .article-text-container > .summary,
+    .article-text-container > .author{
+        display: inline-block;
+    }
+
+    .minor-headlight {
+        padding: 0;
+        margin-bottom: 7px;
+        margin-top: 0;
+        font-size: 1.4375rem;
+        line-height: 1.6875rem;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        color: #333333;
+    }
 }
