@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    button.user-tools {
+        display: none;
+    }
+    
+    span.resp-nav-title {
+        display: none;
+    }
+}

@@ -3,32 +3,49 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World - The New York Times</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="subnavbar.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="articles.css">
     <link rel="stylesheet" href="article-list.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="section-menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
 </head>
 
 <body>
     <nav class="main-navbar">
-        <div>
-            <button class="button sections-button">
+        <div class="left">
+            <div class="dropdown">
+                <button class="button sections-button">
                 <i class="fa fa-align-justify"></i>
-                <span>Sections</span>
+                <span class="resp-nav-title">Sections</span>
             </button>
-            <button class="button quick-navigation">
+                <div class="dropdown-content">
+                    <a href="#">Home Page</a>
+                    <a href="#">World</a>
+                    <a href="#">U.S.</a>
+                    <a href="#">Politics</a>
+                    <a href="#">N.Y.</a>
+                </div>
+            </div>
+            <div>
+                <button class="button quick-navigation">
                 <img class="icon" src="https://cdn.onlinewebfonts.com/svg/img_432879.png">
-                <span>Home</span>
+                <span class="resp-nav-title">Home</span>
             </button>
-            <button class="button quick-navigation">
+            </div>
+            <div>
+                <button class="button quick-navigation">
                 <i class="fa fa-search"></i>
-                <span>Search</span>
+                <span class="resp-nav-title">Search</span>
             </button>
+            </div>
         </div>
+
         <header>
             <img src="../ny-logo.jpg">
         </header>
