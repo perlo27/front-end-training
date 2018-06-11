@@ -1,0 +1,19 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "js-tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perlo27/front-end-training.git"
+  },
+  "author": "marek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perlo27/front-end-training/issues"
+  },
+  "homepage": "https://github.com/perlo27/front-end-training#readme"
+}
