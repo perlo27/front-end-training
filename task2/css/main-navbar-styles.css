@@ -1,9 +1,4 @@
-@media only screen and (max-device-width : 800px) {
-    body {
-        text-decoration: none;
-        background: yellow;
-    }
-}
+
 .main-navbar{
     display: flex;
     justify-content: space-between;
@@ -48,6 +43,9 @@
     background: #326891;
     transition: background-color 0.3s;
 }
+.user-tools .login-button a{
+    color: white;
+}
 .user-tools .configuration-button {
     background: transparent;
     color: black;
@@ -56,4 +54,12 @@
 .user-tools .configuration-button:hover{
     background-color: #e2e2e2;
     transition: background-color 0.3s;
+}
+.user-tools li{
+    display: block;
+    transition-duration: 0.5s;
+}
+
+.user-tools li:hover{
+    cursor: pointer;
 }
