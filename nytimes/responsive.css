@@ -2,8 +2,25 @@
     button.user-tools {
         display: none;
     }
-    
+
     span.resp-nav-title {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        display: grid;
+    }
+
+    .third-story-top {
+        grid-column: 1;
+        grid-row: 3;
+        border-right: 1px solid #e2e2e2;
+    }
+
+    .fourth-story-bottom {
+        grid-column: 2;
+        grid-row: 3;
     }
 }

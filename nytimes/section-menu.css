@@ -18,11 +18,23 @@
     background-color: #ebebeb;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.dropdown-content li {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    font-weight: 700;
+    font-style: normal;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    white-space: nowrap;
 }
 
-.dropdown-content a:hover {background-color: #ebebeb}
+.dropdown-content li:hover {
+    background-color: #ebebeb;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown-content li:hover {background-color: #ebebeb}
