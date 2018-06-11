@@ -1,10 +1,12 @@
-
 .main-navbar{
     display: flex;
     justify-content: space-between;
     padding-top: 8px;
     padding: 14px 12px;
     border-bottom: solid 1px;
+}
+.quick-navigation{
+    display: flex;
 }
 
 .btn{
@@ -28,6 +30,9 @@
     border: 1px solid #e2e2e2;
 }
 .main-navbar .user-tools{
+    display: flex;
+}
+.user-tools{
     display: flex;
 }
 .user-tools a{
@@ -54,9 +59,11 @@
     border: none;
     margin: 0;
 }
-.user-tools .configuration-button:hover{
-    background-color: #e2e2e2;
-    transition: background-color 0.3s;
+.user-tools .subscribe-button:hover{
+    background: transparent;
+}
+.user-tools .subscribe-button:hover{
+    background: transparent;
 }
 
 .gear-dropdown:hover .gear-dropdown-content {
