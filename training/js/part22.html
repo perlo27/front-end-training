@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+
+  <p>Before the script...</p>
+
+  <script>
+    "use strict";
+
+    function logMessage() {
+      console.log("hello")
+    }
+
+    function min(a, b) {
+      if (a > b) {
+        console.log(b);
+      } else if (a < b) {
+        console.log(a);
+      } else {
+        console.log("a equals b")
+      }
+    }
+
+    logMessage();
+    logMessage();
+    min(2, 5);
+    min(4, 1);
+    min(3, 3);
+
+  </script>
+
+  <p>...After the script.</p>
+
+  </body>
+</html>
