@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="article-list.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="section-menu.css">
+    <link rel="stylesheet" href="gear-button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
 </head>
@@ -49,16 +50,33 @@
         <header>
             <img src="../ny-logo.jpg">
         </header>
-        <div>
-            <button class="button user-tools">
+        <div class="right">
+            <div>
+                <button class="button user-tools">
                 <span>Subscribe now</span>
             </button>
-            <button class="button user-tools">
+            </div>
+            <div>
+                <button class="button user-tools">
                 <span>Log in</span>
             </button>
-            <button class="gear-button">
+
+            </div>
+            <div class="gear-dropdown">
+                <button class="gear-button">
                 <i class="fa fa-cog"></i>
-            </button>
+                </button>
+                <div class="gear-dropdown-content">
+                    <div class="edition-menu">
+                        <h5 class="gear-dropdown-header">Edition</h5>
+                        <ul>
+                            <li><a href="#" class="selected">English</a></li>
+                            <li><a href="#">Chinese</a></li>
+                            <li><a href="#">Espanol</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <main>
