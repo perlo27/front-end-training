@@ -1,0 +1,26 @@
+footer{
+    content: '';
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    height: 1px;
+    margin: 15px 0;
+    margin-top: 15px;
+        margin-bottom: 15px;
+    background-color: #fff;
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.footer-logo img{
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.footer-table .column{
+    font-family: "cheltenham";
+    color: #333;
+}
+.footer-table .column ul{
+    list-style-type: none;
+    padding: 0;
+}
