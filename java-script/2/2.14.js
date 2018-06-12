@@ -1,17 +1,19 @@
-function showPrimes(n) {
-
-  for (let i = 2; i < n; i++) {
-    if (!isPrime(i)) continue;
-
-    console.log(i);  // a prime
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Do you have your parents permission to access this page?');
   }
 }
 
-function isPrime(n) {
-  for (let i = 2; i < n; i++) {
-    if ( n % i == 0) return false;
-  }
-  return true;
+//using ?
+
+function checkAge2(age) {
+  return (age > 18) ? true : confirm('Do you have your parents permission to access this page?');
 }
 
-showPrimes(100);
+//using OR ||
+
+function checkAge3(age) {
+  return (age >18) || confirm('Do you have your parents permission to access this page?');
+}
