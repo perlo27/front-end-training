@@ -1,0 +1,6 @@
+{
+  "name": "epm-front-end-js",
+  "scripts": {
+    "start": "node 2.5.js"
+  }
+}
