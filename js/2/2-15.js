@@ -5,8 +5,8 @@ function ask(question, yes, no) {
 
 ask(
     "Do you agree?",
-    function () { alert("You agreed."); },
-    function () { alert("You canceled the execution."); }
+    function () { console.log("You agreed."); },
+    function () { console.log("You canceled the execution."); }
 );
 
 // rewrited
@@ -18,6 +18,6 @@ function ask(question, yes, no) {
 
 ask(
     "Do you agree?",
-    () => alert("You agreed."),
-    () => alert("You canceled the execution.")
+    () => console.log("You agreed."),
+    () => console.log("You canceled the execution.")
 );

@@ -31,7 +31,8 @@ while (i < 3) {
 
 let number;
 do {
-    number = prompt('Type number greater than 100');
+    // number = prompt('Type number greater than 100');
+    number = 101;
 } while (number < 100);
 
 let n = 10;
