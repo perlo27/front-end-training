@@ -9,7 +9,7 @@ ask(
     function () { console.log("You canceled the execution."); }
 );
 
-// rewrited
+// rewritten
 
 function ask(question, yes, no) {
     if (confirm(question)) yes()
