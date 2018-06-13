@@ -4,7 +4,7 @@
   "description": "js-tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha test/*/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/perlo27/front-end-training/issues"
   },
-  "homepage": "https://github.com/perlo27/front-end-training#readme"
+  "homepage": "https://github.com/perlo27/front-end-training#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
 }

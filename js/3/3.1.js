@@ -1,4 +1,7 @@
 exports.pow = function pow(x,n) {
+  if (!(Number.isSafeInteger(n)) || n < 0) {
+    return NaN;
+  }
   let result = 1;
   for (let i=0 ; i < n ; i++) {
       result *= x;
