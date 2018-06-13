@@ -1,5 +1,5 @@
-$ Run 'npm i -g eslint [eslint-plugins]'
-npm i --save-dev eslint eslint-config-airbnb-base
+$ Run 'npm i -g --save-dev eslint [eslint-plugins]'
+npm i -g --save-dev eslint eslint-config-airbnb-base
 
 $ Run 'eslint --init' to interactivly create '.eslintrc' configuration file
 eslint --init
