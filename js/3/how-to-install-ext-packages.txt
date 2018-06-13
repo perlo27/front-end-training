@@ -1,3 +1,4 @@
+>> ESLINT linter <<
 $ Run 'npm i --save-dev eslint [eslint-plugins]'
 npm i --save-dev eslint eslint-plugin-import eslint-config-airbnb-base
 
@@ -12,3 +13,21 @@ $ Optionally create npm hook to eslint. Add to 'package.json' 'scripts' tag:
 
 $ Optionally run with:
 npm run-script lint
+
+###########################################################################
+
+>> MOCHA test framework <<
+
+$ Install 'mocha' packages
+npm i --save-dev mocha
+
+$ Add/update 'env' tag in '.eslintrc.json'
+"env": {
+    "mocha": true
+}
+
+$ Optionally create npm hook to mocha. Add to 'package.json' 'scripts' tag:
+"test": "mocha",
+
+$ Optionally run with:
+npm test
