@@ -15,5 +15,5 @@ function checkAge2(age) {
 //using OR ||
 
 function checkAge3(age) {
-  return (age >18) || confirm('Do you have your parents permission to access this page?');
+  return (age > 18) || confirm('Do you have your parents permission to access this page?');
 }
