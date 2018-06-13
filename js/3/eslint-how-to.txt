@@ -1,0 +1,14 @@
+$ Run 'npm i -g eslint [eslint-plugins]'
+npm i --save-dev eslint eslint-config-airbnb-base
+
+$ Run 'eslint --init' to interactivly create '.eslintrc' configuration file
+eslint --init
+
+$ Update '.eslintrc' with:
+"extends": "airbnb-base"
+
+$ Optionally create npm hook to eslint. Add to 'package.json' 'scripts' tag:
+"lint": "eslint ."
+
+$ Optionally run with:
+npm run lint
