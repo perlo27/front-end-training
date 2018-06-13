@@ -6,8 +6,8 @@ function pow(x,n) {
   return result;
 }
 
-let x=prompt("x?", '');
-let n=prompt("n?", '');
+let x = 5;
+let n = 3;
 
 if (n <= 0) {
   console.log(`Power ${n} is not supported,
