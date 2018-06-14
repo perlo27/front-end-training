@@ -1,0 +1,19 @@
+{
+  "name": "4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+     "chai": "*",
+     "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha 'test/*/*.js'"
+  },
+  "author": "",
+  "license": "ISC"
+}

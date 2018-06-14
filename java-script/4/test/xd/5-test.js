@@ -1,0 +1,1 @@
+const sample = require('../../src/5.js').print;
