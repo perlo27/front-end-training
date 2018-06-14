@@ -3,7 +3,7 @@ $ Run 'npm i --save-dev eslint [eslint-plugins]'
 npm i --save-dev eslint eslint-plugin-import eslint-config-airbnb-base
 
 $ Create '.eslintrc' configuration file manually or with 'eslint --init'
-eslint --init
+./node_modules/.bin/eslint --init
 
 $ Update '.eslintrc' with:
 "extends": "airbnb-base"
