@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    function pow(x, n) {
+        let result = x;
+
+        for (let i = 1; i < n; i++) {
+            result *= x;
+        }
+
+        return result;
+    }
+
+    let x = prompt("Give us base (integer)", '');
+    let n = prompt("give power (integer greater than 0)", '');
+
+    if (n > 0) {
+        alert(pow(x, n));
+    } else {
+        alert('Learn to read :)')
+    }
+
+</script>
+</body>
+</html>
