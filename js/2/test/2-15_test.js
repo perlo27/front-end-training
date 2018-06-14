@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import {ask} from '../2-15';
 
-describe("check age", function() {
+describe("are you adult ?", function() {
   it("if true return yes", function() {
     let result = ask(
       true,
