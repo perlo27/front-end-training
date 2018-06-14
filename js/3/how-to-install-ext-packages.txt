@@ -8,6 +8,9 @@ eslint --init
 $ Update '.eslintrc' with:
 "extends": "airbnb-base"
 
+$ Run eslint
+./node_modules/.bin/eslint yourfile.js
+
 $ Optionally create npm hook to eslint. Add to 'package.json' 'scripts' tag:
 "lint": "eslint ."
 
@@ -25,6 +28,9 @@ $ Add/update 'env' tag in '.eslintrc.json'
 "env": {
     "mocha": true
 }
+
+$ Run mocha
+./node_modules/.bin/mocha yourtestfile.js
 
 $ Optionally create npm hook to mocha. Add to 'package.json' 'scripts' tag:
 "test": "mocha",
