@@ -1,6 +1,5 @@
-const assert = require("chai").assert;
-const ask = require("../2-15").ask;
-
+import {assert} from 'chai';
+import {ask} from '../2-15';
 
 describe("check age", function() {
   it("if true return yes", function() {
