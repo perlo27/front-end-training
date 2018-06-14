@@ -1,4 +1,4 @@
-const isEmpty = require('../../src/3.js').isEmpty;
+const isEmpty = require('../../src/1/3.js').isEmpty;
 const chai = require('chai');
 
 describe("is Empty", function(){
