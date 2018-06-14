@@ -18,6 +18,11 @@
   "homepage": "https://github.com/perlo27/front-end-training#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "jshint": "^2.9.5",
+    "mocha": "^5.2.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "mock-prompt": "^0.1.2"
   }
 }
