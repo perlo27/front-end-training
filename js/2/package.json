@@ -1,0 +1,20 @@
+{
+  "name": "front-end-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2-14.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}

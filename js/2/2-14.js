@@ -41,6 +41,8 @@ function pow(x, n) {
 
 // alternative version
 
-function pow(x, n) {
+export default function pow(x, n) {
   return x ** n;
 }
+
+
