@@ -2,8 +2,8 @@ import { calculator, ladder } from "../4-4";
 import chai from "chai";
 import sinon from "sinon";
 
-describe("calculator tests", function() {
-  it("sum two correct number", function() {
+describe("calculator tests", () => {
+  it("sum two correct number", () => {
     // const promptStub = sinon.stub(window, 'prompt'); doesn't work on NodeJS
     // promptStub.returns(4); doesn't work on NodeJS
     calculator.read(4, 4);
@@ -11,7 +11,7 @@ describe("calculator tests", function() {
     chai.assert.equal(sum, 8);
   });
 
-  it("multiply two correct number", function() {
+  it("multiply two correct number", () => {
     // const promptStub = sinon.stub(window, 'prompt'); doesn't work on NodeJS
     // promptStub.returns(4); doesn't work on NodeJS
     calculator.read(4, 4);
@@ -19,7 +19,7 @@ describe("calculator tests", function() {
     chai.assert.equal(multiplyResult, 16);
   });
 
-  it("try to sum number and string", function() {
+  it("try to sum number and string", () => {
     // const promptStub = sinon.stub(window, 'prompt'); doesn't work on NodeJS
     // promptStub.returns(4); doesn't work on NodeJS
     calculator.read(4, "hello");
@@ -27,7 +27,7 @@ describe("calculator tests", function() {
     chai.expect(sum).to.be.NaN;
   });
 
-  it("try to multiply two strings", function() {
+  it("try to multiply two strings", () => {
     // const promptStub = sinon.stub(window, 'prompt'); doesn't work on NodeJS
     // promptStub.returns(4); doesn't work on NodeJS
     calculator.read("hello", "hello");
@@ -36,17 +36,16 @@ describe("calculator tests", function() {
   });
 });
 
-describe("test ladder", function() {
-  afterEach(function() {
-    ladder.step = 0;
-  });
+describe("test ladder", () => {
+  afterEach(() => ladder.step = 0);
 
-  it("go two steps up expect two", function() {
+  it("go two steps up expect two", () => {
     ladder.up().up();
     let stepsNum = ladder.showStep();
     chai.assert.equal(stepsNum, 2);
   });
-  it("go three steps up and one down expect two", function() {
+
+  it("go three steps up and one down expect two", () => {
     ladder
       .up()
       .up()
@@ -55,7 +54,8 @@ describe("test ladder", function() {
     let stepsNum = ladder.showStep();
     chai.assert.equal(stepsNum, 2);
   });
-  it("try to go two steps down, should return 0 (cannot go on minus", function() {
+  
+  it("try to go two steps down, should return 0 (cannot go on minus)", () => {
       let stepsNum = ladder.down().down().showStep();
       chai.assert.equal(stepsNum, 0);
   });

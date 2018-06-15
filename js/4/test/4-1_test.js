@@ -1,14 +1,14 @@
 import { assert } from "chai";
 import * as app from "../4-1";
 
-describe("is object empty ?", function() {
-  it("if empty return true", function() {
+describe("is object empty ?", () => {
+  it("if empty return true", () => {
     let schedule = {};
     let result = app.isEmpty(schedule);
     assert.equal(result, true);
   });
 
-  it("if object have some properties return false", function() {
+  it("if object have some properties return false", () => {
     let schedule = {};
     schedule["8:30"] = "get up";
     let result = app.isEmpty(schedule);
@@ -16,8 +16,8 @@ describe("is object empty ?", function() {
   });
 });
 
-describe("summing properties", function() {
-  it("sum all properties, expect correct value", function() {
+describe("summing properties", () => {
+  it("sum all properties, expect correct value", () => {
     let salaries = {
       John: 100,
       Ann: 160,
@@ -26,15 +26,16 @@ describe("summing properties", function() {
     let sum = app.sumProperties(salaries);
     assert.equal(sum, 390);
   });
-  it("if salary is empty expect 0", function() {
+
+  it("if salary is empty expect 0", () => {
     let salaries = {};
     let sum = app.sumProperties(salaries);
     assert.equal(sum, 0);
   });
 });
 
-describe("multiply numeric", function() {
-  it("give obj with both numeric and literal keys, expect numeric multiplied", function() {
+describe("multiply numeric", () => {
+  it("give obj with both numeric and literal keys, expect numeric multiplied", () => {
     let obj = {
       name: "John",
       age: 40
@@ -43,7 +44,8 @@ describe("multiply numeric", function() {
     assert.equal(obj.name, "John");
     assert.equal(obj.age, 80);
   });
-  it("give obj with two numerics, expect numeric multiplied", function() {
+  
+  it("give obj with two numerics, expect numeric multiplied", () => {
     let obj = {
       price: 200.5,
       age: 40
