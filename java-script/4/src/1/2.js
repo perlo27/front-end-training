@@ -3,7 +3,7 @@ console.log(user);
 
 user.name = "John";
 user.surname = "Smith";
-console.log(user);
+window.alert(user);
 
 user.name = "Pete";
 console.log(user);
