@@ -7,7 +7,7 @@ let user = {
 (user.go)()
 
 //4.4.2
-let obj, method;
+let obj;
 
 obj = {
     go: function () { console.log(this); }
@@ -27,14 +27,14 @@ function makeUser() {
         name: "John",
         ref: this
     };
-};
+}
 
 let myUser = makeUser();
 
 console.log(myUser.ref.name); // What's the result? undefined
 
 //4.4.4
-calc = {
+let calc = {
     read() {
         this.a = Math.floor(Math.random() * 100);
         this.b = Math.floor(Math.random() * 100);
