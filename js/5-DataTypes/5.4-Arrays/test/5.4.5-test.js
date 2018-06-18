@@ -28,5 +28,4 @@ describe('getMaxSubSum', () => {
   // it('for [-1, 2, 3, -9] the max sum is 5', () => {
   //   chai.assert.equal(getMaxSubSum([-1, 2, 3, -9]), 5);
   // });
-
 });
