@@ -12,8 +12,8 @@ function Calculator() {
 
     this.calculate = function (expression) {
         let splitted = expression.split(" ");
-        let firstValue = Number(splitted[0]);
-        let secondValue = Number(splitted[2]);
+        let firstValue = +(splitted[0]);
+        let secondValue = +(splitted[2]);
         let sign = splitted[1];
 
         return methods[sign](firstValue, secondValue);
