@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  </head>
+  <body>
+
+
+  <style>
+    .bk-color {
+      background-color: yellow;
+    }
+
+    .show-notification {
+      -moz-animation: cssAnimation 0s ease-in 2s forwards;
+      /* Firefox */
+      -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+      /* Safari and Chrome */
+      -o-animation: cssAnimation 0s ease-in 2s forwards;
+      /* Opera */
+      animation: cssAnimation 0s ease-in 2s forwards;
+    }
+
+    .border-css {
+      border: 1px solid aquamarine;
+    }
+  </style>
+
+
+  <ol id="elem">
+    <li>Hello</li>
+    <li>World</li>
+  </ol>
+
+
+  <script>
+    "use strict";
+
+    let div = document.createElement('div');
+    div.classList.add('bk-color')
+    div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+    document.body.appendChild(div);
+
+    let ol = document.getElementById('elem');
+    ol.remove();
+
+    let disappear = document.createElement('div');
+    disappear.classList.add("show-notification");
+    disappear.innerHTML = "WAITING FOR ...";
+    document.body.appendChild(disappear);
+  </script>
+
+
+  <br/><br/>
+  <input value="Test click html" onclick="console.log('clicked from html')" type="button">
+  <input id="clickbtn" value="Test click js" type="button">
+  <script>
+    clickbtn.onclick = function(event) {
+      console.log("clicked from script");
+      console.log(event.type + " at " + event.currentTarget);
+      console.log("Coordinates: " + event.clientX + ":" + event.clientY)
+    };
+  </script>
+
+
+  <br/><br/>
+  <input id="btnhide" value="Hide Me" type="button">
+  <script>
+    btnhide.onclick = function() {
+      document.getElementById("btnhide").hidden = true;
+    }
+  </script>
+
+
+  <br/><br/>
+  <div onclick="console.log('upper div')" class="border-css">
+    upper div
+    <div onclick="console.log('inner div')" class="border-css">
+      inner div
+    </div>
+  </div>
+
+  </body>
+</html>

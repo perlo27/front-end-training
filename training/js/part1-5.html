@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  </head>
+  <body>
+
+  <script>
+    "use strict";
+
+    let str = "Hello";
+//    str.test = 5;
+//    alert(str.test); // error, str is primitive
+
+
+    function upFirst (str) {
+      let first = str.charAt(0);
+      console.log(first.toUpperCase() + str.substring(1, str.length))
+    }
+    upFirst("pavel");
+
+    let fruits = ["Apple", "Orange", "Plum"];
+    for (let fruit of fruits) {
+      console.log( fruit );
+    }
+    for (let key in fruits) {
+      console.log( fruits[key] );
+    }
+
+
+    function unique(arr) {
+      let set = new Set();
+      for (let item of arr) {
+        set.add(item);
+      }
+      return set;
+    }
+    let values = ["Hare", "Krishna", "Hare", "Krishna",
+      "Krishna", "Krishna", "Hare", "Hare", ":-O"
+    ];
+    console.log( unique(values) ); // Hare, Krishna, :-O
+
+
+    function sumSalaries(salaries) {
+      let sum = 0;
+      for (let value of Object.values(salaries)) {
+        sum = sum + value;
+      }
+      return sum;
+    }
+    let salaries = {
+      "John": 100,
+      "Pete": 300,
+      "Mary": 250
+    };
+    console.log( sumSalaries(salaries) ); // 650
+
+
+    let date = new Date(2012, 2, 20, 3, 12)
+    console.log(date)
+
+
+    let student = {
+      name: 'John',
+      age: 30,
+      courses: ['html', 'css', 'js'],
+    };
+    let json = JSON.stringify(student);
+    console.log(json);
+    let studentFromJaon = JSON.parse(json);
+
+  </script>
+
+  </body>
+</html>
