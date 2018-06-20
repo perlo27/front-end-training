@@ -1,0 +1,42 @@
+.message {
+  background-attachment:
+scroll
+;
+background-clip:
+border-box
+;
+background-color:
+rgb(237, 245, 225)
+;
+border-top-color:
+rgb(196, 223, 155)
+;
+border-top-style:
+solid
+;
+border-top-width:
+2px
+;
+display:
+block
+;
+padding-bottom:
+10px
+;
+padding-left:
+20px
+;
+padding-right:
+20px
+;
+padding-top:
+10px
+;
+width:40%;
+float: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
