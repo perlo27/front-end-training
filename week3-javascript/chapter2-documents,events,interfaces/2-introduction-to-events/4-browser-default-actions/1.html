@@ -1,0 +1,14 @@
+<html>
+<body>
+  <script>
+  function handler() {
+    alert( "..." );
+  }
+  </script>
+
+  <!-- <a href="http://w3.org" onclick="handler()">the browser will go to w3.org</a> -->
+  <!-- return false doesn't work in the function-->
+
+<a href="http://w3.org" onclick="handler();return false;">the browser will go to w3.org</a>
+</body>
+</html>
