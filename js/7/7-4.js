@@ -3,14 +3,14 @@ Function.prototype.defer = function(delay) {
 }
 
 function f() {
-    console.log("Milik why");
+    console.log("Milik why ? :(");
 }
 
 f.defer(1000);
 
 
 Function.prototype.defer = function(delay) {
-    let f = this;
+    const f = this;
     return function(...args) {
         setTimeout(() => f.apply(this, args), delay);
     }
