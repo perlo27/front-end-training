@@ -1,6 +1,5 @@
 
-
-describe("min", function() {
+function testing() {
 
   before(() => console.log("Testing started – before all tests"));
   after(() => console.log("Testing finished – after all tests"));
@@ -12,5 +11,4 @@ describe("min", function() {
   it("4 less than 5", function() {
     assert.equal(min(5, 4), 4);
   });
-
-});
+};

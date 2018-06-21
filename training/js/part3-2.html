@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  </head>
+  <body>
+
+
+  <style>
+  </style>
+
+  <script>
+    "use strict";
+
+    // async/await
+    async function loadJson(url) {
+      let answer = await fetch(url);
+
+      if (answer.status == 200) {
+        return await answer.json();
+      }
+
+      throw new Error(response.status);
+    }
+    loadJson('no-such-user.json').catch(console.log); // Error: 404
+
+  </script>
+
+
+  </body>
+</html>
