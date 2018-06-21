@@ -21,5 +21,5 @@ function makeCounter() {
   console.log( counter() ); // 0
   console.log( counter() ); // 1
   
-console.log( counter2() ); // ?
+  console.log( counter2() ); // ?
   console.log( counter2() ); // ?
