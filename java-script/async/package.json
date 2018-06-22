@@ -1,0 +1,29 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "main": "2.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.1.2",
+    "node-fetch-json": "0.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "*",
+    "coffeescript": "^2.3.1",
+    "mocha": "*"
+  },
+  "scripts": {
+    "build": "babel src -d lib && babel test -d lib",
+    "test": "mocha --require babel-core/register 'test/*/*.js'",
+    "compile": "babel 2-15.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

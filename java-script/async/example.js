@@ -1,9 +1,8 @@
+'use strict';
 function first(value,callback) {
-    // Simulate a code delay
     setTimeout(function () {
         console.log(value)
-    }, 500);
-    // return callback(value);
+    }, 5000);
 }
 
 function second(value2) {
@@ -12,3 +11,14 @@ function second(value2) {
 
 first("PIERWSZY");
 second("DRUGi");
+
+// function doHomework(subject, callback) {
+//     console.log(`Starting my ${subject} homework.`);
+//     callback();
+//   }
+  
+//   function alertFinished(){
+//     console.log('Finished my homework');
+//   }
+  
+//   doHomework('math', alertFinished);
