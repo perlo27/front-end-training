@@ -18,5 +18,6 @@ const salaries = {
   Mary: 250,
 };
 
+
 console.log(topSalary(salaries));
 
