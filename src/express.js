@@ -1,19 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// class HelloMessage extends React.Component {
-//     render() {
-//       return <div>Hello {this.props.name}</div>;
-//     }
-//   }
-  
-// var mountNode = document.getElementById("app");
-// ReactDOM.render(<HelloMessage name="World!" />, mountNode);
-
-const element = React.createElement (
+const element1 = React.createElement (
     "h1",
-    {classname: "title"},
+    {className: "title"},
     "Hello World!"
 );
 
-ReactDOM.render(element, document.getElementById("root"))
+const element2 = React.createElement (
+    "div",
+    {},
+    "Some description..."
+);
+
+const root = React.createElement("div", {}, element1, element2);
+
+ReactDOM.render(root, document.getElementById("root"));
