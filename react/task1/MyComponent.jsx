@@ -1,12 +1,4 @@
 import React from 'react';
-var MyComponent = React.createClass({
-    render() {
-       return <div>
-                 <h1>Hello World!</h1>
-                 <p>This is my first React Component.</p>
-              </div>
-       }
- 
- });
+let MyComponent = React.createElement("h1",null,"Hello world again!");
 
  export default MyComponent;
