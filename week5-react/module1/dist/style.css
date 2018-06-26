@@ -1,0 +1,8 @@
+.searchRow{
+  display : "flex";
+  flex-direction : "row";
+}
+
+.selectedButton{
+  color: red
+}
