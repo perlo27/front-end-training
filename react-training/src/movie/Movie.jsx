@@ -9,7 +9,7 @@ export default class Movie extends Component {
 
   render() {
     return (
-      <div className="movie">
+      <div className="movie grid-item">
         <MovieAvatar posterPath={this.props.posterPath} />
         <MovieFooter
           title={this.props.title}

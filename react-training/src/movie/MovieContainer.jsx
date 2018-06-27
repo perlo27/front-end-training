@@ -36,9 +36,9 @@ export default class MovieContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <MovieResultsHeader recordsNumber={this.state.results_number} />
-        {this.state.movies}
+        <div className="grid-container">{this.state.movies}</div>
       </div>
     );
   }
