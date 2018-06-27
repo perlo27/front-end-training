@@ -6,7 +6,6 @@ import task1 from './task1.jsx';
 import task3 from './task3.jsx';
 import task6 from './task6.jsx';
 
-
 const mountNode = document.getElementById('app');
 
 class TaskList extends React.Component {
@@ -27,16 +26,15 @@ class TaskList extends React.Component {
 
   handleTaskSelection = (taskId) => {
     this.setState({ task: this.tasks[taskId] });
-  }
+  };
 
   render() {
+    const { task: currentTask } = this.state;
     return (
       <div key="TaskList-div">
         <ul key="TaskList-ul">
-          { this.tasks.map((task) => {
-            const className = this.state.task.id === task.id
-              ? 'selectedTask'
-              : '';
+          {this.tasks.map((task) => {
+            const className = currentTask.id === task.id ? 'selectedTask' : '';
             return (
               <li
                 key={`TaskList-li-${task.id}`}
@@ -50,13 +48,13 @@ class TaskList extends React.Component {
         </ul>
         <span key="TaskList-span">
           Task :
-          {this.state.task.name}
+          {currentTask.name}
         </span>
-        {this.state.task.component}
-      </div>);
+        {currentTask.component}
+      </div>
+    );
   }
 }
-
 
 ReactDOM.render(
   <BrowserRouter>

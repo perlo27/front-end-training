@@ -2,31 +2,18 @@ import React from 'react';
 
 class Component extends React.Component {
   render() {
-    return (
-      <div key="Task1-Component-div">
-        Component
-      </div>
-    );
+    return <div key="Task1-Component-div">Component</div>;
   }
 }
 
 class PureComponent extends React.PureComponent {
   render() {
-    return (
-      <div
-        key="Task1-PureComponent-div"
-      >
-        PureComponent
-      </div>);
+    return <div key="Task1-PureComponent-div">PureComponent</div>;
   }
 }
 
 function functionalComponent() {
-  return (
-    <div key="Task1-functionalComponent-div">
-        functionalComponent
-    </div>
-  );
+  return <div key="Task1-functionalComponent-div">functionalComponent</div>;
 }
 
 export default function task1() {
