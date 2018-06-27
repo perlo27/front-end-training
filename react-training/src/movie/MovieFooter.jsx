@@ -7,11 +7,13 @@ export default class MovieFooter extends Component {
 
   render() {
     return (
-        <div className="movie-footer">
-            <h2>{this.props.title}</h2>
-            <span>{this.props.releaseDate}</span>
-            <h3>{this.props.genres}</h3>
-        </div>
+      <div className="movie-footer">
+        <h2>{this.props.title}</h2>
+        <span>{new Date(this.props.releaseDate).getFullYear()}</span>
+        <ul className="movie-footer-genres">
+          {this.props.genres.map((item, index) => <li key={index}>{item}</li>)}
+        </ul>
+      </div>
     );
   }
 }

@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import Movie from "./Movie";
+import MovieResultsHeader from "./MovieResultsHeader";
 
 export default class MovieContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      movies: [],
+      results_number: 0
     };
   }
 
   componentDidMount() {
-    fetch("http://react-cdp-api.herokuapp.com/movies")
+    fetch("http://react-cdp-api.herokuapp.com/movies?search=quentin&limit=9")
       .then(results => {
         return results.json();
       })
       .then(res => {
+        this.setState({ results_number: res.data.length });
         let movies = res.data.map(movie => {
           return (
             <div key={movie.id}>
@@ -32,6 +35,11 @@ export default class MovieContainer extends Component {
   }
 
   render() {
-    return <div>{this.state.movies}</div>;
+    return (
+      <div>
+        <MovieResultsHeader recordsNumber={this.state.results_number} />
+        {this.state.movies}
+      </div>
+    );
   }
 }
