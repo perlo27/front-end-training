@@ -1,3 +1,7 @@
 {
-  "extends": ["airbnb-bundle"]
+  extends: ["airbnb-bundle"],
+  parser: babel-eslint,
+  rules: {
+    "linebreak-style": 0
+  }
 }
