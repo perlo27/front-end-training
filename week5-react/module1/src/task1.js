@@ -2,25 +2,25 @@ import React from "react";
 
 class Component extends React.Component {
   render() {
-    return <div>Component</div>;
+    return <div key="Task1-Component-div">Component</div>;
   }
 }
 
 class PureComponent extends React.PureComponent {
   render() {
-    return <div>PureComponent</div>;
+    return <div key="Task1-PureComponent-div">PureComponent</div>;
   }
 }
 
 function functionalComponent() {
-  return <div>functionalComponent</div>;
+  return <div key="Task1-functionalComponent-div">functionalComponent</div>;
 }
 
 export function task1(){
-  const createElement = React.createElement("div",{className:"createElement", key:"key1"},"createElement");
-  const component = <Component key="key2" />;
-  const pureComponent = <PureComponent key="key3" />;
-  const container = React.createElement("div",{className:"container"},[createElement,component, pureComponent, functionalComponent()]);
+  const createElement = React.createElement("div",{className:"createElement", key:"Task1-createElement"},"createElement");
+  const component = <Component key="Task1-Component"/>;
+  const pureComponent = <PureComponent key="Task1-PureComponent"/>;
+  const container = React.createElement("div",{className:"container", key:"Task1-div"},[createElement,component, pureComponent, functionalComponent()]);
 
   return container;
 }

@@ -1,12 +1,6 @@
 import React from "react";
 
-class Container extends React.Component {
-  render() {
-    return <Page1 />;
-  }
-}
-
-class Page1 extends React.Component {
+class Task3 extends React.Component {
   constructor(props) {
     super(props);
     this.allMovies = [{title:"abc",id:1, date:"2018-06-25", rate:3, genre:"drama"},
@@ -15,31 +9,37 @@ class Page1 extends React.Component {
     this.allCriterias = ["genre", "title"];
     this.state = {searchActive: false, searchQuery:'',
     searchMovieList: [], searchCriteria: this.allCriterias[0],
-    };
-    this.sortParameters = {rate:"rate", date:"date"};
-  }
+  };
+  this.sortParameters = {rate:"rate", date:"date"};
+}
 
-  handleSearch() {
-    this.setState({
-      searchActive: true
-    });
-  }
+handleSearch() {
+  this.setState({
+    searchActive: true
+  });
+}
 
-  updateSearchQuery(event) {
-    let newQuery = null;
-    if(event) {
-      newQuery = event.target.value;
-    } else {
-      newQuery = this.state.searchQuery;
-    }
-    const criteria = this.state.searchCriteria;
-    console.log("Updating search query");
-    const filteredMovieList = this.allMovies.filter(movie => movie[criteria].startsWith(newQuery));
-    this.setState({
-      searchQuery: newQuery,
-      searchMovieList : filteredMovieList
-    });
+componentDidCatch(error, info) {
+  // Display fallback UI
+  this.setState({ hasError: true });
+  // You can also log the error to an error reporting service
+  console.log(error, info);
+}
+
+handleSearchText(event) {
+  let newQuery = null;
+  if(event) {
+    newQuery = event.target.value;
+  } else {
+    newQuery = this.state.searchQuery;
   }
+  const criteria = this.state.searchCriteria;
+  const filteredMovieList = this.allMovies.filter(movie => movie[criteria].startsWith(newQuery));
+  this.setState({
+    searchQuery: newQuery,
+    searchMovieList : filteredMovieList
+  });
+}
 
 handleSort(sortField) {
   this.setState({
@@ -57,7 +57,6 @@ movieSelected(movieId) {
   if(movieId){
     const selectedMovie = this.allMovies.find(movie => movie.id === movieId);
     const similarMovies = this.allMovies.filter(otherMovie => otherMovie.genre === selectedMovie.genre && otherMovie.id !== selectedMovie.id);
-    console.log("Similar : " + similarMovies.length);
     this.setState({
       selectedMovie,
       similarMovies,
@@ -70,42 +69,50 @@ movieSelected(movieId) {
   }
 }
 
-  render() {
-    console.log("Rendering page");
-    if(this.state.selectedMovie) {
-      return (<SelectedMovie similarMovieSelected={this.movieSelected.bind(this)}  key={"Page1-SelectedMovie"} backToSearch={() => this.movieSelected.bind(this)}  movie={this.state.selectedMovie} similarMovies={this.state.similarMovies} />);
-    }
-    return (<div>
-      <div>FIND YOUR MOVIE</div>
-      <input type="text" value={this.state.searchQuery} onChange={evt => this.updateSearchQuery(evt)}></input>
-      <div className="searchRow">
-        <span>SEARCH BY</span>
-        {this.allCriterias.map(someCriteria =>{
-            const className = this.state.searchCriteria === someCriteria ? "selectedButton" : "";
-            return <input className={className} key={"Page1-searchRow-input-"+someCriteria} type="button" value={someCriteria.toUpperCase()} onClick={evt => this.handleCriteria(someCriteria)}></input>
-          })
+render() {
+  console.log("Rendering page");
+  return (
+    <div key="Task3-div">
+      {this.state.selectedMovie ?
+        (<SelectedMovie key={"Task3-SelectedMovie"} similarMovieSelected={this.movieSelected.bind(this)} backToSearch={this.movieSelected.bind(this)}  movie={this.state.selectedMovie} similarMovies={this.state.similarMovies} />)
+        :
+        <div>
+          <div key="Task3-div-find-your-movie">FIND YOUR MOVIE</div>
+          <input key="Task3-input-search" type="text" value={this.state.searchQuery} onChange={evt => this.handleSearchText(evt)}></input>
+          <div key="div-search-row" className="searchRow">
+            <span>SEARCH BY</span>
+            {this.allCriterias.map(someCriteria =>{
+              const className = this.state.searchCriteria === someCriteria ? "selectedButton" : "";
+              return <input className={className} key={"Task3-searchRow-input-"+someCriteria} type="button" value={someCriteria.toUpperCase()} onClick={evt => this.handleCriteria(someCriteria)}></input>
+            })
+          }
+          <input key="Task3-searchRow-input-search" type="button" value="SEARCH" onClick={() => this.handleSearch()}></input>
+        </div>
+        {this.state.searchActive
+          &&
+          <div>
+            {this.state.searchMovieList.length  ?
+              <div key="Task3-div-search-movie-list">
+                <div key="Task3-div-search-movie-list-sort">
+                  <span>{this.state.searchMovieList.length} Movies Found</span>
+                  <div>
+                    <span>Sort By</span>
+                    <input type="button" value="release date" onClick={() => this.handleSort(this.sortParameters.date)}></input>
+                    <input type="button" value="rating" onClick={() => this.handleSort(this.sortParameters.rate)}></input>
+                  </div>
+                </div>
+                <SearchResults key="Task3-SearchResults" movieSelected={this.movieSelected.bind(this)}  searchMovieList={this.state.searchMovieList} />
+              </div>
+              : <div>No results found</div>
+            }
+          </div>
         }
-        <input key="Page1-searchRow-input-search" type="button" value="SEARCH" onClick={() => this.handleSearch()}></input>
       </div>
-      {
-        this.state.searchActive
-        &&
-        (this.state.searchMovieList.length
-          ? <div>
-            <div>
-            <span>{this.state.searchMovieList.length} Movies Found</span>
-            <div>
-              <span>Sort By</span>
-              <input type="button" value="release date" onClick={() => this.handleSort(this.sortParameters.date)}></input>
-              <input type="button" value="rating" onClick={() => this.handleSort(this.sortParameters.rate)}></input>
-            </div>
-          </div>
-          <SearchResults movieSelected={this.movieSelected.bind(this)}  searchMovieList={this.state.searchMovieList} />
-          </div>
-          : <div>No results found</div>)
-       }
-    </div>);
-  }
+    }
+
+  </div>
+);
+}
 }
 
 class SearchResults extends React.Component {
@@ -118,40 +125,40 @@ class SearchResults extends React.Component {
 
   render() {
     console.log("Rendering search results");
-      return (<div>
-          <ul>
-            {this.props.searchMovieList.map((result) => {
-              return (<li key={"SearchResults-li-"+result.id} onClick={() => this.props.movieSelected(result.id)}>{result.title}</li>);
-              })
-            }
-          </ul>
-        </div>);
+    return (<div>
+      <ul>
+        {this.props.searchMovieList.map((result) => {
+          return (<li key={"SearchResults-li-"+result.id} onClick={() => this.props.movieSelected(result.id)}>{result.title}</li>);
+        })
       }
+    </ul>
+  </div>);
+}
+}
+
+class SelectedMovie extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
-  class SelectedMovie extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-
-    render() {
-      const movie = this.props.movie;
-      const similarMovies = this.props.similarMovies;
-      return <div>
-        <a key="SelectedMovie-a-backToSearch" href="" onClick={this.props.backToSearch()}>Search</a>
-        <div key="SelectedMovie-div-movieTitle">{movie.title}</div>
-        <span key="SelectedMovie-div-filmsBy">Films by genre {movie.genre}</span>
-        <div key="SelectedMovie-div-similarMovies">
-          <ul>
-            {
-              similarMovies.map(similarMovie => <li key={"SelectedMovie-div-similarMovies-li-"+similarMovie.id} onClick={() => this.props.similarMovieSelected(similarMovie.id)}>{similarMovie.title}</li>)
-            }
-          </ul>
-        </div>
+  render() {
+    const movie = this.props.movie;
+    const similarMovies = this.props.similarMovies;
+    return <div>
+      <input type="button" value="Search" key="SelectedMovie-input-backToSearch" onClick={() => this.props.backToSearch()}></input>
+      <div key="SelectedMovie-div-movieTitle">{movie.title}</div>
+      <span key="SelectedMovie-div-filmsBy">Films by genre {movie.genre}</span>
+      <div key="SelectedMovie-div-similarMovies">
+        <ul>
+          {
+            similarMovies.map(similarMovie => <li key={"SelectedMovie-div-similarMovies-li-"+similarMovie.id} onClick={() => this.props.similarMovieSelected(similarMovie.id)}>{similarMovie.title}</li>)
+          }
+        </ul>
       </div>
-    }
+    </div>
   }
+}
 
 export function task3() {
-  return <Container />;
+  return <Task3 key="Task3" />;
 }

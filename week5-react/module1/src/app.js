@@ -1,7 +1,10 @@
 import ReactDOM from "react-dom";
 import React from "react";
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+
 import {task1} from "./task1.js";
 import {task3} from "./task3.js";
+import {task6} from "./task6.js";
 
 
 var mountNode = document.getElementById("app");
@@ -11,8 +14,9 @@ class TaskList extends React.Component {
     super(props);
     let index=0;
     this.tasks = [
-      {name:"Task 1", component:task1()},
-      {name:"Task 3", component:task3()},
+      {name:"Task 1 - Core Concepts", component:task1()},
+      {name:"Task 3 - Components", component:task3()},
+      {name:"Task 6 - Routing", component:task6()},
     ].map(task => {
       Object.assign(task,{id:index++});
       return task;
@@ -25,18 +29,20 @@ class TaskList extends React.Component {
   }
 
   render() {
-    return (<div>
-      <ul>
+    return (<div key="TaskList-div">
+      <ul key="TaskList-ul">
         {this.tasks.map(task => {
           const className = this.state.task.id === task.id ? "selectedTask" : "";
           return <li key={"TaskList-li-"+task.id} className={className} onClick={evt => this.handleTaskSelection(task.id)}>{task.name}</li>
         })}
       </ul>
-      <span>Task : {this.state.task.name}</span>
+      <span key="TaskList-span">Task : {this.state.task.name}</span>
       {this.state.task.component}
     </div>);
   }
 }
 
 
-ReactDOM.render(<TaskList />, mountNode);
+ReactDOM.render(<BrowserRouter>
+    <TaskList key="TaskList" />
+  </BrowserRouter>, mountNode);
