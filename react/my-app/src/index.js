@@ -11,21 +11,43 @@ function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 
-class ShoppingList extends React.Component {
+
+class Netflixroulette extends React.Component {
     render() {
+        const movies = [
+            {
+                title: 'Dark',
+                cover: '',
+                rating: '8/10',
+                duration: '90min',
+                releaseYear: '10-06-2017'
+            },
+
+            {
+                title: 'Kill Bill',
+                cover: '',
+                rating: '9/10',
+                duration: '90min',
+                releaseYear: '10-06-2010'
+            },
+
+            {
+                title: 'Game of thrones',
+                cover: '',
+                rating: '10/10',
+                duration: '60min',
+                releaseYear: '01-01-2013'
+            }
+        ]
         return (
-            <div>
-                <Welcome name="Sara"/>
-                <div className="shopping-list">
-                    <h1>Shopping List for {this.props.name}</h1>
-                    <ul>
-                        <li>Instagram</li>
-                        <li>WhatsApp</li>
-                        <li>Oculus</li>
-                    </ul>
-                </div>
-            </div>
+            movies.map(movie => {
+                return (
+                    <div>
+                        <div>{movie.title} : {movie.cover} : {movie.rating} : {movie.duration} : {movie.releaseYear}</div>
+                    </div>
+                );
+            })
         );
     }
 }
-render(<ShoppingList name="Mark" />, document.getElementById("root"));
+render(<Netflixroulette />, document.getElementById("app"));
