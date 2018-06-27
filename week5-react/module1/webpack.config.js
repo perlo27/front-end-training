@@ -8,13 +8,19 @@ const config = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [
-            {
+      rules: [
+        {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
-            }
-        ]
+                use: [{
+                  loader: 'babel-loader',
+                  query: {
+                    presets: ['react', 'es2015', ],
+                    plugins: ['transform-class-properties']
+                  }
+                }]
+        }
+      ]
     }
 };
 module.exports = config;
