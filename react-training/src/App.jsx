@@ -1,10 +1,4 @@
-import React, { Component } from 'react'
-import MovieContainer from './movie/MovieContainer';
+import React from 'react'
+import MovieContainer from './container/MovieContainer';
 
-export default class App extends Component {
-  render() {
-    return (
-      <MovieContainer/>
-    )
-  }
-}
+export default () => <MovieContainer/>;
