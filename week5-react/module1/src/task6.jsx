@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import {
+  Route, Switch, Link, BrowserRouter,
+} from 'react-router-dom';
 import { allMovies, allCriterias, sortParameters } from './mock';
 
 class Task6 extends React.Component {
@@ -182,5 +184,9 @@ const SelectedMovie = ({ movie, similarMovies }) => (
 );
 
 export default function task6() {
-  return <Task6 key="Task6" />;
+  return (
+    <BrowserRouter>
+      <Task6 key="Task6" />
+    </BrowserRouter>
+  );
 }

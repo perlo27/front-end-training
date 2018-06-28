@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
 import task1 from './task1.jsx';
 import task3 from './task3.jsx';
+import task5 from './task5.jsx';
 import task6 from './task6.jsx';
 
 const mountNode = document.getElementById('app');
@@ -15,6 +15,7 @@ class TaskList extends React.Component {
     this.tasks = [
       { name: 'Task 1 - Core Concepts', component: task1() },
       { name: 'Task 3 - Components', component: task3() },
+      { name: 'Task 5 - Redux', component: task5() },
       { name: 'Task 6 - Routing', component: task6() },
     ].map((task) => {
       Object.assign(task, { id: index });
@@ -56,9 +57,4 @@ class TaskList extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <BrowserRouter>
-    <TaskList key="TaskList" />
-  </BrowserRouter>,
-  mountNode,
-);
+ReactDOM.render(<TaskList key="TaskList" />, mountNode);

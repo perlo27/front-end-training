@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "start": "webpack ",
     "build:dev": "webpack --env dev --mode development --progress --profile --colors",
     "build:prod": "webpack --env prod --mode production --progress --profile --colors",
     "dist": "webpack --mode development"
