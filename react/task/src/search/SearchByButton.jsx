@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class SearchByGenreButton extends Component {
+export default class SearchByButton extends Component {
   render() {
     return (
       <div>
-          Genre
+          {this.props.searchBy}
       </div>
     )
   }

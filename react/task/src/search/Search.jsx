@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import SearchField from './SearchField';
 import SearchButton from './SearchButton';
 import SearchHeader from './SearchHeader';
-import SearchByTitleButton from './SearchByTitleButton';
-import SearchByGenreButton from './SearchByGenreButton';
+import SearchByButton from './SearchByButton';
+import SortByButton from './SortByButton';
 
-export default class Searc extends Component {
+export default class Search extends Component {
     render() {
         return (
             <div>
                 <SearchHeader />
                 <SearchField />
                 <SearchButton />
-                <SearchByTitleButton />
-                <SearchByGenreButton />
+                <SearchByButton searchBy="Genre" />
+                <SearchByButton searchBy="Title" />
+                <SearchByButton />
+                <SortByButton sortBy="Release date" />
+                <SortByButton sortBy="Rating" />
             </div>
         )
     }

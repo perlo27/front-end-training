@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class SearchByTitleButton extends Component {
+export default class SortByButton extends Component {
   render() {
     return (
       <div>
-        Title
+        {this.props.sortBy}
       </div>
     )
   }
