@@ -1,7 +1,117 @@
+body {
+  margin: 0px 0px;
+}
+
+h2 h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* HEADER */
+.header-parent {
+  position: relative;
+  min-height: 250px;
+}
+
+.header-background {
+  position: absolute;
+  background-image: url("./img/poster.jpg");
+  opacity: 0.8;
+  filter: brightness(10%);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.header-content {
+  padding: 0px 100px;
+}
+
+.header-title {
+  margin-top: 0px;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 36px;
+  color: #fc5a5a;
+  z-index: 1;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  min-height: 40px;
+  background-color: #222121;
+  border: 2px solid #222121;
+  outline: none;
+  border-bottom: 2px solid #fc5a5a;
+  color: grey;
+  z-index: 1;
+}
+
+input[type="text"] {
+  padding: 12px 8px;
+}
+
+.search-bar:focus {
+  color: #f7f7f7;
+}
+
+.header-search {
+  text-transform: uppercase;
+  color: #f7f7f7;
+}
+
+.search-panel-wrapper ul {
+  list-style: none;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.search-panel-wrapper li, .search-panel-wrapper h4 {
+  display: inline;
+  margin: 0px 0px;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-by {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+.search-by-title {
+  background-color: #fc5a5a;
+  border: 1px solid #fc5a5a;
+}
+
+.search-by-genre {
+  background-color: grey;
+  border: 1px solid grey; 
+}
+
+.search {
+  float: right;
+  background-color: #fc5a5a;
+  border: 1px solid #fc5a5a;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 20px;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+
 /* MAIN CONTAINER */
 .main {
-    margin-left: 30px;
-    margin-right: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .grid-container {
@@ -11,45 +121,45 @@
 }
 
 .movie-poster {
-    display: block;
-    width: 100%;
-    height: 700px;
+  display: block;
+  width: 100%;
+  height: 700px;
 }
 
 .movie-info {
-    display: grid;
-    grid-template-columns: 80% 20%;
+  display: grid;
+  grid-template-columns: 90% 10%;
 }
 .movie-title {
-    grid-column: 1;
-    grid-row: 1;
-    text-transform: uppercase;
-    margin: 10px 30px 10px 0px;
-    float: left;
+  grid-column: 1;
+  grid-row: 1;
+  text-transform: uppercase;
+  margin: 10px 30px 10px 0px;
+  float: left;
 }
 
 .movie-year {
-    grid-column: 2;
-    grid-row: 1;
-    border: 0.5px solid black;
-    padding: 2px 10px 2px 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-height: 20px;
-    max-width: 30px;
-    float: right;
-    display: block;
+  grid-column: 2;
+  grid-row: 1;
+  border: 0.5px solid black;
+  padding: 2px 10px 2px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 20px;
+  max-width: 30px;
+  float: right;
+  display: block;
 }
 
 .movie-year-wrapper {
-    width: 100%;
-    float: right;
+  width: 100%;
+  float: right;
 }
 
 .movie-genres {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    float: left;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  float: left;
 }
 
 .movie-footer-genres {
@@ -65,44 +175,44 @@
 }
 
 .movies-header {
-    display: grid;
-    grid-template-columns: 70% 10% 10% 10%;
-    background-color: #f7f7f7;
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 70% 10% 10% 10%;
+  background-color: #f7f7f7;
+  margin-bottom: 30px;
 }
 
 .movies-header button {
-    background-color: transparent;
-    border: 1px solid transparent;
-    font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-weight: bold;
 }
 
 .movies-header h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .movies-header-results {
-    grid-column: 1;
-    width: 100%;
-    padding-left: 50px;
+  grid-column: 1;
+  width: 100%;
+  padding-left: 50px;
 }
 
 /* FOOTER */
 .footer {
-    height: 60px;
-    background-color: #333333;
-    position: relative;
-    margin-top: 30px;
+  height: 60px;
+  background-color: #333333;
+  position: relative;
+  margin-top: 30px;
 }
 
 .footer-title {
-    color: red;
-    font-weight: bold;
-    font-size: 24px;
-    padding-left: 50px;
-    float: left;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    margin-top: -15px;
+  color: #fc5a5a;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 50px;
+  float: left;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
 }
