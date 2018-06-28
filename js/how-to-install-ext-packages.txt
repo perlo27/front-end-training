@@ -1,27 +1,34 @@
+>> NPM package <<
+
+$ Init npm project package with default config
+npm init -y
+
+###########################################################################
+
 >> ESLINT linter <<
-$ Run 'npm i --save-dev eslint [eslint-plugins]'
+
+$ Install linter package locally with dependencies
 npm i --save-dev eslint eslint-plugin-import eslint-config-airbnb-base
 
 $ Create '.eslintrc' configuration file manually or with 'eslint --init'
 ./node_modules/.bin/eslint --init
 
-$ Update '.eslintrc' with:
+$ Update '.eslintrc' with or configure as Airbnb using '--init' flag:
 "extends": "airbnb-base"
-
-$ Run eslint
-./node_modules/.bin/eslint yourfile.js
 
 $ Optionally create npm hook to eslint. Add to 'package.json' 'scripts' tag:
 "lint": "eslint ."
 
-$ Optionally run with:
+$ Run eslint
+./node_modules/.bin/eslint yourfile.js
+./node_modules/.bin/eslint .
 npm run-script lint
 
 ###########################################################################
 
 >> MOCHA test framework <<
 
-$ Install 'mocha' packages
+$ Install mocha packages
 npm i --save-dev mocha
 
 $ Add/update 'env' tag in '.eslintrc.json'
@@ -29,11 +36,17 @@ $ Add/update 'env' tag in '.eslintrc.json'
     "mocha": true
 }
 
-$ Run mocha
-./node_modules/.bin/mocha yourtestfile.js
-
 $ Optionally create npm hook to mocha. Add to 'package.json' 'scripts' tag:
 "test": "mocha",
 
-$ Optionally run with:
+$ Run mocha
+./node_modules/.bin/mocha yourtestfile.js
 npm test
+npm run-script test
+
+###########################################################################
+
+>> CHAI test assertion lib <<
+
+$ Install 'chai' packages as 'dependencies'
+npm i chai
