@@ -10,16 +10,18 @@ export default class MovieFooter extends Component {
       <div className="movie-footer">
         <div className="movie-info">
           <h2 className="movie-title">{this.props.title}</h2>
-          <span className="movie-year">
-            {new Date(this.props.releaseDate).getFullYear()}
-          </span>
-        </div>
-        <div>
-          <ul className="movie-footer-genres">
-            {this.props.genres.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+          <div className="movie-year-wrapper">
+            <div className="movie-year">
+              {new Date(this.props.releaseDate).getFullYear()}
+            </div>
+          </div>
+          <div className="movie-genres">
+            <ul className="movie-footer-genres">
+              {this.props.genres.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );
