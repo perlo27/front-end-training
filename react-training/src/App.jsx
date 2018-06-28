@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import MovieContainer from './movie/MovieContainer';
 
 export default class App extends Component {
@@ -8,3 +8,8 @@ export default class App extends Component {
     )
   }
 }
+
+
+// refactored 
+
+// export default () => <MovieContainer/>;

@@ -25,3 +25,23 @@ export default class MovieFooter extends Component {
     );
   }
 }
+
+//refactored
+
+// export default ({title, releaseDate, genres}) => (
+//   <div className="movie-footer">
+//     <div className="movie-info">
+//       <h2 className="movie-title">{title}</h2>
+//       <span className="movie-year">
+//         {new Date(releaseDate).getFullYear()}
+//       </span>
+//     </div>
+//     <div>
+//       <ul className="movie-footer-genres">
+//         {genres.map((item, index) => (
+//           <li key={index}>{item}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   </div>
+// );
