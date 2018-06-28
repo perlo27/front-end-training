@@ -1,28 +1,41 @@
-var config = {
-      entry: '/src/main.js',
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
-      output: {
-        path: '/src',
-        filename: 'index.js'
+module.exports = {
+  entry: "./src/main.js", // from webpack 4 src/index.js is taken as default entry point
+
+  devServer: {
+    inline: true,
+    contentBase: __dirname + "/dist",
+    port: 3000
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: "babel-loader"
       },
-
-      devServer: {
-        inline: true,
-        port: 7777
-      },
-
-      module: {
-        rules: [
-          {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-              presets: ['es2015', 'react']
-            }
-          }
-        ]
+      {
+          test: /\.css$/,
+          use: [MiniCssExtractPlugin.loader, "css-loader"]
       }
-    }
+    ]
+  },
 
-    module.exports = config;
+  resolve: {
+    extensions: ["*", ".js", ".jsx"]
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    }),
+    new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css"
+      })
+  ]
+};
