@@ -64,10 +64,33 @@
   color: grey;
 }
 
+.movies-header {
+    display: grid;
+    grid-template-columns: 70% 10% 10% 10%;
+    background-color: #f7f7f7;
+    margin-bottom: 30px;
+}
+
+.movies-header button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.movies-header h2 {
+    text-align: center;
+}
+
+.movies-header-results {
+    grid-column: 1;
+    width: 100%;
+    padding-left: 50px;
+}
+
 /* FOOTER */
 .footer {
     height: 60px;
-    background-color: #2f343d;
+    background-color: #333333;
     position: relative;
     margin-top: 30px;
 }

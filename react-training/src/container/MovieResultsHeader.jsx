@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 
-export default class MovieResultsHeader extends Component {
-
-  render() {
+export default ({recordsNumber}) => {
     return (
-        <div className="">
-            <h3>{this.props.recordsNumber} movies founds</h3>
-            <span>
-                <h2>Sort by</h2>
-                <span>release date</span>
-                <span>rating</span>
-            </span>
-        </div>
-    )
-  }
+      <div className="movies-header">
+        <h3 className="movies-header-results">
+          {recordsNumber} movies founds
+        </h3>
+        <h2>Sort by</h2>
+        <button>release date</button>
+        <button>rating</button>
+      </div>
+    );
 }
