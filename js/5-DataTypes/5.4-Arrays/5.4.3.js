@@ -2,7 +2,7 @@
 
 const arr = ['a', 'b'];
 
-arr.push(function () {
+arr.push(() => {
   console.log(this);
 });
 

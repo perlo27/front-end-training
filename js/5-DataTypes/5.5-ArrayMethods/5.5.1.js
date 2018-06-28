@@ -1,4 +1,5 @@
 // Translate border-left-width to borderLeftWidth
+
 function camelize(str) {
   return str.split('-')
     .filter(item => item.length > 0)

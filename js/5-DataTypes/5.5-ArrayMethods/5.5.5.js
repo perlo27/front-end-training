@@ -1,4 +1,5 @@
 // Copy and sort array
+
 function copySorted(arr) {
   return arr.slice().sort();
 }

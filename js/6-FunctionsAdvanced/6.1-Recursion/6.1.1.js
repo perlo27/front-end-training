@@ -17,6 +17,7 @@ function sumToVer2(n) {
 
 // SUM = n(a1 + an)/2
 function sumToVer3(n) {
+  // eslint-disable-next-line no-mixed-operators
   return n * (n + 1) / 2;
 }
 

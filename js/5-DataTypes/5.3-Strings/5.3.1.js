@@ -7,4 +7,3 @@ function ucFirst(str) {
 
 console.log(ucFirst('john'));
 
-

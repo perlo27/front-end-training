@@ -1,11 +1,14 @@
 // Reverse the array
+
 function reverse(arr) {
   // console.log(arr);
   for (let i = 0; i < Math.floor(arr.length / 2); i += 1) {
     const leftIdx = i;
     const rightIdx = -i - 1;
     const leftValue = arr.slice(leftIdx, leftIdx + 1)[0];
-    const rightValue = (rightIdx === -1 ? arr.slice(rightIdx) : arr.slice(rightIdx, rightIdx + 1))[0];
+    const rightValue = (rightIdx === -1 ?
+      arr.slice(rightIdx) :
+      arr.slice(rightIdx, rightIdx + 1))[0];
 
     arr.splice(rightIdx, 1, leftValue);
     arr.splice(leftIdx, 1, rightValue);

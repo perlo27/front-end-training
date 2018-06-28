@@ -1,16 +1,19 @@
 // The maximal salary
 
-const topSalary = exports.topSalary = function (salaries) {
+function topSalary(salaries) {
   const max = { maxName: null, maxSalary: 0 };
   const entry = {};
 
+  // eslint-disable-next-line no-restricted-syntax
   for ([entry.name, entry.salary] of Object.entries(salaries)) {
     if (entry.salary > max.maxSalary) {
       ({ name: max.maxName, salary: max.maxSalary } = entry);
     }
   }
   return max.maxName;
-};
+}
+
+exports.topSalary = topSalary;
 
 const salaries = {
   John: 100,
@@ -19,4 +22,3 @@ const salaries = {
 };
 
 console.log(topSalary(salaries));
-

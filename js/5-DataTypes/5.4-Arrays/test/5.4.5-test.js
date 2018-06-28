@@ -1,11 +1,11 @@
-const chai = require('chai');
-const getMaxSubSum = require('../5.4.5.js').getMaxSubSum;
+const { assert } = require('chai');
+const { getMaxSubSum } = require('../5.4.5.js');
 
 describe('getMaxSubSum', () => {
   describe('Test in loop', () => {
     function makeTest(input, output) {
       it(`Max sum of given array ${input} equals ${output}`, () => {
-        chai.assert.equal(getMaxSubSum(input), output);
+        assert.equal(getMaxSubSum(input), output);
       });
     }
 
@@ -20,7 +20,9 @@ describe('getMaxSubSum', () => {
       [-1, -2, -3], -1,
     ];
 
-    for (let x = 0; x < testFeed.length / 2 -1; x += 1) {
+    // eslint-disable-next-line no-mixed-operators
+    for (let x = 0; x < testFeed.length / 2 - 1; x += 1) {
+      // eslint-disable-next-line no-mixed-operators
       makeTest(testFeed[2 * x], testFeed[2 * x + 1]);
     }
   });

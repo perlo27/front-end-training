@@ -1,5 +1,5 @@
-const assert = require('chai').assert;
-const count = require('../5.8.2.js').count;
+const { assert } = require('chai');
+const { count } = require('../5.8.2.js');
 
 describe('count', () => {
   it('counts the number of properties', () => {

@@ -1,6 +1,5 @@
-const assert = require('chai').assert;
-const sumSalariesVer1 = require('../5.8.1.js').sumSalariesVer1;
-const sumSalariesVer2 = require('../5.8.1.js').sumSalariesVer2;
+const { assert } = require('chai');
+const { sumSalariesVer1, sumSalariesVer2 } = require('../5.8.1.js');
 
 describe('sumSalariesVer1', () => {
   it('returns sum of salaries', () => {

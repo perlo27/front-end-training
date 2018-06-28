@@ -1,4 +1,5 @@
 // Sort objects
+
 function sortByName(users) {
   return users.sort((u1, u2) => u1.name > u2.name);
 }

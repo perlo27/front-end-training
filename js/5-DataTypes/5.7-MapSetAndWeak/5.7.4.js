@@ -1,4 +1,5 @@
 // Store "unread" flags
+
 const messages = [
   { text: 'Hello', from: 'John' },
   { text: 'How goes?', from: 'John' },

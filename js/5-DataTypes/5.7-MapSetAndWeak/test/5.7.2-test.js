@@ -1,5 +1,5 @@
-const assert = require('chai').assert;
-const aclean = require('../5.7.2.js').aclean;
+const { assert } = require('chai');
+const { aclean } = require('../5.7.2.js');
 
 function intersection(arr1, arr2) {
   return arr1.filter(item => arr2.includes(item));

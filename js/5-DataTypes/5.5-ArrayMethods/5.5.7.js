@@ -1,4 +1,5 @@
 // Map to objects
+
 function mapUser(users) {
   return users.map(item => ({
     id: item.id,
@@ -14,6 +15,7 @@ const users = [john, pete, mary];
 
 const mappedUsers = mapUser(users);
 
+// eslint-disable-next-line no-restricted-syntax
 for (const mapedUser of mappedUsers) {
   console.log(`Mapped = ${mapedUser.id} : ${mapedUser.fullName}`);
 }

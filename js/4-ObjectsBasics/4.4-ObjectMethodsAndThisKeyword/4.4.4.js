@@ -1,4 +1,5 @@
-// 4. Create a calculator
+// Create a calculator
+
 const calculator = {
   number1: null,
   number2: null,

@@ -1,4 +1,5 @@
-// 3. Using "this" in object literal
+// Using "this" in object literal
+
 function makeUser() {
   return {
     name: 'John',

@@ -1,4 +1,4 @@
-// 5. Chaining
+// Chaining
 const ladder = {
   step: 0,
   up() {

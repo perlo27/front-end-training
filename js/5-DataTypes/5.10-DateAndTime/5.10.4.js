@@ -1,10 +1,12 @@
 // Which day of month was many days ago?
 
-const getDateAgo = exports.getDateAgo = function (date, days) {
+function getDateAgo(date, days) {
   const copyDate = new Date(date);
   copyDate.setDate(copyDate.getDate() - days);
   return copyDate.getDate();
-};
+}
+
+exports.getDateAgo = getDateAgo;
 
 const date = new Date(2015, 0, 2);
 

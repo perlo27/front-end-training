@@ -6,7 +6,9 @@
 // works on strings | works on numbers
 function sumImput() {
   const numberArray = [];
+  // eslint-disable-next-line no-constant-condition
   while (true) {
+    // eslint-disable-next-line no-alert
     const input = prompt('Insert value', 'Any value');
     if (input == null || input === '' || !Number.isFinite(+input)) break;
     numberArray.push(+input);
@@ -14,7 +16,8 @@ function sumImput() {
   console.log(numberArray);
 
   let sum = 0;
-  for (num of numberArray) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const num of numberArray) {
     sum += num;
   }
   console.log(sum);

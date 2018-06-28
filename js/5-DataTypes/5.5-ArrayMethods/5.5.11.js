@@ -1,7 +1,9 @@
 // Filter unique array members
+
 function unique(arr) {
   const result = [];
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const str of arr) {
     if (!result.includes(str)) {
       result.push(str);

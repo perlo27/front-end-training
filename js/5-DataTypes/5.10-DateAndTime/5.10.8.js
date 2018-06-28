@@ -1,4 +1,5 @@
 // Format the relative date
+/* eslint-disable no-mixed-operators */
 
 function formatDate(date) {
   const nowDate = new Date();

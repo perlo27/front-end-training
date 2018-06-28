@@ -1,8 +1,11 @@
-// 1. Two functions – one object
+// Two functions – one object
+
 const commonObj = {};
+
 function A() {
   return commonObj;
 }
+
 function B() {
   return commonObj;
 }
@@ -12,4 +15,3 @@ const b = new B();
 
 console.log(a === b); // true
 
-//

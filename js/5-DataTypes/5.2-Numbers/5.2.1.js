@@ -1,4 +1,5 @@
 // Sum numbers from the visitor
+
 const numGen = () => {
   const sign = Math.random() > 0.5 ? 1 : -1;
   return sign * Math.floor(Math.random() * 100);

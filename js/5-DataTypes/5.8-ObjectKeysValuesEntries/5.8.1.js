@@ -1,15 +1,20 @@
 // Sum the properties
-const sumSalariesVer1 = exports.sumSalariesVer1 = function (salaries) {
-  return Object.values(salaries).reduce((sum, sal) => sum + sal, 0);
-};
 
-const sumSalariesVer2 = exports.sumSalariesVer2 = function (salaries) {
+function sumSalariesVer1(salaries) {
+  return Object.values(salaries).reduce((sum, sal) => sum + sal, 0);
+}
+
+function sumSalariesVer2(salaries) {
   let sum = 0;
+  // eslint-disable-next-line no-restricted-syntax
   for (const val of Object.values(salaries)) {
     sum += val;
   }
   return sum;
 }
+
+exports.sumSalariesVer1 = sumSalariesVer1;
+exports.sumSalariesVer2 = sumSalariesVer2;
 
 const salaries = {
   John: 100,

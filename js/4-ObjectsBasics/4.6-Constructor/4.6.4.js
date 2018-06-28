@@ -1,10 +1,13 @@
-// 4. reate an extendable calculator
+// Create an extendable calculator
+
 function Calculator() {
   this.operations = {
+    // eslint-disable-next-line func-names
     '+': function (leftOperand, rightOperand) { return leftOperand + rightOperand; },
     '-': (leftOperand, rightOperand) => leftOperand - rightOperand,
   };
 
+  // eslint-disable-next-line func-names
   this.calculate = function (exp) {
     console.log(`Exp: '${exp}'`);
     const expParts = exp.split(' ');
@@ -16,6 +19,7 @@ function Calculator() {
     console.log(`operation: '${operation}'; typeof: '${typeof operation}'`);
     console.log(`rightOperand: '${rightOperand}'; typeof: '${typeof rightOperand}'`);
 
+    // eslint-disable-next-line no-restricted-globals
     if (!this.operations[operation] || isNaN(leftOperand) || isNaN(rightOperand)) {
       console.log('Expression malformed');
       return NaN;
@@ -24,6 +28,7 @@ function Calculator() {
     return this.operations[operation](leftOperand, rightOperand);
   };
 
+  // eslint-disable-next-line func-names
   this.addOperation = function (name, func) {
     this.operations[name] = func;
   };

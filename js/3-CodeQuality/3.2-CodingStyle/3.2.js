@@ -22,15 +22,19 @@ function pow(x, n) {
 // 'x' and n' is never reassigned. Use 'const' instead. (prefer-const)
 // Unexpected prompt. (no-alert)
 // Unexpected alert. (no-alert)
+// eslint-disable-next-line no-alert
 const x = prompt('x?', '');
+// eslint-disable-next-line no-alert
 const n = prompt('n?', '');
 // Opening curly brace does not appear on the same line as controlling statement. (brace-style)
 // Closing curly brace does not appear on the same line as the subsequent block. (brace-style)
 // Opening curly brace does not appear on the same line as controlling statement. (brace-style)
 if (n <= 0) {
+// eslint-disable-next-line no-alert
   alert(`Power ${n} is not supported, please enter an integer number greater than zero`);
 } else {
   // A space is required after ','. (comma-spacing)
   // Missing semicolon. (semi)
+// eslint-disable-next-line no-alert
   alert(pow(x, n));
 }

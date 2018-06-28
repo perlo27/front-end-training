@@ -1,4 +1,5 @@
 // Map to names
+
 function getUserNames(users) {
   return users.map(item => item.name);
 }

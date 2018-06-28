@@ -1,4 +1,5 @@
 // 1. Syntax check
+
 const user = {
   name: 'John',
   go() { console.log(this.name); },

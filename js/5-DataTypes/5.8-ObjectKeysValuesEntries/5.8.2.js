@@ -1,7 +1,10 @@
 // Count properties
-const count = exports.count = function (user) {
+
+function count(user) {
   return Object.keys(user).length;
-};
+}
+
+exports.count = count;
 
 const user = {
   name: 'John',
