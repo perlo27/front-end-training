@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/main.js", // from webpack 4 src/index.js is taken as default entry point
+  entry: "./src/index.js", // from webpack 4 src/index.js is taken as default entry point
 
   devServer: {
     inline: true,
