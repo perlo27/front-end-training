@@ -13,8 +13,13 @@ npm i --save-dev eslint eslint-plugin-import eslint-config-airbnb-base
 $ Create '.eslintrc' configuration file manually or with 'eslint --init'
 ./node_modules/.bin/eslint --init
 
-$ Update '.eslintrc' with or configure as Airbnb using '--init' flag:
+$ Update '.eslintrc' with snippet below or configure as Airbnb using '--init' flag:
 "extends": "airbnb-base"
+
+$ Update '.eslintrc' with snippet below to allow for 'console.log':
+"rules": {
+    "no-console": 0
+}
 
 $ Optionally create npm hook to eslint. Add to 'package.json' 'scripts' tag:
 "lint": "eslint ."
@@ -31,7 +36,7 @@ npm run-script lint
 $ Install mocha packages
 npm i --save-dev mocha
 
-$ Add/update 'env' tag in '.eslintrc.json'
+$ Add/update 'env' tag in '.eslintrc'
 "env": {
     "mocha": true
 }

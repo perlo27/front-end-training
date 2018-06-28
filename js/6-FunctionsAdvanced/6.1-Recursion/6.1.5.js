@@ -17,7 +17,7 @@ function printReverseListVer2(list) {
     tmp = tmp.next;
   }
 
-  for (let i = arr.length - 1; i >= 0; i--) {
+  for (let i = arr.length - 1; i >= 0; i -= 1) {
     console.log(arr[i]);
   }
 }
