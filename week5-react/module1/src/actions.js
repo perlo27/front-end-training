@@ -3,10 +3,6 @@ export const handleSearchTextAction = newValue => ({
   newValue,
 });
 
-export const filteredMoviesAction = {
-  type: 'FILTERED_MOVIES',
-};
-
 export const searchActiveAction = {
   type: 'SEARCH_ACTIVE',
 };
