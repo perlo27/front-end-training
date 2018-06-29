@@ -1,27 +1,29 @@
-export const handleSearchTextAction = newValue => ({
-  type: 'SEARCH_QUERY',
-  newValue,
-});
+export default {
+  handleSearchTextAction: newValue => ({
+    type: 'SEARCH_QUERY',
+    newValue,
+  }),
 
-export const searchActiveAction = {
-  type: 'SEARCH_ACTIVE',
-};
+  searchActiveAction: {
+    type: 'SEARCH_ACTIVE',
+  },
 
-export const sortAction = newValue => ({
-  type: 'SORT_BY',
-  newValue,
-});
+  sortAction: newValue => ({
+    type: 'SORT_BY',
+    newValue,
+  }),
 
-export const criteriaAction = newValue => ({
-  type: 'SEARCH_CRITERIA',
-  newValue,
-});
+  criteriaAction: newValue => ({
+    type: 'SEARCH_CRITERIA',
+    newValue,
+  }),
 
-export const movieSelectedAction = newValue => ({
-  type: 'SELECTED_MOVIE',
-  newValue,
-});
+  movieSelectedAction: newValue => ({
+    type: 'SELECTED_MOVIE',
+    newValue,
+  }),
 
-export const similarMoviesAction = {
-  type: 'SIMILAR_MOVIES',
+  similarMoviesAction: {
+    type: 'SIMILAR_MOVIES',
+  },
 };

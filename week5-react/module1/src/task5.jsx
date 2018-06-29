@@ -1,15 +1,25 @@
 import React from 'react';
 import { connect, Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import PropTypes from 'prop-types';
-import { allMovies, allCriterias, sortParameters } from './mock';
-import {
+import mocks from './mock';
+import actions from './actions';
+
+const {
   handleSearchTextAction,
   searchActiveAction,
   sortAction,
   criteriaAction,
   movieSelectedAction,
-} from './actions';
+} = actions;
+
+const {
+  allMovies,
+  allCriterias,
+  sortParameters,
+  selectedMovieAndSimilarMoviesShape,
+  movieShape,
+} = mocks;
 
 function searchActive(state = false, action) {
   switch (action.type) {
@@ -55,11 +65,17 @@ function sortCriteria(state = sortParameters.rate, action) {
   }
 }
 
-function selectedMovie(state = null, action) {
+function selectedMovieAndSimilarMovies(state = null, action) {
   switch (action.type) {
     case 'SELECTED_MOVIE': {
       if (action.newValue) {
-        return allMovies.find(movie => movie.id === action.newValue);
+        const selectedMovie = allMovies.find(movie => movie.id === action.newValue);
+        return {
+          selectedMovie,
+          similarMovies: allMovies.filter(
+            otherMovie => otherMovie.genre === selectedMovie.genre && otherMovie.id !== selectedMovie.id,
+          ),
+        };
       }
       return null;
     }
@@ -69,48 +85,25 @@ function selectedMovie(state = null, action) {
   }
 }
 
-function similarMovies({ similar, movie }, action) {
-  switch (action.type) {
-    case 'SIMILAR_MOVIES': {
-      if (movie) {
-        const { genre, id } = movie;
-        return allMovies.filter(otherMovie => otherMovie.genre === genre && otherMovie.id !== id);
-      }
-      return [];
-    }
-    default: {
-      return similar;
-    }
-  }
-}
+const store = createStore(
+  combineReducers({
+    searchActive,
+    searchQuery,
+    searchCriteria,
+    sortCriteria,
+    selectedMovieAndSimilarMovies,
+  }),
+  {},
+);
 
-function combinedReducer(state = {}, action) {
-  return {
-    searchActive: searchActive(state.searchActive, action),
-    searchQuery: searchQuery(state.searchQuery, action),
-    searchCriteria: searchCriteria(state.searchCriteria, action),
-    sortCriteria: sortCriteria(state.sortCriteria, action),
-    selectedMovie: selectedMovie(state.selectedMovie, action),
-    similarMovies: similarMovies(
-      { similar: state.similarMovies, movie: state.selectedMovie },
-      action,
-    ),
-  };
-}
-const store = createStore(combinedReducer, {});
-
-let Task5 = ({ searchActive, selectedMovie }) => (
+let Task5 = ({ searchActive, selectedMovieAndSimilarMovies }) => (
   <div key="Task5-div">
-    {selectedMovie ? (
+    {selectedMovieAndSimilarMovies ? (
       <SelectedMovie key="Task5-SelectedMovie" />
     ) : (
       <div>
         <SearchRow />
-        {searchActive && (
-          <div key="Task5-div-search-movie-list">
-            <MovieLinkList key="Task5-MovieLinkList" movieList={allMovies} />
-          </div>
-        )}
+        {searchActive && <MovieLinkList key="Task5-MovieLinkList" movieList={allMovies} />}
       </div>
     )}
   </div>
@@ -120,18 +113,9 @@ Task5 = connect(
   mapStateToPropsTask5,
   null,
 )(Task5);
-
 Task5.propTypes = {
-  // You can declare that a prop is a specific JS primitive. By default, these
-  // are all optional.
   searchActive: PropTypes.bool.isRequired,
-  selectedMovie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    date: PropTypes.string.isRequired,
-    rate: PropTypes.number.isRequired,
-    genre: PropTypes.string.isRequired,
-  }).isRequired,
+  selectedMovieAndSimilarMovies: selectedMovieAndSimilarMoviesShape,
 };
 
 let SearchRow = ({ handleSearch, handleSearchText, searchQuery }) => (
@@ -168,22 +152,30 @@ SearchRow = connect(
   mapStateToPropsSearchRow,
   mapDispatchToPropsSearchRow,
 )(SearchRow);
+SearchRow.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+  handleSearchText: PropTypes.func.isRequired,
+  searchQuery: PropTypes.string.isRequired,
+};
 
 let MovieLink = ({ movie, movieSelected }) => (
   <li key={`MovieLink-${movie.id}`} onClick={() => movieSelected(movie.id)}>
     {movie.title}
   </li>
 );
-const mapStateToPropsMovieLink = state => Object.assign({}, state);
 const mapDispatchToPropsMovieLink = dispatch => ({
   movieSelected: (newValue) => {
     dispatch(movieSelectedAction(newValue));
   },
 });
 MovieLink = connect(
-  mapStateToPropsMovieLink,
+  null,
   mapDispatchToPropsMovieLink,
 )(MovieLink);
+MovieLink.propTypes = {
+  movie: movieShape.isRequired,
+  movieSelected: PropTypes.func.isRequired,
+};
 
 let MovieLinkList = ({
   searchQuery, searchCriteria, searchActive, movieList, sortCriteria,
@@ -210,6 +202,13 @@ MovieLinkList = connect(
   mapStateToPropsMovieLinkList,
   null,
 )(MovieLinkList);
+MovieLinkList.propTypes = {
+  searchQuery: PropTypes.string.isRequired,
+  searchCriteria: PropTypes.string.isRequired,
+  searchActive: PropTypes.bool.isRequired,
+  sortCriteria: PropTypes.string.isRequired,
+  movieList: PropTypes.arrayOf(movieShape).isRequired,
+};
 
 let SearchCriteria = ({ handleCriteria, searchCriteria }) => (
   <div>
@@ -237,6 +236,10 @@ SearchCriteria = connect(
   mapStateToPropsSearchCriteria,
   mapDispatchToPropsSearchCriteria,
 )(SearchCriteria);
+SearchCriteria.propTypes = {
+  handleCriteria: PropTypes.func.isRequired,
+  searchCriteria: PropTypes.string.isRequired,
+};
 
 let SortMovies = ({ handleSort }) => (
   <div key="Task5-div-search-movie-list-sort">
@@ -257,8 +260,14 @@ SortMovies = connect(
   mapStateToPropsSortMovies,
   mapDispatchToPropsSortMovies,
 )(SortMovies);
+SortMovies.propTypes = {
+  handleSort: PropTypes.func.isRequired,
+};
 
-let SelectedMovie = ({ selectedMovie, backToSearch }) => (
+let SelectedMovie = ({
+  selectedMovieAndSimilarMovies: { selectedMovie, similarMovies },
+  backToSearch,
+}) => (
   <div>
     <input
       type="button"
@@ -268,11 +277,7 @@ let SelectedMovie = ({ selectedMovie, backToSearch }) => (
     />
     <div key="SelectedMovie-div-movieTitle">{selectedMovie.title}</div>
     <span key="SelectedMovie-div-filmsBy">{`Films by genre ${selectedMovie.genre}`}</span>
-    <MovieLinkList
-      movieList={allMovies.filter(
-        otherMovie => otherMovie.genre === selectedMovie.genre && otherMovie.id !== selectedMovie.id,
-      )}
-    />
+    <MovieLinkList movieList={similarMovies} />
   </div>
 );
 const mapStateToPropsSelectedMovie = state => Object.assign({}, state);
@@ -285,6 +290,10 @@ SelectedMovie = connect(
   mapStateToPropsSelectedMovie,
   mapDispatchToPropsSelectedMovie,
 )(SelectedMovie);
+SelectedMovie.propTypes = {
+  selectedMovieAndSimilarMovies: selectedMovieAndSimilarMoviesShape.isRequired,
+  backToSearch: PropTypes.func.isRequired,
+};
 
 export default () => (
   <Provider store={store}>
