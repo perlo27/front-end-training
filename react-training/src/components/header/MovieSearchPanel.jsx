@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SearchByPanel from "./SearchByPanel";
 
 export default class MovieSearchPanel extends Component {
   render() {
@@ -8,14 +9,9 @@ export default class MovieSearchPanel extends Component {
           <li>
             <h4>search by</h4>
           </li>
+          <SearchByPanel/>
           <li>
-            <button className="search-by search-by-title">title</button>
-          </li>
-          <li>
-            <button className="search-by search-by-genre">genre</button>
-          </li>
-          <li>
-            <button className="search">search</button>
+            <button onClick={this.handleClick} className="search">search</button>
           </li>
         </ul>
       </div>

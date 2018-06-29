@@ -84,16 +84,13 @@ input[type="text"] {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 14px;
+  background-color: grey;
+  border: 1px solid grey;
 }
 
-.search-by-title {
+.active {
   background-color: #fc5a5a;
   border: 1px solid #fc5a5a;
-}
-
-.search-by-genre {
-  background-color: grey;
-  border: 1px solid grey; 
 }
 
 .search {

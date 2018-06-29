@@ -1,6 +1,7 @@
 import React from "react";
 import MovieSearch from "./MovieSearch";
 import MovieSearchPanel from "./MovieSearchPanel";
+import SearchForm from "./SearchForm";
 
 export default () => {
   return (
@@ -9,8 +10,7 @@ export default () => {
       <div className="header-content">
         <h2 className="header-title">netflixroulette</h2>
         <h2 className="header-search">find your movie</h2>
-        <MovieSearch/>
-        <MovieSearchPanel/>
+        <SearchForm/>
       </div>
     </div>
   );
