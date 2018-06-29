@@ -8,7 +8,8 @@ h2 h3 {
 /* HEADER */
 .header-parent {
   position: relative;
-  min-height: 250px;
+  height: 300px;
+
 }
 
 .header-background {
@@ -63,6 +64,7 @@ input[type="text"] {
   list-style: none;
   padding-left: 0px;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 .search-panel-wrapper li, .search-panel-wrapper h4 {
@@ -71,6 +73,7 @@ input[type="text"] {
   color: #f7f7f7;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+  margin-right: 15px;
 }
 
 .search-by {
@@ -100,7 +103,7 @@ input[type="text"] {
   color: #f7f7f7;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
-  height: 20px;
+  height: 30px;
   font-size: 16px;
   padding-left: 30px;
   padding-right: 30px;
