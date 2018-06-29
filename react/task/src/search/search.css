@@ -31,6 +31,7 @@
 .search-sidebar{
     color: white;
     display: block;
+    direction: rtl
 }
 
 .search-sidebar ul {
@@ -38,7 +39,7 @@
     margin: 0;
     margin-bottom: 0px;
     list-style-type: none;
-    background: gray;
+    background: rgb(231, 231, 231);
 }
 .search-sidebar li {
     display: inline;
@@ -52,4 +53,5 @@
 .search-sidebar ul > li {
     /* display: inline; */
     /* float: right; */
+    color: #444040;
 }

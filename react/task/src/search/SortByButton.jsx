@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./sort-by-button.css"
 
 // export default class SortByButton extends Component {
 //   render() {
@@ -13,7 +14,7 @@ import React, { Component } from 'react'
 export default (props) => {
   return (
     <div>
-      <button>{props.sortBy}</button>
+      <button className="sort-by-button">{props.sortBy}</button>
     </div>
   );
 }

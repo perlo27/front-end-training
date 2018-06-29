@@ -1,0 +1,8 @@
+.sort-by-button {
+    border: none;
+    background: transparent;
+}
+
+.sort-by-button:focus{
+    background-color: #cccc00;
+}
