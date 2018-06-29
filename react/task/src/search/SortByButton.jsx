@@ -13,7 +13,7 @@ import React, { Component } from 'react'
 export default (props) => {
   return (
     <div>
-      {props.sortBy}
+      <button>{props.sortBy}</button>
     </div>
   );
 }

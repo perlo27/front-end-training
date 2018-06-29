@@ -10,8 +10,8 @@ import "./search.css";
 export default () => {
     return (
         <div className="search-main-component">
-            <SearchHeader />
             <div className="search-main-component-content">
+                <SearchHeader />
                 <SearchField />
                 <div className="search-by-elements">
                     <ul>
@@ -21,10 +21,15 @@ export default () => {
                         <li><SearchButton /></li>
                     </ul>
                 </div>
-                <SortByButton sortBy="Release date" />
-                <SortByButton sortBy="Rating" />
             </div>
-
+            <div className="search-sidebar">
+                <ul>
+                    <li>7 movies found</li>
+                    <li><SortByButton sortBy="rating" /></li>
+                    <li><SortByButton sortBy="release date" /></li>
+                    <li>Sort by</li>
+                </ul>
+            </div>
         </div>
     );
 }

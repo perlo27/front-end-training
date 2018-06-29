@@ -1,8 +1,9 @@
-.search-main-component{
+.search-main-component-content{
     background-image: url("http://www.carnabymedia.com/wp-content/uploads/2016/01/movies-viewlorium.jpg");
     background-color: rgba(17, 11, 11, 0.81);
     background-blend-mode: color;
     padding: 50px;
+    display: block;
 }
 
 .search-by-elements{
@@ -26,4 +27,29 @@
 }
 .search-by-elements li:last-child{
     float: right;
+}
+.search-sidebar{
+    color: white;
+    display: block;
+}
+
+.search-sidebar ul {
+    padding: 0 50px 0 50px;
+    margin: 0;
+    margin-bottom: 0px;
+    list-style-type: none;
+    background: gray;
+}
+.search-sidebar li {
+    display: inline;
+}
+.search-sidebar li > div {
+    display: inline;
+}
+.search-sidebar li:first-child{
+    /* float: left; */
+}
+.search-sidebar ul > li {
+    /* display: inline; */
+    /* float: right; */
 }
