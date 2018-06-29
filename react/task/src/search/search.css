@@ -1,0 +1,16 @@
+.search-main-component{
+    background-image: url("http://www.carnabymedia.com/wp-content/uploads/2016/01/movies-viewlorium.jpg");
+    background-color: rgba(17, 11, 11, 0.81);
+    background-blend-mode: color;
+    padding: 50px;
+}
+
+.search-by-elements{
+    color: white; 
+    text-transform: uppercase;
+    display: flex;
+}
+.search-by-elements div{
+    padding: 10px;
+    font-size: 100%;
+}

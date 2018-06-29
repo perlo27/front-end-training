@@ -1,0 +1,10 @@
+button .search-by {
+    background-color: #444040;
+    border: none;
+    color: white;
+}
+
+button .search-by:focus{
+    background-color: #cccc00;
+    
+}

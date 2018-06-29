@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "./search-header.css"
 
-export default class SearchHeader extends Component {
-  render() {
+export default () => {
     return (
-      <div>
-          Find your movie!
-      </div>
-    )
-  }
+        <div className="search-header">
+            Find your movie!
+        </div>
+    );
 }

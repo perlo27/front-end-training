@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 
+
 export default class SearchButton extends Component {
-    handleClick(){
+    handleClick() {
         alert("Click!")
     }
-    
+
     render() {
         return (
-            <button onClick={this.handleClick}>
+            <button className ="search-button" onClick={this.handleClick}>
                 Siema
             </button>)
     }
