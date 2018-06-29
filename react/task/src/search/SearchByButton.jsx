@@ -14,7 +14,7 @@ import "./search-by-button.css";
 export default (props) => {
   return (
     <div>
-      <button >{props.searchBy}</button>
+      <button className="search-by">{props.searchBy}</button>
     </div>
   );
 }

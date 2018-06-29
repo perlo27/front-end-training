@@ -5,5 +5,5 @@
     width: 100%;
 }
 .search-field input:focus{
-    background-color: lightblue;
+    color: white;
 }

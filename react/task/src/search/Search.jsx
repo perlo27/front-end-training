@@ -5,8 +5,7 @@ import SearchHeader from './SearchHeader';
 import SearchByButton from './SearchByButton';
 import SortByButton from './SortByButton';
 import "./search.css";
-import "./search-button.css";
-import "./search-by-button.css"
+
 
 export default () => {
     return (
@@ -14,11 +13,13 @@ export default () => {
             <SearchHeader />
             <div className="search-main-component-content">
                 <SearchField />
-                <SearchButton className="search-button" />
                 <div className="search-by-elements">
-                    <div>Search by</div>
-                    <SearchByButton className="search-by" searchBy="Title" />
-                    <SearchByButton className="search-by" searchBy="Genre" />
+                    <ul>
+                        <li><div>Search by</div></li>
+                        <li><SearchByButton searchBy="Title" /></li>
+                        <li><SearchByButton searchBy="Genre" /></li>
+                        <li><SearchButton /></li>
+                    </ul>
                 </div>
                 <SortByButton sortBy="Release date" />
                 <SortByButton sortBy="Rating" />

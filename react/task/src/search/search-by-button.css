@@ -1,10 +1,9 @@
-button .search-by {
+button.search-by {
     background-color: #444040;
     border: none;
     color: white;
 }
 
-button .search-by:focus{
+button.search-by:focus{
     background-color: #cccc00;
-    
 }

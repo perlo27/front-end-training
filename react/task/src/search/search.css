@@ -8,9 +8,22 @@
 .search-by-elements{
     color: white; 
     text-transform: uppercase;
-    display: flex;
 }
 .search-by-elements div{
-    padding: 10px;
     font-size: 100%;
+}
+.search-by-elements ul{
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.search-by-elements li{
+    display: inline;
+}
+.search-by-elements li > div{
+    display: inline;
+    margin: 0px 0px;
+    margin-right: 15px;
+}
+.search-by-elements li:last-child{
+    float: right;
 }

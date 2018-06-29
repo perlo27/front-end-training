@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import "./search-button.css"
 
 export default class SearchButton extends Component {
     handleClick() {
@@ -8,9 +8,12 @@ export default class SearchButton extends Component {
 
     render() {
         return (
-            <button className ="search-button" onClick={this.handleClick}>
-                Siema
-            </button>)
+            <div>
+                <button className="search-button" onClick={this.handleClick}>
+                    Search
+                 </button>
+            </div>
+        );
     }
 }
 
