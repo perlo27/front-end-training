@@ -40,18 +40,20 @@
     margin-bottom: 0px;
     list-style-type: none;
     background: rgb(231, 231, 231);
+    display: flex;
 }
 .search-sidebar li {
-    display: inline;
+    /* display: inline; */
+    justify-content: space-between;
 }
-.search-sidebar li > div {
-    display: inline;
-}
+
 .search-sidebar li:first-child{
     /* float: left; */
+    
 }
 .search-sidebar ul > li {
     /* display: inline; */
     /* float: right; */
     color: #444040;
+    justify-content: center;
 }
