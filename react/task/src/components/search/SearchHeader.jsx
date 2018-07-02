@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./search-header.css"
 
 export default () => {
     return (

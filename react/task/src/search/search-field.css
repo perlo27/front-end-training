@@ -1,9 +1,0 @@
-.search-field input{
-    background: black;
-    border: none;
-    border-bottom: 1px #cccc00 solid;
-    width: 100%;
-}
-.search-field input:focus{
-    color: white;
-}

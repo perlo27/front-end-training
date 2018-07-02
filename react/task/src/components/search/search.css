@@ -5,7 +5,25 @@
     padding: 50px;
     display: block;
 }
+/* Search header */
+.search-header{
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
 
+/* Search engine field input  */
+.search-field input{
+    background: black;
+    border: none;
+    border-bottom: 1px #cccc00 solid;
+    width: 100%;
+}
+
+.search-field input:focus{
+    color: white;
+}
+/* Search by - elements  */
 .search-by-elements{
     color: white; 
     text-transform: uppercase;
@@ -28,9 +46,35 @@
 .search-by-elements li:last-child{
     float: right;
 }
+
+/* Search sidebar */
 .search-sidebar{
     color: white;
     display: block;
+}
+/* Search button  */
+.search-button{
+    background: #cccc00;
+    border: none;
+}
+/* Search by ... buttons */
+button.search-by {
+    background-color: #444040;
+    border: none;
+    color: white;
+}
+/* Sort by .. buttons */
+.sort-by-button {
+    border: none;
+    background: transparent;
+}
+
+.sort-by-button:focus{
+    background-color: #cccc00;
+}
+
+button.search-by:focus{
+    background-color: #cccc00;
 }
 
 .search-sidebar ul {

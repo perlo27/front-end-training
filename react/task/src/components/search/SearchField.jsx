@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./search-field.css"
 
 export default class SearchField extends Component {
   render() {

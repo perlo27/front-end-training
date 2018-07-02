@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./search-by-button.css";
 
 // export default class SearchByButton extends Component {
 //   render() {
