@@ -179,24 +179,26 @@ MovieLink.propTypes = {
 
 let MovieLinkList = ({
   searchQuery, searchCriteria, searchActive, movieList, sortCriteria,
-}) => (
-  <div>
-    {movieList.length ? (
-      <div>
-        <span>{`${movieList.length} Movies Found`}</span>
-        <SortMovies />
-        {(searchActive
-          ? movieList.filter(movie => movie[searchCriteria].startsWith(searchQuery))
-          : movieList
-        )
-          .sort((a, b) => a[sortCriteria] > b[sortCriteria])
-          .map(movie => <MovieLink movie={movie} />)}
-      </div>
-    ) : (
-      <span>No Movies Found</span>
-    )}
-  </div>
-);
+}) => {
+  const filteredMovieList = searchActive
+    ? movieList.filter(movie => movie[searchCriteria].startsWith(searchQuery))
+    : movieList;
+  return (
+    <div>
+      {filteredMovieList.length ? (
+        <div>
+          <span>{`${filteredMovieList.length} Movies Found`}</span>
+          <SortMovies />
+          {filteredMovieList
+            .sort((a, b) => a[sortCriteria] > b[sortCriteria])
+            .map(movie => <MovieLink movie={movie} />)}
+        </div>
+      ) : (
+        <span>No Movies Found</span>
+      )}
+    </div>
+  );
+};
 const mapStateToPropsMovieLinkList = state => Object.assign({}, state);
 MovieLinkList = connect(
   mapStateToPropsMovieLinkList,
