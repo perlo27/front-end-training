@@ -7,6 +7,7 @@ export default class MoviesContainer extends Component {
     super(props);
     this.state = {
       movies: [],
+      query: "http://react-cdp-api.herokuapp.com/movies?search=wajda",
       err: null
     }
 
@@ -14,6 +15,7 @@ export default class MoviesContainer extends Component {
   }
 
   componentDidMount() {
+    console.log(this.state.query);
     this.loadData();
   }
 
@@ -27,32 +29,30 @@ export default class MoviesContainer extends Component {
   // }
 
   loadData() {
-    fetch("http://react-cdp-api.herokuapp.com/movies?search=polanski&limit=9")
+    fetch(this.state.query)
       .then(results => {
         return results.json();
       })
       .then(({ data: movies }) => this.setState({ movies }));
   }
 
-render() {
-  const { movies } = this.state;
-  return (
-    <div className="movies-container">
-      <ul>
+  render() {
+    const { movies } = this.state;
+    return (
+      <div className="movies-container">
         {this.state.movies.map(movie => {
           return (
-          <li>
-            <Movie
-              imagePath={movie.poster_path}
-              title={movie.title}
-              genres={movie.genres}
-              releaseDate={movie.release_date} />
-          </li>);
+            <div>
+              <Movie
+                imagePath={movie.poster_path}
+                title={movie.title}
+                genres={movie.genres}
+                releaseDate={movie.release_date} />
+            </div>);
         })}
 
 
-      </ul>
-    </div>
-  )
-}
+      </div>
+    )
+  }
 }

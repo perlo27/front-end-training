@@ -1,4 +1,12 @@
-.movies-container ul{
-    list-style: none;
-    columns: 3;
+.movies-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+.single-movie-item img{
+    width:  100%;
+    height: 600px;
+}
+.single-movie-item .movie-info{
+    background: green;
 }
