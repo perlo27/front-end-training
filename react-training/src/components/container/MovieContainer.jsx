@@ -3,17 +3,21 @@ import Movie from "./Movie";
 import MovieResultsHeader from "./MovieResultsHeader";
 
 export default class MovieContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     movies: [],
     err: null
   };
 
   componentDidMount() {
-    this.loadData();
+    // this.loadData(this.props);
   }
 
-  loadData = () => {
-    fetch("http://react-cdp-api.herokuapp.com/movies?search=quentin&limit=9")
+  loadData = ({query, searchBy}) => {
+    fetch(`http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9`)
       .then(results => {
         return results.json();
       })

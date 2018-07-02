@@ -19,6 +19,8 @@ export default class SearchByPanel extends Component {
     this.state.title === "active"
       ? this.setState({ selector: "title", title: "", genre: "active" })
       : this.setState({ selector: "title", title: "active", genre: "" });
+    console.log(this.state.selector);
+    this.props.handleSearchBy(this.state.selector);
   }
 
   handleGenre(e) {
@@ -26,6 +28,8 @@ export default class SearchByPanel extends Component {
     this.state.genre === "active"
       ? this.setState({ selector: "genre", genre: "", title: "active" })
       : this.setState({ selector: "genre", genre: "active", title: "" });
+    console.log(this.state.selector);
+    this.props.handleSearchBy(this.state.selector);
   }
 
   render() {

@@ -19,7 +19,13 @@ export const MovieFooter = ({ title, releaseDate, genres }) => {
   );
 };
 
+MovieFooter.defaultProps = {
+  title: "Title",
+  releaseDate: "01-01-2018",
+  genres: ["Drama"]
+}
+
 MovieFooter.propTypes = {
-  title: PropTypes.string,
-  releaseDate: PropTypes.instanceOf(Date)
+  title: PropTypes.string.isRequired,
+  releaseDate: PropTypes.instanceOf(Date).isRequired
 };

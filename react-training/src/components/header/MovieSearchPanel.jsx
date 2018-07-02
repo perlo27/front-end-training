@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SearchByPanel from "./SearchByPanel";
 
 export default class MovieSearchPanel extends Component {
+
   render() {
     return (
       <div className="search-panel-wrapper">
@@ -9,7 +10,7 @@ export default class MovieSearchPanel extends Component {
           <li>
             <h4>search by</h4>
           </li>
-          <SearchByPanel/>
+          <SearchByPanel handleSearchBy={this.props.handleSearchOptions}/>
           <li>
             <button onClick={this.handleClick} className="search">search</button>
           </li>
