@@ -31,7 +31,6 @@
 .search-sidebar{
     color: white;
     display: block;
-    direction: rtl
 }
 
 .search-sidebar ul {
@@ -41,19 +40,14 @@
     list-style-type: none;
     background: rgb(231, 231, 231);
     display: flex;
-}
-.search-sidebar li {
-    /* display: inline; */
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-.search-sidebar li:first-child{
-    /* float: left; */
-    
-}
 .search-sidebar ul > li {
-    /* display: inline; */
-    /* float: right; */
     color: #444040;
-    justify-content: center;
+
+}
+
+.search-sidebar ul >li:first-child{
+    background-color: yellow;
 }

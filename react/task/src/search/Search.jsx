@@ -24,10 +24,10 @@ export default () => {
             </div>
             <div className="search-sidebar">
                 <ul>
+                    <li>Sort by</li>
                     <li>7 movies found</li>
                     <li><SortByButton sortBy="rating" /></li>
                     <li><SortByButton sortBy="release date" /></li>
-                    <li>Sort by</li>
                 </ul>
             </div>
         </div>
