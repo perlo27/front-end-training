@@ -1,11 +1,5 @@
 import React from 'react';
 
-import Container from './Container'
+import Search from './components/Search/Search'
 
-export default () => {
-  return (
-    <div>
-      <Container></Container>
-    </div>
-  );
-}
+export default () =>  <Search />
