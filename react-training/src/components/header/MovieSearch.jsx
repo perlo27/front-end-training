@@ -12,8 +12,7 @@ export default class MovieSearch extends Component {
   };
 
   handleChange(event) {
-    this.setState({value: event.target.value});
-    this.props.handleSearchQuery(this.state.value);
+    this.setState({value: event.target.value}, () => this.props.handleSearchQuery(this.state.value));
   }
 
   render() {

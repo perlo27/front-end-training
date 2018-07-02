@@ -10,9 +10,7 @@ export default class App extends Component {
   }
 
   handleSubmit({query, searchBy}) {
-    this.setState({query: query, searchBy: searchBy}, () => console.log(this.state));
-    console.log(this.state);
-    this.cont.loadData(this.state);
+    this.setState({query: query, searchBy: searchBy}, () => this.cont.loadData(this.state));
   }
   
   render() {

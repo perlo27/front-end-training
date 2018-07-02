@@ -12,11 +12,8 @@ export default class MovieContainer extends Component {
     err: null
   };
 
-  componentDidMount() {
-    // this.loadData(this.props);
-  }
-
   loadData = ({query, searchBy}) => {
+    console.log(query + " " + searchBy);
     fetch(`http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9`)
       .then(results => {
         return results.json();
