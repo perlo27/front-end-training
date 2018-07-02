@@ -1,0 +1,4 @@
+.movies-container ul{
+    list-style: none;
+    columns: 3;
+}
