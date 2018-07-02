@@ -84,14 +84,16 @@ button.search-by:focus{
     list-style-type: none;
     background: rgb(231, 231, 231);
     display: flex;
+    width: 100%;
     justify-content: flex-end;
 }
 
 .search-sidebar ul > li {
     color: #444040;
-
+    
 }
 
 .search-sidebar ul >li:first-child{
     background-color: yellow;
+    
 }

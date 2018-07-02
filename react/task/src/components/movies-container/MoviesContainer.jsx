@@ -3,19 +3,56 @@ import Movie from './Movie';
 import './movies-container.css'
 
 export default class MoviesContainer extends Component {
-  render() {
-    return (
-      <div className="movies-container">
-        <ul>
-          <li>
-            <Movie 
-            imagePath="+"
-            title="Kill Bill"
-            genres="Thriller"
-            releaseDate="21.07.1994" />
-          </li>
-        </ul>
-      </div>
-    )
+  constructor(props) {
+    super(props);
+    this.state = {
+      movies: [],
+      err: null
+    }
+
+    this.loadData = this.loadData.bind(this);
   }
+
+  componentDidMount() {
+    this.loadData();
+  }
+
+
+  // loadData = () => {
+  //   fetch("http://react-cdp-api.herokuapp.com/movies?search=quentin&limit=9")
+  //     .then(results => {
+  //       return results.json();
+  //     })
+  //     .then(({ data: movies }) => this.setState({ movies }));
+  // }
+
+  loadData() {
+    fetch("http://react-cdp-api.herokuapp.com/movies?search=polanski&limit=9")
+      .then(results => {
+        return results.json();
+      })
+      .then(({ data: movies }) => this.setState({ movies }));
+  }
+
+render() {
+  const { movies } = this.state;
+  return (
+    <div className="movies-container">
+      <ul>
+        {this.state.movies.map(movie => {
+          return (
+          <li>
+            <Movie
+              imagePath={movie.poster_path}
+              title={movie.title}
+              genres={movie.genres}
+              releaseDate={movie.release_date} />
+          </li>);
+        })}
+
+
+      </ul>
+    </div>
+  )
+}
 }
