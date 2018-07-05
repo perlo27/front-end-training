@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
+import SearchField from './SearchField';
 
 export default class SearchButton extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            valueToSearch : 'sss'
+            query: ""
         };
         this.handleClick = this.handleClick.bind(this);
+        this.handleSearchQuery = this.handleSearchQuery.bind(this);
+        this.handleSumbit = this.handleSumbit.bind(this);
     }
-    myFunc(){
-        return "hello";
+    handleSearchQuery(query) {
+        this.setState({
+            query: query
+        });
     }
-    
-    handleClick() {
-        alert(this.state.valueToSearch);
+
+    handleClick(event) {
+        event.preventDefault();
+        this.handleSubmit();
+    }
+
+    handleSumbit() {
+        this.props.handleSubmit(this.state);
     }
 
     render() {
         return (
-            <div>
-                <button className="search-button" onClick={this.handleClick}>
-                    Search
+            <button className="search-button" onClick={this.handleClick}>
+                Search
                  </button>
-            </div>
         );
     }
 }

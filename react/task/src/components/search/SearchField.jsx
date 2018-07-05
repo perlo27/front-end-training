@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
-import SearchButton from './SearchButton'
+import PropTypes from 'prop-types'
 
 export default class SearchField extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+
+  handleChange(event) {
+    this.setState({ value: event.target.value }, () => this.props.handleSearchQuery(this.state.value));
+  }
   render() {
     return (
       <div className="search-field">
-        <SearchButton ref={foo => {
-          this.foo = foo;
-        }} />
-        <input type="text"></input>
+        <input type="text" value={this.state.value} onChange={this.handleChange}></input>
       </div>
     );
   }
-  componentDidMount() {
-    var x = this.foo.myFunc();
-    console.log(x);
-  }
+}
+
+SearchField.propTypes = {
+  handleSearchQuery: PropTypes.func
 }
