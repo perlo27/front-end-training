@@ -16,31 +16,48 @@ export default class MovieContainer extends Component {
   };
 
   loadData = ({ query, searchBy }, sortBy, sortOrder) => {
-    this.setState({ query: query, searchBy: searchBy, sortBy: sortBy, sortOrder: sortOrder}, () => {
-      fetch(
-        `http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9&sortBy=${sortBy}&sortOrder=${sortOrder}`
-      )
-        .then(results => {
-          return results.json();
-        })
-        .then(({ data: movies }) => this.setState({ movies, err: null }))
-        .catch(err => {
-          message: "Error - something gone wrong", err;
-        });
-    });
+    this.setState(
+      {
+        query: query,
+        searchBy: searchBy,
+        sortBy: sortBy,
+        sortOrder: sortOrder
+      },
+      () => {
+        fetch(
+          `http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9&sortBy=${sortBy}&sortOrder=${sortOrder}`
+        )
+          .then(results => {
+            return results.json();
+          })
+          .then(({ data: movies }) => this.setState({ movies, err: null }))
+          .catch(err => {
+            message: "Error - something gone wrong", err;
+          });
+      }
+    );
   };
 
   onSortByReleaseDate = () => {
-    this.loadData(this.state, "release_date", this.state.sortOrder === "asc" ? "desc" : "asc");
+    this.loadData(
+      this.state,
+      "release_date",
+      this.state.sortOrder === "asc" ? "desc" : "asc"
+    );
   };
 
   render() {
-    const { movies, err } = this.state;
-    if (err) {
-      console.log(err.err);
+    const { movies, loading, err } = this.state;
+    if (loading) {
       return (
-        <div>
-          <h3>{err.message}</h3>
+        <div className="no-films-found">
+          <h1>Loading...</h1>
+        </div>
+      );
+    } else if (err) {
+      return (
+        <div className="no-films-found">
+          <h1>{err.message}</h1>
           <button onClick={this.loadData}>Reload...</button>
         </div>
       );
@@ -50,7 +67,7 @@ export default class MovieContainer extends Component {
           <h1>No films found</h1>
         </div>
       );
-    } 
+    }
     return (
       <div>
         <MovieResultsHeader
