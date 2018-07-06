@@ -15,11 +15,12 @@ export default class Search extends Component {
     }
 
     handleSubmit() {
-        console.log("submit");
+        this.props.handleSubmit();
     }
 
-    handleSearchQuery(value) {
-        this.setState({value: value}, () => console.log(this.state.value + " search query"));
+    //aktualziacja stanu i wypisywanie na ekran wartosci
+    handleSearchQuery(query) {
+        this.setState({ query: query }, () => console.log(query));
     }
 
     render() {
@@ -27,7 +28,7 @@ export default class Search extends Component {
             <div className="search-main-component">
                 <div className="search-main-component-content">
                     <SearchHeader />
-                    <SearchField handleSearchQuery={this.handleSearchQuery}/>
+                    <SearchField handleSearchQuery={this.handleSearchQuery} />
                     <div className="search-by-elements">
                         <ul>
                             <li><div>Search by</div></li>

@@ -11,9 +11,11 @@ export default class SearchField extends Component {
   }
   
 
+  // Przekazanie wyzej
   handleChange(event) {
     this.setState({ value: event.target.value }, () => this.props.handleSearchQuery(this.state.value));
   }
+
   render() {
     return (
       <div className="search-field">

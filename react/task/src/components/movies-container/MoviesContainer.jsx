@@ -50,8 +50,6 @@ export default class MoviesContainer extends Component {
                 releaseDate={movie.release_date} />
             </div>);
         })}
-
-
       </div>
     )
   }
