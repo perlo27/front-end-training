@@ -1,5 +1,5 @@
-import { createStore, applyMiddleware } from "redux";
-import { rootReducer } from "../reducers/reducers";
+import { createStore, applyMiddleware, compose } from "redux";
+import rootReducer from "../reducers/reducers";
 import createSagaMiddleware from "redux-saga";
 
 const __PROD__ = process.env.NODE_ENV === 'production';
@@ -15,7 +15,8 @@ const initialState = {
   movies: []
 };
 
-export default createStoreWithInitialState = () => {
+export default function createStoreWithInitialState() {
+  console.log("Creating store");
   return createStore(
     rootReducer,
     initialState,

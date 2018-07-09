@@ -15,6 +15,7 @@ export const REQUEST_MOVIES_ERROR = "REQUEST_MOVIES_ERROR";
 
 
 export const requestMovies = ({ query, searchBy }) => {
+  console.log("Action is starting ");
   return {
     type: REQUEST_MOVIES,
     query,
