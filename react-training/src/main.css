@@ -67,6 +67,10 @@ input[type="text"] {
   margin-bottom: 0px;
 }
 
+.search-panel-wrapper p {
+  display: inline;
+}
+
 .search-panel-wrapper li, .search-panel-wrapper h4 {
   display: inline;
   margin: 0px 0px;

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import SearchByButton from "./SearchByButton";
+import SearchByTile from "./SearchByTile";
 
 export default class SearchByPanel extends Component {
   constructor(props) {
     super(props);
-    this.handleTitle = this.handleTitle.bind(this);
-    this.handleGenres = this.handleGenres.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   state = {
@@ -14,19 +13,10 @@ export default class SearchByPanel extends Component {
     title: "active"
   };
 
-  handleTitle(e) {
-    e.preventDefault();
+  handleClick() {
     this.state.title === "active"
-      ? this.setState({ selector: "title", title: "", genres: "active" })
+      ? this.setState({ selector: "genre", title: "", genres: "active" })
       : this.setState({ selector: "title", title: "active", genres: "" });
-    this.props.handleSearchBy(this.state.selector);
-  }
-
-  handleGenres(e) {
-    e.preventDefault();
-    this.state.genres === "active"
-      ? this.setState({ selector: "genres", genres: "", title: "active" })
-      : this.setState({ selector: "genres", genres: "active", title: "" });
     this.props.handleSearchBy(this.state.selector);
   }
 
@@ -34,16 +24,16 @@ export default class SearchByPanel extends Component {
     return (
       <React.Fragment>
         <li>
-          <SearchByButton
+          <SearchByTile
             selector="title"
-            onClick={this.handleTitle}
+            onClick={this.handleClick}
             active={this.state.title}
           />
         </li>
         <li>
-          <SearchByButton
+          <SearchByTile
             selector="genres"
-            onClick={this.handleGenres}
+            onClick={this.handleClick}
             active={this.state.genres}
           />
         </li>

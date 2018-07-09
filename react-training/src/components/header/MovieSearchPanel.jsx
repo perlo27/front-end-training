@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import SearchByPanel from "./SearchByPanel";
 
-export default class MovieSearchPanel extends Component {
-
-  render() {
+export default ({handleSearchOptions}) => {
     return (
       <div className="search-panel-wrapper">
         <ul>
           <li>
             <h4>search by</h4>
           </li>
-          <SearchByPanel handleSearchBy={this.props.handleSearchOptions}/>
+          <SearchByPanel handleSearchBy={handleSearchOptions}/>
           <li>
-            <button onClick={this.handleClick} className="search">search</button>
+            <input type="submit" className="search" value="SEARCH"/>
           </li>
         </ul>
       </div>
     );
-  }
 }

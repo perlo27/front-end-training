@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { MovieAvatar } from "./MovieAvatar";
 import { MovieFooter } from "./MovieFooter";
 

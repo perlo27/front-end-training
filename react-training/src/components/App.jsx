@@ -1,25 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+import Provider from "react-redux";
 import MovieContainer from "./container/MovieContainer";
 import { Footer } from "./footer/Footer";
 import HeaderContainer from "./header/HeaderContainer";
+import createStoreWithInitialState from "../store/configureStore";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const store = createStoreWithInitialState();
 
-  handleSubmit({query, searchBy}) {
-    this.setState({query: query, searchBy: searchBy}, () => this.cont.loadData(this.state));
-  }
-  
-  render() {
-    return (
+export default () => {
+  return (
+    <Provider store={store}>
       <div>
-        <HeaderContainer handleSubmit={this.handleSubmit} />
-        <MovieContainer ref={cont => this.cont = cont} />
+        <HeaderContainer />
+        <MovieContainer />
         <Footer />
       </div>
-    );
-  }
-}
+    </Provider>
+  );
+};

@@ -24,16 +24,19 @@ export default class MovieContainer extends Component {
         sortOrder: sortOrder
       },
       () => {
-        fetch(
-          `http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9&sortBy=${sortBy}&sortOrder=${sortOrder}`
-        )
-          .then(results => {
-            return results.json();
-          })
-          .then(({ data: movies }) => this.setState({ movies, err: null }))
-          .catch(err => {
-            message: "Error - something gone wrong", err;
-          });
+        return dispatch => {
+          dispatch(requestMovies());
+          fetch(
+            `http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9&sortBy=${sortBy}&sortOrder=${sortOrder}`
+          )
+            .then(results => {
+              return results.json();
+            })
+            .then(({ data: movies }) => dispatch())
+            .catch(err => {
+              message: "Error - something gone wrong", err;
+            });
+        };
       }
     );
   };
