@@ -2,8 +2,9 @@ import React from "react";
 import MovieSearch from "./MovieSearch";
 import MovieSearchPanel from "./MovieSearchPanel";
 import { requestMovies } from "../../actions";
+import { connect } from "react-redux";
 
-export default class SearchForm extends React.Component {
+class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -18,7 +19,7 @@ export default class SearchForm extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
-    requestMovies(this.state);
+    this.props.dispatch(requestMovies(this.state));
   }
 
   handleSearchOptions(searchBy) {
@@ -38,3 +39,5 @@ export default class SearchForm extends React.Component {
     );
   }
 }
+
+export default connect()(SearchForm);
