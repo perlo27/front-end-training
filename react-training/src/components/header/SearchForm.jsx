@@ -1,7 +1,7 @@
 import React from "react";
 import MovieSearch from "./MovieSearch";
 import MovieSearchPanel from "./MovieSearchPanel";
-import { requestMovies } from "../../actions";
+import { setRequestParams } from "../../actions";
 import { connect } from "react-redux";
 
 class SearchForm extends React.Component {
@@ -19,7 +19,6 @@ class SearchForm extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
-    this.props.dispatch(requestMovies(this.state));
   }
 
   handleSearchOptions(searchBy) {
@@ -28,6 +27,7 @@ class SearchForm extends React.Component {
 
   handleChange(e) {
     this.setState({query : e.target.value});
+    this.props.dispatch(setRequestParams(this.state));
   }
 
   render() {

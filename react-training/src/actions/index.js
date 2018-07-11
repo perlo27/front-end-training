@@ -9,22 +9,29 @@
     2. Define states which will be impacted by actions
 */
 
+export const SET_REQUEST_PARAMS = "SET_REQUEST_PARAMS";
 export const REQUEST_MOVIES = "REQUEST_MOVIES";
-export const RESPONSE_MOVIES = "RESPONSE_MOVIES";
+export const REQUEST_MOVIES_SUCCESS = "REQUEST_MOVIES_SUCCESS";
 export const REQUEST_MOVIES_ERROR = "REQUEST_MOVIES_ERROR";
 
 
-export const requestMovies = ({ query, searchBy }) => {
+export const setRequestParams = ({ query, searchBy }) => {
   return {
-    type: REQUEST_MOVIES,
+    type: SET_REQUEST_PARAMS,
     query,
     searchBy,
   };
 };
 
+export const requestMovies = () => {
+  return {
+    type: REQUEST_MOVIES
+  }
+}
+
 export const successfulResponseMovies = (movies) => {
   return {
-    type: RESPONSE_MOVIES,
+    type: REQUEST_MOVIES_SUCCESS,
     payload: movies,
   };
 };

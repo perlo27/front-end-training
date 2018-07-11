@@ -15,30 +15,8 @@ export default class MovieContainer extends Component {
     err: null
   };
 
-  loadData = ({ query, searchBy }, sortBy, sortOrder) => {
-    this.setState(
-      {
-        query: query,
-        searchBy: searchBy,
-        sortBy: sortBy,
-        sortOrder: sortOrder
-      },
-      () => {
-        return dispatch => {
-          dispatch(requestMovies());
-          fetch(
-            `http://react-cdp-api.herokuapp.com/movies?search=${query}&searchBy=${searchBy}&limit=9&sortBy=${sortBy}&sortOrder=${sortOrder}`
-          )
-            .then(results => {
-              return results.json();
-            })
-            .then(({ data: movies }) => dispatch())
-            .catch(err => {
-              message: "Error - something gone wrong", err;
-            });
-        };
-      }
-    );
+  loadData = () => {
+  
   };
 
   onSortByReleaseDate = () => {
