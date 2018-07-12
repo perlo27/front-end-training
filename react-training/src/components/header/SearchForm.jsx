@@ -19,7 +19,6 @@ class SearchForm extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
-    this.props.dispatch(requestMovies());
   }
 
   handleSearchOptions(searchBy) {
@@ -27,7 +26,10 @@ class SearchForm extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({query : e.target.value}, () => this.props.dispatch(setRequestQuery(this.state)));
+    this.setState({query : e.target.value}, () => {
+      this.props.dispatch(setRequestQuery(this.state));
+      this.props.dispatch(requestMovies());
+    });
   }
 
   render() {

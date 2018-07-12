@@ -1,45 +1,33 @@
 import React, { Component } from "react";
 import Movie from "./Movie";
 import MovieResultsHeader from "./MovieResultsHeader";
+import { connect } from "react-redux";
+import { requestMovies } from "../../actions/index";
 
-export default class MovieContainer extends Component {
+class MovieContainer extends Component {
   constructor(props) {
     super(props);
     this.onSortByReleaseDate = this.onSortByReleaseDate.bind(this);
   }
 
   state = {
-    movies: [],
     sortBy: "release_date",
     sortOrder: "asc",
-    err: null
   };
 
   loadData = () => {
-  
+    this.props.dispatch(requestMovies());
   };
 
-  onSortByReleaseDate = () => {
-    this.loadData(
-      this.state,
-      "release_date",
-      this.state.sortOrder === "asc" ? "desc" : "asc"
-    );
-  };
+  onSortByReleaseDate = () => {};
 
   render() {
-    const { movies, loading, err } = this.state;
-    if (loading) {
-      return (
-        <div className="no-films-found">
-          <h1>Loading...</h1>
-        </div>
-      );
-    } else if (err) {
+    const {movies, err} = this.props;
+    if (err) {
       return (
         <div className="no-films-found">
           <h1>{err.message}</h1>
-          <button onClick={this.loadData}>Reload...</button>
+          <button onClick={requestMovies}>Reload...</button>
         </div>
       );
     } else if (movies.length === 0) {
@@ -75,3 +63,10 @@ export default class MovieContainer extends Component {
     );
   }
 }
+
+export default connect(({movies, error}) => ({
+  movies,
+  err: error
+}), {requestMovies})(MovieContainer);
+
+

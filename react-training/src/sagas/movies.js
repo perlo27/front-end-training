@@ -4,7 +4,9 @@ import { fetchData } from "./utils";
 import { REQUEST_MOVIES } from "../actions";
 
 export function* fetchMovies() {
-  yield take(REQUEST_MOVIES);
-  const params = yield select();
-  yield fetchData(callApi, params);
+  while (true) {
+    yield take(REQUEST_MOVIES);
+    const params = yield select();
+    yield fetchData(callApi, params);
+  }
 }

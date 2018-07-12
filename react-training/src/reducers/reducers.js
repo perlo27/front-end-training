@@ -13,7 +13,7 @@ export default (state, action) => {
     case SET_REQUEST_SELECTOR:
       return { ...state, searchBy: action.searchBy };
     case REQUEST_MOVIES:
-      return state;
+      return { ...state, error: null };
     case REQUEST_MOVIES_SUCCESS:
       return { ...state, movies: action.payload };
     case REQUEST_MOVIES_ERROR:

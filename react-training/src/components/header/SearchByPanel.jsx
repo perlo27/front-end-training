@@ -15,7 +15,7 @@ export default class SearchByPanel extends Component {
 
   handleClick() {
     this.state.title === "active"
-      ? this.setState({ selector: "genre", title: "", genres: "active" })
+      ? this.setState({ selector: "genres", title: "", genres: "active" })
       : this.setState({ selector: "title", title: "active", genres: "" });
     this.props.handleSearchBy(this.state.selector);
   }

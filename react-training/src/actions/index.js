@@ -1,14 +1,3 @@
-// TODO: define actions which will be performed in this application
-// MOVIE_SEARCH
-// ADD_ERROR
-// CLEAR_ERROR
-// FETCH_RESULTS
-// CANCEL_FETCHING
-/*
-    1. Define actions and export them as a constants
-    2. Define states which will be impacted by actions
-*/
-
 export const SET_REQUEST_QUERY = "SET_REQUEST_QUERY";
 export const SET_REQUEST_SELECTOR = "SET_REQUEST_SELECTOR";
 export const REQUEST_MOVIES = "REQUEST_MOVIES";
