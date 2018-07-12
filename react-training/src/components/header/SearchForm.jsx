@@ -1,7 +1,7 @@
 import React from "react";
 import MovieSearch from "./MovieSearch";
 import MovieSearchPanel from "./MovieSearchPanel";
-import { setRequestParams } from "../../actions";
+import { setRequestQuery, setRequestSelector, requestMovies } from "../../actions";
 import { connect } from "react-redux";
 
 class SearchForm extends React.Component {
@@ -19,15 +19,15 @@ class SearchForm extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
+    this.props.dispatch(requestMovies());
   }
 
   handleSearchOptions(searchBy) {
-    this.setState({ searchBy: searchBy });
+    this.setState({searchBy: searchBy}, () => this.props.dispatch(setRequestSelector(this.state)));
   }
 
   handleChange(e) {
-    this.setState({query : e.target.value});
-    this.props.dispatch(setRequestParams(this.state));
+    this.setState({query : e.target.value}, () => this.props.dispatch(setRequestQuery(this.state)));
   }
 
   render() {

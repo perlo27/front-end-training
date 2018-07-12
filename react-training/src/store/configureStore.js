@@ -1,38 +1,32 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "../reducers/reducers";
 import createSagaMiddleware from "redux-saga";
-import rootSaga from "../sagas/movies";
-import { createLogger } from 'redux-logger'
+import { fetchMovies } from "../sagas/movies";
+import { createLogger } from "redux-logger";
 
+const __PROD__ = process.env.NODE_ENV === "production";
+const sagaMiddleware = createSagaMiddleware();
 
-const __PROD__ = process.env.NODE_ENV === 'production';
 let composeEnhancers = compose;
 if (!__PROD__ && window.__REDUX_DEVTOOLS_EXTENSION__) {
   composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 }
 
-const sagaMiddleware = createSagaMiddleware();
 const logger = createLogger({
-  level : 'log',
-  stateTransformer,
-  actionTransformer,
-  errorTransformer,
-  logger : console
+  level: "log",
+  logger: console
 });
+
 const initialState = {
   query: "",
   searchBy: "title",
   movies: []
 };
 
-export default function createStoreWithInitialState() {
-  console.log("Creating store");
-  return createStore(
-    rootReducer,
-    initialState,
-    composeEnhancers(applyMiddleware(sagaMiddleware, logger))
-  );
-};
+export default createStore(
+  rootReducer,
+  initialState,
+  composeEnhancers(applyMiddleware(sagaMiddleware, logger))
+);
 
-sagaMiddleware.run(rootSaga);
-
+sagaMiddleware.run(fetchMovies);

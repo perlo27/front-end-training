@@ -1,10 +1,10 @@
 import { baseUrl } from "./config";
 
-export const callApi = ({ params }) => {
-  return fetch(baseUrl + params.url)
+export const callApi = ({ query, searchBy }) => {
+  return fetch(`${baseUrl}?search=${query}&searchBy=${searchBy}`)
     .then(response => response.json())
-    .then(json => ({
-      response: json,
+    .then(({data : movies}) => ({
+      response: movies,
       err: null
     }))
     .catch(err => ({
